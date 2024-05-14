@@ -29,7 +29,7 @@ void lcd_spi_config() {
 	gpio_put( LCD_SPI_CS_GPIO, 0 );
 
 	//initialisation de SPI0 à 10MHz => à revoir.
-	spi_init( spi0, 10000*1000 );
+	spi_init( spi0, 10000*10000 );
 }
 
 void lcd_init(){
@@ -184,11 +184,11 @@ void lcd_draw_char(char c, uint16_t x, uint16_t y, uint16_t color, fontdatatype*
 		for(int i = 0; i < FONT_H(t); i ++){
 			uint8_t l = t[index + 2*i];
 			for(int j = 0; j < 8; j++) {
-				if( l & ( 1 << (8-j-1) ) )	lcd_set_pixel( x+j , y+2*i, color);
+				if( l & ( 1 << (8-j-1) ) )	lcd_set_pixel( x+j , y+i, color);
 			}
 			l = t[index + 2*i + 1];
 			for(int j = 0; j < 8; j++) {
-				if( l & ( 1 << (8-j-1) ) )	lcd_set_pixel( x+j+8 , y+2*i, color);
+				if( l & ( 1 << (8-j-1) ) )	lcd_set_pixel( x+j+8 , y+i, color);
 			}
 		}
 	}
@@ -223,8 +223,8 @@ void lcd_write_Data16(uint16_t data){
 
 void lcd_set_zone(uint16_t x1, uint16_t x2, uint16_t y1, uint16_t y2) {
 	lcd_write_Cmd(0x2A);
-	lcd_write_Data16(Y_LCD-y2);
-	lcd_write_Data16(Y_LCD-y1);
+	lcd_write_Data16(LCD_Y-y2);
+	lcd_write_Data16(LCD_Y-y1);
 
 	lcd_write_Cmd(0x2B);
 	lcd_write_Data16(x1);
@@ -232,11 +232,10 @@ void lcd_set_zone(uint16_t x1, uint16_t x2, uint16_t y1, uint16_t y2) {
 }
 
 void lcd_clear(uint16_t color){
-	lcd_set_zone(0, X_LCD-1, 0, Y_LCD-1);
-
+	lcd_set_zone(0, LCD_X, 0, LCD_Y);
 	lcd_write_Cmd(0x2C);
-	for(int i = 0; i<Y_LCD; i++){
-		for(int j = 0; j<X_LCD; j++) {
+	for(int i = 0; i<LCD_Y; i++){
+		for(int j = 0; j<LCD_X; j++) {
 			lcd_write_Data16(color);
 		}
 	}
@@ -253,11 +252,11 @@ void lcd_draw_circle(uint16_t cx, uint16_t cy, uint16_t r ,uint16_t color){
 	for(int x = cx-r; x < cx + r; x++){
 		y_abs = sqrt( (double)( (r*r) - ( (x - cx)*(x - cx) ) ) );
 		y = y_abs + cy;
-		if( x > -1 && x < X_LCD && y > -1 && y < Y_LCD) {
+		if( x > -1 && x < LCD_X && y > -1 && y < LCD_Y) {
 			lcd_set_pixel(x,y,color);
 		}
 		y = -y_abs + cy;
-		if( x > -1 && x < X_LCD && y > -1 && y < Y_LCD) {
+		if( x > -1 && x < LCD_X && y > -1 && y < LCD_Y) {
 			lcd_set_pixel(x,y,color);
 		}
 	}
@@ -265,11 +264,11 @@ void lcd_draw_circle(uint16_t cx, uint16_t cy, uint16_t r ,uint16_t color){
 	for(int y = cy-r; y < cy + r; y++){
 		x_abs = sqrt( (double)( (r*r) - ( (y - cy)*(y - cy) ) ) );
 		x = x_abs + cx;
-		if( x > -1 && x < X_LCD && y > -1 && y < Y_LCD) {
+		if( x > -1 && x < LCD_X && y > -1 && y < LCD_Y) {
 			lcd_set_pixel(x,y,color);
 		}
 		x = -x_abs + cx;
-		if( x > -1 && x < X_LCD && y > -1 && y < Y_LCD) {
+		if( x > -1 && x < LCD_X && y > -1 && y < LCD_Y) {
 			lcd_set_pixel(x,y,color);
 		}
 	}
@@ -322,7 +321,7 @@ void lcd_v_scroll_config( uint16_t top_height, uint16_t scroll_area_height ,uint
 
 void lcd_scroll_init( uint16_t top, uint16_t core, uint16_t bottom ) {
 	scrolling.top = top;
-	scrolling.bottom = Y_LCD-bottom-1;
+	scrolling.bottom = LCD_Y-bottom-1;
 	scrolling.screen_line = scrolling.top;
 	scrolling.screen_y = scrolling.bottom;
 	lcd_v_scroll_config( scrolling.top-1, core, bottom);

@@ -312,6 +312,19 @@ util/fast:
 .PHONY : util/fast
 
 #=============================================================================
+# Target rules for targets named display
+
+# Build rule for target.
+display: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 display
+.PHONY : display
+
+# fast build rule for target.
+display/fast:
+	$(MAKE) $(MAKESILENT) -f src/display/CMakeFiles/display.dir/build.make src/display/CMakeFiles/display.dir/build
+.PHONY : display/fast
+
+#=============================================================================
 # Target rules for targets named station
 
 # Build rule for target.
@@ -1868,6 +1881,7 @@ help:
 	@echo "... RN4870"
 	@echo "... bme280"
 	@echo "... bs2_default"
+	@echo "... display"
 	@echo "... font"
 	@echo "... lcd"
 	@echo "... led_rgb"

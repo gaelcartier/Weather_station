@@ -54,8 +54,8 @@ touchscreen_info_t touchscreen_read() {
 	touchscreen_info_t touch_info;
 	touch_info.touch_event = i2c_data[2] >> 6;
 	touch_info.time = 0;
-	touch_info.x = X_LCD - ( (i2c_data[2] & 0xF) << 8 | i2c_data[3] );
-	touch_info.y = Y_LCD - ( (i2c_data[4] & 0xF) << 8 | i2c_data[5] );
+	touch_info.x = TOUCHSCREEN_X - ( (i2c_data[2] & 0xF) << 8 | i2c_data[3] );
+	touch_info.y = TOUCHSCREEN_Y - ( (i2c_data[4] & 0xF) << 8 | i2c_data[5] );
 
 	return touch_info;
 }

@@ -1211,6 +1211,7 @@ weather_station.elf: src/veml7700/libveml7700.a
 weather_station.elf: src/RN4870/libRN4870.a
 weather_station.elf: src/util/libutil.a
 weather_station.elf: src/station/libstation.a
+weather_station.elf: src/display/libdisplay.a
 weather_station.elf: src/lcd/liblcd.a
 weather_station.elf: src/led_rgb/libled_rgb.a
 weather_station.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S

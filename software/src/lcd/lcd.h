@@ -36,6 +36,9 @@
 #define MADCTL				0x36
 #define V_SCROLL_START_ADDR	0x37
 
+#define LCD_Y	240
+#define LCD_X	320
+
 #define LCD_BLUE    		(0x1F<<0)
 #define LCD_LIGHT_BLUE		0x7FF
 #define LCD_GREEN 			(0x0F<<5)

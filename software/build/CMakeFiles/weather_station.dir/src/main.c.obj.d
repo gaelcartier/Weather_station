@@ -84,6 +84,10 @@ CMakeFiles/weather_station.dir/src/main.c.obj: \
  /home/gael/git/Weather_station/software/src/station/../RN4870/../util/util.h \
  /home/gael/git/Weather_station/software/src/station/../RN4870/../util/../board.h \
  /home/gael/git/Weather_station/software/src/lcd/lcd.h \
+ /home/gael/git/Weather_station/software/src/display/display.h \
+ /home/gael/git/Weather_station/software/src/display/../board.h \
+ /home/gael/git/Weather_station/software/src/display/../lcd/lcd.h \
+ /home/gael/git/Weather_station/software/src/display/../font/font.h \
  /home/gael/git/Weather_station/software/src/touchscreen/touchscreen.h \
  /home/gael/git/Weather_station/software/src/bme280/bme280.h \
  /home/gael/git/Weather_station/software/src/veml7700/veml7700.h \

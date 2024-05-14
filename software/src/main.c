@@ -4,6 +4,7 @@
 #include "board.h"
 #include "station/station.h"
 #include "lcd/lcd.h"
+#include "display/display.h"
 #include "touchscreen/touchscreen.h"
 #include "bme280/bme280.h"
 #include "veml7700/veml7700.h"
@@ -22,6 +23,7 @@ typedef enum _test_t {
     VEML_7700,
     BLE,
     LED_RGB,
+    DISPLAY,
     METEO,
     OTHER
 } test_t;
@@ -46,19 +48,20 @@ void test_usb() {
 }
 
 void test_lcd() {
-    // while( 1 ) {
-    //     lcd_clear( LCD_YELLOW );
-    //     log( "yellow" );
-    //     sleep_ms(1000);
-    //     lcd_clear( LCD_GREEN );
-    //     log("green");
-    //     sleep_ms(1000);
-    //     lcd_clear( LCD_ORANGE );
-    //     log("orange");
-    //     sleep_ms(1000);
-    // }
     lcd_backlight_on();
+    while( 1 ) {
+        lcd_clear( LCD_YELLOW );
+        log( "yellow" );
+        sleep_ms(1000);
+        lcd_clear( LCD_LIGHT_GREEN );
+        log("green");
+        sleep_ms(1000);
+        lcd_clear( LCD_ORANGE );
+        log("orange");
+        sleep_ms(1000);
+    }
     lcd_fill_rect( 0, 160, 0, 120, LCD_YELLOW);
+    lcd_fill_rect( 300, LCD_X, 200, LCD_Y, LCD_LIGHT_GREEN);
     lcd_draw_string( "Weather station", 0, 120, LCD_ORANGE, SmallFont );
 }
 
@@ -157,12 +160,24 @@ void test_ble() {
     }
 }
 
+void test_display(){
+    lcd_backlight_on();
+    uint col = 7;
+    uint row = 13;
+    zone_t zone_array[col*row];
+    zone_matrix_t zm;
+    display_create_zone_matrix( &zm, zone_array, row, col, (point_t){0,20}, (point_t){320,220} );
+    for(int i = 0; i<row*col; i++){
+        display_draw_zone(zm.z[i], LCD_YELLOW);
+    }
+}
+
 int main() {
     
-    test_t TEST = METEO;
+    test_t TEST = LCD_TOUCHSCREEN;
 
-    stdio_init_all();
-    station_init();
+   stdio_init_all();
+   station_init();
 
     switch( TEST ) {
         case USB : test_usb();
@@ -184,6 +199,9 @@ int main() {
             break;
 
         case BLE : test_ble();
+            break;
+
+        case DISPLAY: test_display();
             break;
         
         case METEO : station_main();

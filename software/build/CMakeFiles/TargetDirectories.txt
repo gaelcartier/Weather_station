@@ -191,6 +191,9 @@
 /home/gael/git/Weather_station/software/build/src/util/CMakeFiles/util.dir
 /home/gael/git/Weather_station/software/build/src/util/CMakeFiles/edit_cache.dir
 /home/gael/git/Weather_station/software/build/src/util/CMakeFiles/rebuild_cache.dir
+/home/gael/git/Weather_station/software/build/src/display/CMakeFiles/display.dir
+/home/gael/git/Weather_station/software/build/src/display/CMakeFiles/edit_cache.dir
+/home/gael/git/Weather_station/software/build/src/display/CMakeFiles/rebuild_cache.dir
 /home/gael/git/Weather_station/software/build/src/station/CMakeFiles/station.dir
 /home/gael/git/Weather_station/software/build/src/station/CMakeFiles/edit_cache.dir
 /home/gael/git/Weather_station/software/build/src/station/CMakeFiles/rebuild_cache.dir

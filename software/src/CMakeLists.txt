@@ -8,11 +8,13 @@ add_subdirectory( veml7700 )
 add_subdirectory( led_rgb )
 add_subdirectory( RN4870 )
 add_subdirectory( util )
+add_subdirectory( display )
 add_subdirectory( station )
 
 target_link_libraries(  font
                         lcd
                         touchscreen
+                        display
                         bme280
                         veml7700
                         led_rgb

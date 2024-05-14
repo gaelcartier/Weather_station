@@ -2937,6 +2937,10 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   ../src/util/util.h \
   ../src/board.h \
   ../src/lcd/lcd.h \
+  ../src/display/display.h \
+  ../src/board.h \
+  ../src/lcd/lcd.h \
+  ../src/font/font.h \
   ../src/touchscreen/touchscreen.h \
   ../src/bme280/bme280.h \
   ../src/veml7700/veml7700.h \
@@ -2944,6 +2948,8 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   ../src/RN4870/RN4870.h \
   ../src/util/util.h
 
+
+../src/display/display.h:
 
 ../src/led_rgb/led_rgb.h:
 

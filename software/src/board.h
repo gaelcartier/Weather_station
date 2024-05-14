@@ -1,6 +1,3 @@
-#define Y_LCD	240
-#define X_LCD	320
-
 #define nRESET_GPIO             7
     
 #define BLE_ENABLE_GPIO         29
