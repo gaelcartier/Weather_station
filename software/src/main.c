@@ -11,9 +11,11 @@
 #include "led_rgb/led_rgb.h"
 #include "RN4870/RN4870.h"
 #include "util/util.h"
+#include "systick/systick.h"
 
 #define log( S )        printf("%s%c", S, '\n')
 
+uint systick_counter; 
 
 typedef enum _test_t {
     USB,
@@ -24,6 +26,7 @@ typedef enum _test_t {
     BLE,
     LED_RGB,
     DISPLAY,
+    SYSTICK,
     METEO,
     OTHER
 } test_t;
@@ -172,9 +175,22 @@ void test_display(){
     }
 }
 
+extern void isr_systick() {
+    systick_counter ++;
+}
+
+void test_systick() {
+    systick_counter = 0;
+    systick_init( 124999UL );
+    while(1){
+        printf(">>> Counter = %d\n", systick_counter);
+        sleep_ms(1000);
+    }
+}
+
 int main() {
     
-    test_t TEST = LCD_TOUCHSCREEN;
+    test_t TEST = SYSTICK;
 
    stdio_init_all();
    station_init();
@@ -202,6 +218,9 @@ int main() {
             break;
 
         case DISPLAY: test_display();
+            break;
+        
+        case SYSTICK : test_systick();
             break;
         
         case METEO : station_main();

@@ -101,8 +101,6 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/boot_stage2/include"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/include"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include"
   )
 
 # The set of dependency files which are needed:
@@ -120,10 +118,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj" "gcc" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj" "gcc" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" "gcc" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj" "gcc" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" "gcc" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" "gcc" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj" "gcc" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj" "gcc" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj" "gcc" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj" "gcc" "src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj.d"
@@ -148,15 +144,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/gael/git/Weather_station/software/build/src/lcd/CMakeFiles/lcd.dir/DependInfo.cmake"
-  "/home/gael/git/Weather_station/software/build/src/touchscreen/CMakeFiles/touchscreen.dir/DependInfo.cmake"
-  "/home/gael/git/Weather_station/software/build/src/display/CMakeFiles/display.dir/DependInfo.cmake"
-  "/home/gael/git/Weather_station/software/build/src/bme280/CMakeFiles/bme280.dir/DependInfo.cmake"
-  "/home/gael/git/Weather_station/software/build/src/veml7700/CMakeFiles/veml7700.dir/DependInfo.cmake"
-  "/home/gael/git/Weather_station/software/build/src/led_rgb/CMakeFiles/led_rgb.dir/DependInfo.cmake"
-  "/home/gael/git/Weather_station/software/build/src/RN4870/CMakeFiles/RN4870.dir/DependInfo.cmake"
-  "/home/gael/git/Weather_station/software/build/src/util/CMakeFiles/util.dir/DependInfo.cmake"
-  "/home/gael/git/Weather_station/software/build/src/station/CMakeFiles/station.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

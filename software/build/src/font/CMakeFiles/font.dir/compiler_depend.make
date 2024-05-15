@@ -519,50 +519,6 @@ src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_commo
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h
 
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/types.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/boards/include/boards/pico.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/types.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/error.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/include/pico/time.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/include/pico/timeout_helper.h
-
 src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico.h \
@@ -641,45 +597,6 @@ src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_commo
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h
-
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/types.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/assert.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/assert.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  generated/pico_base/pico/version.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/boards/include/boards/pico.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/machine/_default_types.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/types.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/error.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
 
 src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
@@ -1593,12 +1510,6 @@ src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_commo
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c:
 
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/include/hardware/vreg.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c:
-
 /usr/include/newlib/sys/_timeval.h:
 
 /usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed/limits.h:
@@ -1627,13 +1538,7 @@ src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_commo
 
 /usr/include/newlib/sys/_locale.h:
 
-/usr/include/newlib/c++/10.3.1/stdlib.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/boot_stage2/include/boot_stage2/config.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c:
-
-/usr/include/newlib/sys/_intsup.h:
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/include/hardware/vreg.h:
 
 /usr/include/newlib/sys/unistd.h:
 
@@ -1673,15 +1578,13 @@ src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_commo
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h:
 
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pll.h:
+
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/psm.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/xosc.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pll.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c:
 
 /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h:
 
@@ -1703,13 +1606,7 @@ src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_commo
 
 /usr/include/newlib/sys/_timespec.h:
 
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c:
-
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/vreg_and_chip_reset.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h:
 
@@ -1724,6 +1621,8 @@ src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_commo
 /usr/include/newlib/sys/features.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include/pico/types.h:
+
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h:
 
@@ -1753,9 +1652,9 @@ src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_commo
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h:
 
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c:
-
 /usr/include/newlib/sys/_sigset.h:
+
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c:
 
 ../src/font/font.c:
 
@@ -1764,8 +1663,6 @@ src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_commo
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h:
 
@@ -1833,8 +1730,6 @@ generated/pico_base/pico/version.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_claim/include/hardware/claim.h:
 
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h:
-
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c:
@@ -1852,8 +1747,6 @@ generated/pico_base/pico/version.h:
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/watchdog.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/watchdog.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/include/hardware/pll.h:
 
@@ -1875,17 +1768,15 @@ generated/pico_base/pico/version.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h:
 
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c:
+
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/vreg_and_chip_reset.h:
+
 /usr/include/newlib/stdlib.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h:
-
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h:
 
@@ -1899,8 +1790,18 @@ generated/pico_base/pico/version.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h:
 
-/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h:
-
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h:
+
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h:
+
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h:
+
+/usr/include/newlib/c++/10.3.1/stdlib.h:
+
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/boot_stage2/include/boot_stage2/config.h:
+
+/usr/include/newlib/sys/_intsup.h:
+
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c:

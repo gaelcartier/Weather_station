@@ -197,3 +197,6 @@
 /home/gael/git/Weather_station/software/build/src/station/CMakeFiles/station.dir
 /home/gael/git/Weather_station/software/build/src/station/CMakeFiles/edit_cache.dir
 /home/gael/git/Weather_station/software/build/src/station/CMakeFiles/rebuild_cache.dir
+/home/gael/git/Weather_station/software/build/src/systick/CMakeFiles/systick.dir
+/home/gael/git/Weather_station/software/build/src/systick/CMakeFiles/edit_cache.dir
+/home/gael/git/Weather_station/software/build/src/systick/CMakeFiles/rebuild_cache.dir

@@ -450,30 +450,6 @@ home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
 	cd /home/gael/git/Weather_station/software/build && $(MAKE) $(MAKESILENT) -f src/font/CMakeFiles/font.dir/build.make src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj
-
-# target to build an object file
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj:
-	cd /home/gael/git/Weather_station/software/build && $(MAKE) $(MAKESILENT) -f src/font/CMakeFiles/font.dir/build.make src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.i
-
-# target to preprocess a source file
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
-	cd /home/gael/git/Weather_station/software/build && $(MAKE) $(MAKESILENT) -f src/font/CMakeFiles/font.dir/build.make src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
-
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.s
-
-# target to generate assembly for a file
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
-	cd /home/gael/git/Weather_station/software/build && $(MAKE) $(MAKESILENT) -f src/font/CMakeFiles/font.dir/build.make src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
-
 home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.obj
 
@@ -529,30 +505,6 @@ home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/ga
 home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	cd /home/gael/git/Weather_station/software/build && $(MAKE) $(MAKESILENT) -f src/font/CMakeFiles/font.dir/build.make src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
-
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.obj: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.obj
-
-# target to build an object file
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
-	cd /home/gael/git/Weather_station/software/build && $(MAKE) $(MAKESILENT) -f src/font/CMakeFiles/font.dir/build.make src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.i
-
-# target to preprocess a source file
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
-	cd /home/gael/git/Weather_station/software/build && $(MAKE) $(MAKESILENT) -f src/font/CMakeFiles/font.dir/build.make src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.s
-
-# target to generate assembly for a file
-home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
-	cd /home/gael/git/Weather_station/software/build && $(MAKE) $(MAKESILENT) -f src/font/CMakeFiles/font.dir/build.make src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
-.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
 home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.obj
@@ -1155,9 +1107,6 @@ help:
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
-	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj"
-	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.i"
-	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.s"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.obj"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.s"
@@ -1165,9 +1114,6 @@ help:
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.s"
-	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.obj"
-	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.i"
-	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.s"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.obj"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.i"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.s"

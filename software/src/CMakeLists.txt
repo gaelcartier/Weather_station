@@ -10,8 +10,10 @@ add_subdirectory( RN4870 )
 add_subdirectory( util )
 add_subdirectory( display )
 add_subdirectory( station )
+add_subdirectory( systick )
 
-target_link_libraries(  font
+target_link_libraries(  systick
+                        font
                         lcd
                         touchscreen
                         display

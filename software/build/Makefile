@@ -337,6 +337,19 @@ station/fast:
 	$(MAKE) $(MAKESILENT) -f src/station/CMakeFiles/station.dir/build.make src/station/CMakeFiles/station.dir/build
 .PHONY : station/fast
 
+#=============================================================================
+# Target rules for targets named systick
+
+# Build rule for target.
+systick: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 systick
+.PHONY : systick
+
+# fast build rule for target.
+systick/fast:
+	$(MAKE) $(MAKESILENT) -f src/systick/CMakeFiles/systick.dir/build.make src/systick/CMakeFiles/systick.dir/build
+.PHONY : systick/fast
+
 home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 
@@ -1886,6 +1899,7 @@ help:
 	@echo "... lcd"
 	@echo "... led_rgb"
 	@echo "... station"
+	@echo "... systick"
 	@echo "... touchscreen"
 	@echo "... util"
 	@echo "... veml7700"

@@ -23,6 +23,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../src/lcd/CMakeLists.txt"
   "../src/led_rgb/CMakeLists.txt"
   "../src/station/CMakeLists.txt"
+  "../src/systick/CMakeLists.txt"
   "../src/touchscreen/CMakeLists.txt"
   "../src/util/CMakeLists.txt"
   "../src/veml7700/CMakeLists.txt"
@@ -254,6 +255,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/util/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/display/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/station/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/systick/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -275,4 +277,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/util/CMakeFiles/util.dir/DependInfo.cmake"
   "src/display/CMakeFiles/display.dir/DependInfo.cmake"
   "src/station/CMakeFiles/station.dir/DependInfo.cmake"
+  "src/systick/CMakeFiles/systick.dir/DependInfo.cmake"
   )

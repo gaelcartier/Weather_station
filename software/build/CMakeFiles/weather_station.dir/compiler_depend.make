@@ -2946,7 +2946,9 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   ../src/veml7700/veml7700.h \
   ../src/led_rgb/led_rgb.h \
   ../src/RN4870/RN4870.h \
-  ../src/util/util.h
+  ../src/util/util.h \
+  ../src/systick/systick.h \
+  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h
 
 
 ../src/display/display.h:
@@ -3357,6 +3359,8 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h:
 
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h:
+
 /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h:
 
 /usr/include/newlib/_newlib_version.h:
@@ -3376,6 +3380,8 @@ generated/pico_base/pico/config_autogen.h:
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/sem.c:
+
+../src/systick/systick.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h:
 

@@ -93,4 +93,6 @@ CMakeFiles/weather_station.dir/src/main.c.obj: \
  /home/gael/git/Weather_station/software/src/veml7700/veml7700.h \
  /home/gael/git/Weather_station/software/src/led_rgb/led_rgb.h \
  /home/gael/git/Weather_station/software/src/RN4870/RN4870.h \
- /home/gael/git/Weather_station/software/src/util/util.h
+ /home/gael/git/Weather_station/software/src/util/util.h \
+ /home/gael/git/Weather_station/software/src/systick/systick.h \
+ /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h

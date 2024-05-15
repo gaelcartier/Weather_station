@@ -21,7 +21,7 @@ pico_enable_stdio_usb(weather_station 1)
 pico_enable_stdio_uart(weather_station 0)
 
 # Add pico_stdlib library which aggregates commonly used features
-target_link_libraries( weather_station util station pico_stdlib lcd font touchscreen bme280 veml7700 RN4870 )
+target_link_libraries( weather_station util station pico_stdlib lcd font touchscreen bme280 veml7700 RN4870 display systick )
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs( weather_station )

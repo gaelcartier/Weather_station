@@ -702,34 +702,6 @@ src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_commo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
 	cd /home/gael/git/Weather_station/software/build/src/font && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: src/font/CMakeFiles/font.dir/flags.make
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: src/font/CMakeFiles/font.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
-	cd /home/gael/git/Weather_station/software/build/src/font && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -MF CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d -o CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c
-
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i"
-	cd /home/gael/git/Weather_station/software/build/src/font && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c > CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s"
-	cd /home/gael/git/Weather_station/software/build/src/font && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c -o CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
-
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: src/font/CMakeFiles/font.dir/flags.make
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: src/font/CMakeFiles/font.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
-	cd /home/gael/git/Weather_station/software/build/src/font && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -MF CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj.d -o CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
-
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i"
-	cd /home/gael/git/Weather_station/software/build/src/font && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c > CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
-
-src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s"
-	cd /home/gael/git/Weather_station/software/build/src/font && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c -o CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
-
 # Object files for target font
 font_OBJECTS = \
 "CMakeFiles/font.dir/font.c.obj" \
@@ -777,9 +749,7 @@ font_OBJECTS = \
 "CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" \
 "CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj" \
 "CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
-"CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" \
-"CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj" \
-"CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
+"CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
 
 # External object files for target font
 font_EXTERNAL_OBJECTS =
@@ -830,11 +800,9 @@ src/font/libfont.a: src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pi
 src/font/libfont.a: src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 src/font/libfont.a: src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 src/font/libfont.a: src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-src/font/libfont.a: src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-src/font/libfont.a: src/font/CMakeFiles/font.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 src/font/libfont.a: src/font/CMakeFiles/font.dir/build.make
 src/font/libfont.a: src/font/CMakeFiles/font.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Linking CXX static library libfont.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking CXX static library libfont.a"
 	cd /home/gael/git/Weather_station/software/build/src/font && $(CMAKE_COMMAND) -P CMakeFiles/font.dir/cmake_clean_target.cmake
 	cd /home/gael/git/Weather_station/software/build/src/font && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/font.dir/link.txt --verbose=$(VERBOSE)
 
