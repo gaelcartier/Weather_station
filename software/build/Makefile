@@ -350,6 +350,32 @@ systick/fast:
 	$(MAKE) $(MAKESILENT) -f src/systick/CMakeFiles/systick.dir/build.make src/systick/CMakeFiles/systick.dir/build
 .PHONY : systick/fast
 
+#=============================================================================
+# Target rules for targets named i2c_non_blocking
+
+# Build rule for target.
+i2c_non_blocking: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 i2c_non_blocking
+.PHONY : i2c_non_blocking
+
+# fast build rule for target.
+i2c_non_blocking/fast:
+	$(MAKE) $(MAKESILENT) -f src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/build.make src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/build
+.PHONY : i2c_non_blocking/fast
+
+#=============================================================================
+# Target rules for targets named callback
+
+# Build rule for target.
+callback: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 callback
+.PHONY : callback
+
+# fast build rule for target.
+callback/fast:
+	$(MAKE) $(MAKESILENT) -f src/callback/CMakeFiles/callback.dir/build.make src/callback/CMakeFiles/callback.dir/build
+.PHONY : callback/fast
+
 home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 
@@ -1542,6 +1568,30 @@ home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shi
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 .PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 
+home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.obj: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj
+.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.obj
+
+# target to build an object file
+home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj
+.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj
+
+home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.i: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.i
+.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.i
+
+# target to preprocess a source file
+home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.i
+.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.i
+
+home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.s: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.s
+.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.s
+
+# target to generate assembly for a file
+home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.s
+.PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.s
+
 home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj
 
@@ -1894,8 +1944,10 @@ help:
 	@echo "... RN4870"
 	@echo "... bme280"
 	@echo "... bs2_default"
+	@echo "... callback"
 	@echo "... display"
 	@echo "... font"
+	@echo "... i2c_non_blocking"
 	@echo "... lcd"
 	@echo "... led_rgb"
 	@echo "... station"
@@ -2053,6 +2105,9 @@ help:
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.i"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.s"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj"
+	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.obj"
+	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.i"
+	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.s"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i"

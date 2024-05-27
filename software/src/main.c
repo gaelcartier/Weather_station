@@ -12,25 +12,36 @@
 #include "RN4870/RN4870.h"
 #include "util/util.h"
 #include "systick/systick.h"
+#include "i2c_non_blocking/i2c_non_blocking.h"
 
 #define log( S )        printf("%s%c", S, '\n')
 
 uint systick_counter; 
+extern uint in_i2c_irq;
+
+// extern volatile touchscreen_status_t touchscreen_status;
+
 
 typedef enum _test_t {
     USB,
     LCD,
-    LCD_TOUCHSCREEN,
+    TOUCHSCREEN,
     BME_280,
     VEML_7700,
     BLE,
     LED_RGB,
     DISPLAY,
     SYSTICK,
+    I2C_NB,
+    CALLBACK,
     METEO,
     OTHER
 } test_t;
 
+extern void isr_systick() {
+    systick_counter ++;
+    if( touchscreen_status.touched ) touchscreen_status.touch_duration ++;
+}
 
 void blink_led() {
     gpio_init( 25 );
@@ -68,19 +79,34 @@ void test_lcd() {
     lcd_draw_string( "Weather station", 0, 120, LCD_ORANGE, SmallFont );
 }
 
-void test_lcd_touchscreen() {
+void test_touchscreen() {
+    systick_counter = 0;
+    systick_init( 124999UL );
 
     touchscreen_init();
     lcd_clear( LCD_BLACK );
     lcd_backlight_on();
 
     while (true) {
-        if( TOUCHED ) {
-            // touchscreen_info_t touch_info = touchscreen_read();
+        if( touchscreen_status.touched ) {
+            touchscreen_info_t touch_info = touchscreen_read();
             // lcd_fill_rect( touch_info.x-2, touch_info.x+2, touch_info.y-2, touch_info.y+2, LCD_YELLOW );
-            // printf("- x : %d, y : %d \n", touch_info.x, touch_info.y);
-            printf(">>> Screen touch detected\n");
-            TOUCHED = false;
+            if( touch_info.touch_event == PRESS_DOWN ) {
+                touch_info.time = 0;
+                touchscreen_status.first_touch = touch_info;
+            }
+            printf("- x : %d, y : %d, ", touch_info.x, touch_info.y);
+            touchscreen_print_touch_event( touch_info ); 
+            printf("\n");
+            if( touch_info.touch_event == LIFT_UP ) {
+                touchscreen_status.touched = false;
+                touch_info.time = touchscreen_status.touch_duration;
+                touchscreen_status.touch_duration = 0;
+                touchscreen_action_t a = touchscreen_set_action_from_infos( touchscreen_status.first_touch, touch_info );
+                printf(">>> GESTURE : ");
+                touchscreen_print_gesture(a);
+                printf(" x: %d, y: %d, x_area: %d, y_area: %d, duration: %d \n", a.x, a.y, a.x_area, a.y_area, a.duration);
+            }
         }
     }
 }
@@ -175,10 +201,6 @@ void test_display(){
     }
 }
 
-extern void isr_systick() {
-    systick_counter ++;
-}
-
 void test_systick() {
     systick_counter = 0;
     systick_init( 124999UL );
@@ -188,9 +210,26 @@ void test_systick() {
     }
 }
 
+void test_i2c_nb(){
+    i2c_non_blocking_init( TOUCHSCREEN_I2C_INST, 100*1000, i2c_nb_handler );
+    while(1){
+        i2c_request_data( TOUCHSCREEN_I2C_INST, TOUCHSCREEN_I2C_ADDR, TOUCHSCREEN_GEST_ID);
+        sleep_ms(1000);
+        printf("in handler() ?\n");
+        if( in_i2c_irq ){
+            printf(">>> In I2C irq_handler()\n");
+            in_i2c_irq = 0;
+        }
+    }
+}
+
+void test_callback(){
+    while(1);
+}
+
 int main() {
     
-    test_t TEST = SYSTICK;
+    test_t TEST = TOUCHSCREEN;
 
    stdio_init_all();
    station_init();
@@ -202,7 +241,7 @@ int main() {
         case LCD : test_lcd();
             break;
 
-        case LCD_TOUCHSCREEN : test_lcd_touchscreen();
+        case TOUCHSCREEN : test_touchscreen();
             break;
         
         case BME_280 : test_bme280();
@@ -221,6 +260,12 @@ int main() {
             break;
         
         case SYSTICK : test_systick();
+            break;
+
+        case I2C_NB : test_i2c_nb();
+            break;
+
+        case CALLBACK : test_callback();
             break;
         
         case METEO : station_main();

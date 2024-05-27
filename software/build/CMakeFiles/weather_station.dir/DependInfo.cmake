@@ -34,6 +34,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_FIX_RP2040_USB_DEVICE_ENUMERATION=1"
   "LIB_PICO_FLOAT=1"
   "LIB_PICO_FLOAT_PICO=1"
+  "LIB_PICO_I2C_SLAVE=1"
   "LIB_PICO_INT64_OPS=1"
   "LIB_PICO_INT64_OPS_PICO=1"
   "LIB_PICO_MALLOC=1"
@@ -69,7 +70,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/include"
+  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_base/include"
   "generated/pico_base"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/boards/include"
@@ -79,19 +80,20 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_claim/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/include"
+  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/include"
+  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/include"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/include"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_stdlib/include"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/include"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_resets/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/include"
+  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/include"
+  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_stdlib/include"
+  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/include"
@@ -114,8 +116,8 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/hw"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include"
+  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/include"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include"
   )
 
 # The set of dependency files which are needed:
@@ -167,6 +169,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj" "gcc" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj" "gcc" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj" "gcc" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj.d"
+  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj" "gcc" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj" "gcc" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_platform/platform.c" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj" "gcc" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj.d"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj" "gcc" "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj.d"
@@ -184,7 +187,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/gael/git/Weather_station/software/build/src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/util/CMakeFiles/util.dir/DependInfo.cmake"
+  "/home/gael/git/Weather_station/software/build/src/callback/CMakeFiles/callback.dir/DependInfo.cmake"
+  "/home/gael/git/Weather_station/software/build/src/systick/CMakeFiles/systick.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/station/CMakeFiles/station.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/lcd/CMakeFiles/lcd.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/font/CMakeFiles/font.dir/DependInfo.cmake"
@@ -193,7 +199,6 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/gael/git/Weather_station/software/build/src/veml7700/CMakeFiles/veml7700.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/RN4870/CMakeFiles/RN4870.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/display/CMakeFiles/display.dir/DependInfo.cmake"
-  "/home/gael/git/Weather_station/software/build/src/systick/CMakeFiles/systick.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/led_rgb/CMakeFiles/led_rgb.dir/DependInfo.cmake"
   )
 

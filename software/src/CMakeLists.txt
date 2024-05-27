@@ -11,8 +11,12 @@ add_subdirectory( util )
 add_subdirectory( display )
 add_subdirectory( station )
 add_subdirectory( systick )
+add_subdirectory( i2c_non_blocking )
+add_subdirectory( callback )
 
 target_link_libraries(  systick
+                        i2c_non_blocking
+                        callback
                         font
                         lcd
                         touchscreen

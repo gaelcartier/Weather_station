@@ -1499,6 +1499,8 @@ src/all: src/util/all
 src/all: src/display/all
 src/all: src/station/all
 src/all: src/systick/all
+src/all: src/i2c_non_blocking/all
+src/all: src/callback/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
@@ -1513,6 +1515,8 @@ src/preinstall: src/util/preinstall
 src/preinstall: src/display/preinstall
 src/preinstall: src/station/preinstall
 src/preinstall: src/systick/preinstall
+src/preinstall: src/i2c_non_blocking/preinstall
+src/preinstall: src/callback/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
@@ -1527,6 +1531,8 @@ src/clean: src/util/clean
 src/clean: src/display/clean
 src/clean: src/station/clean
 src/clean: src/systick/clean
+src/clean: src/i2c_non_blocking/clean
+src/clean: src/callback/clean
 .PHONY : src/clean
 
 #=============================================================================
@@ -1560,6 +1566,21 @@ src/bme280/clean: src/bme280/CMakeFiles/bme280.dir/clean
 .PHONY : src/bme280/clean
 
 #=============================================================================
+# Directory level rules for directory src/callback
+
+# Recursive "all" directory target.
+src/callback/all: src/callback/CMakeFiles/callback.dir/all
+.PHONY : src/callback/all
+
+# Recursive "preinstall" directory target.
+src/callback/preinstall:
+.PHONY : src/callback/preinstall
+
+# Recursive "clean" directory target.
+src/callback/clean: src/callback/CMakeFiles/callback.dir/clean
+.PHONY : src/callback/clean
+
+#=============================================================================
 # Directory level rules for directory src/display
 
 # Recursive "all" directory target.
@@ -1588,6 +1609,21 @@ src/font/preinstall:
 # Recursive "clean" directory target.
 src/font/clean: src/font/CMakeFiles/font.dir/clean
 .PHONY : src/font/clean
+
+#=============================================================================
+# Directory level rules for directory src/i2c_non_blocking
+
+# Recursive "all" directory target.
+src/i2c_non_blocking/all: src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/all
+.PHONY : src/i2c_non_blocking/all
+
+# Recursive "preinstall" directory target.
+src/i2c_non_blocking/preinstall:
+.PHONY : src/i2c_non_blocking/preinstall
+
+# Recursive "clean" directory target.
+src/i2c_non_blocking/clean: src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/clean
+.PHONY : src/i2c_non_blocking/clean
 
 #=============================================================================
 # Directory level rules for directory src/lcd
@@ -1711,9 +1747,11 @@ CMakeFiles/weather_station.dir/all: src/util/CMakeFiles/util.dir/all
 CMakeFiles/weather_station.dir/all: src/display/CMakeFiles/display.dir/all
 CMakeFiles/weather_station.dir/all: src/station/CMakeFiles/station.dir/all
 CMakeFiles/weather_station.dir/all: src/systick/CMakeFiles/systick.dir/all
+CMakeFiles/weather_station.dir/all: src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/all
+CMakeFiles/weather_station.dir/all: src/callback/CMakeFiles/callback.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=89,90,91,92,93,94,95,96,97,98,99,100 "Built target weather_station"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=90,91,92,93,94,95,96,97,98,99,100 "Built target weather_station"
 .PHONY : CMakeFiles/weather_station.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1765,12 +1803,12 @@ CMakeFiles/ELF2UF2Build.dir/clean:
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/all:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=18 "Built target bs2_default"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num= "Built target bs2_default"
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/rule
@@ -1796,7 +1834,7 @@ pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/all: pico-sdk
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule
@@ -1817,7 +1855,7 @@ pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/clean:
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build.make pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build.make pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num= "Built target bs2_default_padded_checksummed_asm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=16 "Built target bs2_default_padded_checksummed_asm"
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1895,12 +1933,12 @@ pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bu
 src/font/CMakeFiles/font.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f src/font/CMakeFiles/font.dir/build.make src/font/CMakeFiles/font.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/font/CMakeFiles/font.dir/build.make src/font/CMakeFiles/font.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=27,28,29,30,31,32,33,34 "Built target font"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=30,31,32,33,34,35,36 "Built target font"
 .PHONY : src/font/CMakeFiles/font.dir/all
 
 # Build rule for subdir invocation for target.
 src/font/CMakeFiles/font.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/font/CMakeFiles/font.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : src/font/CMakeFiles/font.dir/rule
@@ -1921,7 +1959,7 @@ src/font/CMakeFiles/font.dir/clean:
 src/lcd/CMakeFiles/lcd.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f src/lcd/CMakeFiles/lcd.dir/build.make src/lcd/CMakeFiles/lcd.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/lcd/CMakeFiles/lcd.dir/build.make src/lcd/CMakeFiles/lcd.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=35,36,37,38,39,40,41 "Built target lcd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=43,44,45,46,47,48,49 "Built target lcd"
 .PHONY : src/lcd/CMakeFiles/lcd.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1947,12 +1985,12 @@ src/lcd/CMakeFiles/lcd.dir/clean:
 src/touchscreen/CMakeFiles/touchscreen.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f src/touchscreen/CMakeFiles/touchscreen.dir/build.make src/touchscreen/CMakeFiles/touchscreen.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/touchscreen/CMakeFiles/touchscreen.dir/build.make src/touchscreen/CMakeFiles/touchscreen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=66,67,68,69,70,71,72,73 "Built target touchscreen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=70,71,72,73,74,75,76 "Built target touchscreen"
 .PHONY : src/touchscreen/CMakeFiles/touchscreen.dir/all
 
 # Build rule for subdir invocation for target.
 src/touchscreen/CMakeFiles/touchscreen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/touchscreen/CMakeFiles/touchscreen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : src/touchscreen/CMakeFiles/touchscreen.dir/rule
@@ -1973,7 +2011,7 @@ src/touchscreen/CMakeFiles/touchscreen.dir/clean:
 src/bme280/CMakeFiles/bme280.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f src/bme280/CMakeFiles/bme280.dir/build.make src/bme280/CMakeFiles/bme280.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/bme280/CMakeFiles/bme280.dir/build.make src/bme280/CMakeFiles/bme280.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=11,12,13,14,15,16,17 "Built target bme280"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=9,10,11,12,13,14,15 "Built target bme280"
 .PHONY : src/bme280/CMakeFiles/bme280.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1999,12 +2037,12 @@ src/bme280/CMakeFiles/bme280.dir/clean:
 src/veml7700/CMakeFiles/veml7700.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f src/veml7700/CMakeFiles/veml7700.dir/build.make src/veml7700/CMakeFiles/veml7700.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/veml7700/CMakeFiles/veml7700.dir/build.make src/veml7700/CMakeFiles/veml7700.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=81,82,83,84,85,86,87,88 "Built target veml7700"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=84,85,86,87,88,89 "Built target veml7700"
 .PHONY : src/veml7700/CMakeFiles/veml7700.dir/all
 
 # Build rule for subdir invocation for target.
 src/veml7700/CMakeFiles/veml7700.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/veml7700/CMakeFiles/veml7700.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : src/veml7700/CMakeFiles/veml7700.dir/rule
@@ -2025,12 +2063,12 @@ src/veml7700/CMakeFiles/veml7700.dir/clean:
 src/led_rgb/CMakeFiles/led_rgb.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f src/led_rgb/CMakeFiles/led_rgb.dir/build.make src/led_rgb/CMakeFiles/led_rgb.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/led_rgb/CMakeFiles/led_rgb.dir/build.make src/led_rgb/CMakeFiles/led_rgb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=42,43,44,45,46,47,48,49 "Built target led_rgb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=50,51,52,53,54,55,56 "Built target led_rgb"
 .PHONY : src/led_rgb/CMakeFiles/led_rgb.dir/all
 
 # Build rule for subdir invocation for target.
 src/led_rgb/CMakeFiles/led_rgb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/led_rgb/CMakeFiles/led_rgb.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : src/led_rgb/CMakeFiles/led_rgb.dir/rule
@@ -2051,12 +2089,12 @@ src/led_rgb/CMakeFiles/led_rgb.dir/clean:
 src/RN4870/CMakeFiles/RN4870.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f src/RN4870/CMakeFiles/RN4870.dir/build.make src/RN4870/CMakeFiles/RN4870.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/RN4870/CMakeFiles/RN4870.dir/build.make src/RN4870/CMakeFiles/RN4870.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10 "Built target RN4870"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target RN4870"
 .PHONY : src/RN4870/CMakeFiles/RN4870.dir/all
 
 # Build rule for subdir invocation for target.
 src/RN4870/CMakeFiles/RN4870.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/RN4870/CMakeFiles/RN4870.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : src/RN4870/CMakeFiles/RN4870.dir/rule
@@ -2077,7 +2115,7 @@ src/RN4870/CMakeFiles/RN4870.dir/clean:
 src/util/CMakeFiles/util.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f src/util/CMakeFiles/util.dir/build.make src/util/CMakeFiles/util.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/util/CMakeFiles/util.dir/build.make src/util/CMakeFiles/util.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=74,75,76,77,78,79,80 "Built target util"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=77,78,79,80,81,82,83 "Built target util"
 .PHONY : src/util/CMakeFiles/util.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2104,12 +2142,12 @@ src/display/CMakeFiles/display.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMak
 src/display/CMakeFiles/display.dir/all: src/lcd/CMakeFiles/lcd.dir/all
 	$(MAKE) $(MAKESILENT) -f src/display/CMakeFiles/display.dir/build.make src/display/CMakeFiles/display.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/display/CMakeFiles/display.dir/build.make src/display/CMakeFiles/display.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26 "Built target display"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=23,24,25,26,27,28,29 "Built target display"
 .PHONY : src/display/CMakeFiles/display.dir/all
 
 # Build rule for subdir invocation for target.
 src/display/CMakeFiles/display.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/display/CMakeFiles/display.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : src/display/CMakeFiles/display.dir/rule
@@ -2130,12 +2168,12 @@ src/display/CMakeFiles/display.dir/clean:
 src/station/CMakeFiles/station.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f src/station/CMakeFiles/station.dir/build.make src/station/CMakeFiles/station.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/station/CMakeFiles/station.dir/build.make src/station/CMakeFiles/station.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=50,51,52,53,54,55,56,57 "Built target station"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=57,58,59,60,61,62,63 "Built target station"
 .PHONY : src/station/CMakeFiles/station.dir/all
 
 # Build rule for subdir invocation for target.
 src/station/CMakeFiles/station.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/station/CMakeFiles/station.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : src/station/CMakeFiles/station.dir/rule
@@ -2164,14 +2202,16 @@ src/systick/CMakeFiles/systick.dir/all: src/RN4870/CMakeFiles/RN4870.dir/all
 src/systick/CMakeFiles/systick.dir/all: src/util/CMakeFiles/util.dir/all
 src/systick/CMakeFiles/systick.dir/all: src/display/CMakeFiles/display.dir/all
 src/systick/CMakeFiles/systick.dir/all: src/station/CMakeFiles/station.dir/all
+src/systick/CMakeFiles/systick.dir/all: src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/all
+src/systick/CMakeFiles/systick.dir/all: src/callback/CMakeFiles/callback.dir/all
 	$(MAKE) $(MAKESILENT) -f src/systick/CMakeFiles/systick.dir/build.make src/systick/CMakeFiles/systick.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/systick/CMakeFiles/systick.dir/build.make src/systick/CMakeFiles/systick.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=58,59,60,61,62,63,64,65 "Built target systick"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=64,65,66,67,68,69 "Built target systick"
 .PHONY : src/systick/CMakeFiles/systick.dir/all
 
 # Build rule for subdir invocation for target.
 src/systick/CMakeFiles/systick.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 86
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 87
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/systick/CMakeFiles/systick.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : src/systick/CMakeFiles/systick.dir/rule
@@ -2184,6 +2224,58 @@ systick: src/systick/CMakeFiles/systick.dir/rule
 src/systick/CMakeFiles/systick.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/systick/CMakeFiles/systick.dir/build.make src/systick/CMakeFiles/systick.dir/clean
 .PHONY : src/systick/CMakeFiles/systick.dir/clean
+
+#=============================================================================
+# Target rules for target src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir
+
+# All Build rule for target.
+src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
+	$(MAKE) $(MAKESILENT) -f src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/build.make src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/build.make src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=37,38,39,40,41,42 "Built target i2c_non_blocking"
+.PHONY : src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/all
+
+# Build rule for subdir invocation for target.
+src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
+.PHONY : src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/rule
+
+# Convenience name for target.
+i2c_non_blocking: src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/rule
+.PHONY : i2c_non_blocking
+
+# clean rule for target.
+src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/build.make src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/clean
+.PHONY : src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/clean
+
+#=============================================================================
+# Target rules for target src/callback/CMakeFiles/callback.dir
+
+# All Build rule for target.
+src/callback/CMakeFiles/callback.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
+	$(MAKE) $(MAKESILENT) -f src/callback/CMakeFiles/callback.dir/build.make src/callback/CMakeFiles/callback.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/callback/CMakeFiles/callback.dir/build.make src/callback/CMakeFiles/callback.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=17,18,19,20,21,22 "Built target callback"
+.PHONY : src/callback/CMakeFiles/callback.dir/all
+
+# Build rule for subdir invocation for target.
+src/callback/CMakeFiles/callback.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/callback/CMakeFiles/callback.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
+.PHONY : src/callback/CMakeFiles/callback.dir/rule
+
+# Convenience name for target.
+callback: src/callback/CMakeFiles/callback.dir/rule
+.PHONY : callback
+
+# clean rule for target.
+src/callback/CMakeFiles/callback.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/callback/CMakeFiles/callback.dir/build.make src/callback/CMakeFiles/callback.dir/clean
+.PHONY : src/callback/CMakeFiles/callback.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

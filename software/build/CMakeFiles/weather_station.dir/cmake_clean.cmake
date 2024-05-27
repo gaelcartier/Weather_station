@@ -101,6 +101,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
   "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj.d"
   "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
+  "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj"
+  "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj.d"
   "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
   "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
   "CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj.d"

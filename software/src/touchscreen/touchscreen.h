@@ -97,7 +97,16 @@ typedef struct {
 	void (*handler)(void);
 } touchscreen_action_t;
 
+typedef struct {
+	bool touched;
+	uint32_t touch_duration; 
+	uint32_t last_read_duration;
+	touchscreen_info_t first_touch;
+} touchscreen_status_t;
+
+
 extern volatile int TOUCHED;
+extern volatile touchscreen_status_t touchscreen_status;
 
 void touchscreen_i2c_config();
 void touchscreen_config();
@@ -105,5 +114,8 @@ void touchscreen_init();
 void touchscreen_irq_callback( uint8_t gpio, uint32_t events );
 void touchscreen_enable_irq();
 touchscreen_info_t touchscreen_read();
+void touchscreen_print_touch_event( touchscreen_info_t touch_info );
+touchscreen_action_t touchscreen_set_action_from_infos( touchscreen_info_t first, touchscreen_info_t last );
+void touchscreen_print_gesture( touchscreen_action_t a );
 
 #endif 

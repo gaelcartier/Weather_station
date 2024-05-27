@@ -200,3 +200,9 @@
 /home/gael/git/Weather_station/software/build/src/systick/CMakeFiles/systick.dir
 /home/gael/git/Weather_station/software/build/src/systick/CMakeFiles/edit_cache.dir
 /home/gael/git/Weather_station/software/build/src/systick/CMakeFiles/rebuild_cache.dir
+/home/gael/git/Weather_station/software/build/src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir
+/home/gael/git/Weather_station/software/build/src/i2c_non_blocking/CMakeFiles/edit_cache.dir
+/home/gael/git/Weather_station/software/build/src/i2c_non_blocking/CMakeFiles/rebuild_cache.dir
+/home/gael/git/Weather_station/software/build/src/callback/CMakeFiles/callback.dir
+/home/gael/git/Weather_station/software/build/src/callback/CMakeFiles/edit_cache.dir
+/home/gael/git/Weather_station/software/build/src/callback/CMakeFiles/rebuild_cache.dir

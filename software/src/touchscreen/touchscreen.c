@@ -8,6 +8,11 @@
 #include "touchscreen.h"
 
 volatile int TOUCHED = false;
+volatile touchscreen_status_t touchscreen_status;
+
+static uint abs( int v ){
+	return v < 0 ? -v : v;
+}
 
 void touchscreen_i2c_config() {
 	i2c_init( TOUCHSCREEN_I2C_INST, 100*1000 );
@@ -31,8 +36,7 @@ void touchscreen_config() {
 }
 
 void touchscreen_irq_callback( uint8_t gpio, uint32_t events ) {
-	printf("I'm in the touchscreen irq\n");
-	TOUCHED = true;
+	touchscreen_status.touched = true;
 }
 
 void touchscreen_enable_irq() {
@@ -54,8 +58,55 @@ touchscreen_info_t touchscreen_read() {
 	touchscreen_info_t touch_info;
 	touch_info.touch_event = i2c_data[2] >> 6;
 	touch_info.time = 0;
-	touch_info.x = TOUCHSCREEN_X - ( (i2c_data[2] & 0xF) << 8 | i2c_data[3] );
-	touch_info.y = TOUCHSCREEN_Y - ( (i2c_data[4] & 0xF) << 8 | i2c_data[5] );
+	touch_info.y = ( (i2c_data[2] & 0xF) << 8 | i2c_data[3] );
+	touch_info.x = TOUCHSCREEN_X - ( (i2c_data[4] & 0xF) << 8 | i2c_data[5] );
 
 	return touch_info;
+}
+
+void touchscreen_print_touch_event( touchscreen_info_t touch_info ){
+	switch( touch_info.touch_event ){
+		case CONTACT: printf("CONTACT");
+			break;
+		case PRESS_DOWN: printf("PRESS_DOWN");
+			break;
+		case LIFT_UP: printf("LIFT UP");
+			break;
+		case NO_EVENT: printf("NO_EVENT");
+			break;
+	}
+}
+
+touchscreen_action_t touchscreen_set_action_from_infos( touchscreen_info_t first, touchscreen_info_t last ){
+	touchscreen_action_t a;
+	a.x = first.x;
+	a.y = first.y;
+	a.x_area = last.x - first.x;
+	a.y_area = last.y - first.y;
+	a.duration = last.time - first.time;
+	if( abs( a.x_area ) < TOUCHSCREEN_MOVE_TRESHOLD && abs( a.y_area ) < TOUCHSCREEN_MOVE_TRESHOLD ) {
+		a.gesture = ( a.duration < TOUCHSCREEN_LONG_TRESHOLD ) ? POINT : LONG_POINT;
+	}
+	else {
+		if( abs(a.x_area) > abs(a.y_area) ) a.gesture = ( a.x_area < 0 ) ? MOVE_LEFT : MOVE_RIGHT;
+		else a.gesture = ( a.y_area < 0 ) ? MOVE_UP : MOVE_DOWN; 
+	}
+}
+
+void touchscreen_print_gesture( touchscreen_action_t a ){
+	switch( a.gesture ){
+		case POINT: printf("POINT");
+			break;
+		case LONG_POINT: printf("LONG_POINT");
+			break;
+		case MOVE_UP: printf("MOVE_UP");
+			break;
+		case MOVE_DOWN: printf("MOVE_DOWN");
+			break;
+		case MOVE_RIGHT: printf("MOVE_RIGHT");
+			break;
+		case MOVE_LEFT: printf("MOVE_LEFT");
+			break;
+		default: printf("OTHER");
+	}
 }
