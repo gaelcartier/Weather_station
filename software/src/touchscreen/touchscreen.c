@@ -91,6 +91,7 @@ touchscreen_action_t touchscreen_set_action_from_infos( touchscreen_info_t first
 		if( abs(a.x_area) > abs(a.y_area) ) a.gesture = ( a.x_area < 0 ) ? MOVE_LEFT : MOVE_RIGHT;
 		else a.gesture = ( a.y_area < 0 ) ? MOVE_UP : MOVE_DOWN; 
 	}
+	return a;
 }
 
 void touchscreen_print_gesture( touchscreen_action_t a ){
