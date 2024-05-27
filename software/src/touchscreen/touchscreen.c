@@ -36,9 +36,9 @@ void touchscreen_config() {
 }
 
 void touchscreen_irq_callback( uint8_t gpio, uint32_t events ) {
-	if( touchscreen_status.is_watching || touchscreen_is_new_event() ){
+	if( touchscreen_new_event() ){
 		touchscreen_status.is_watching = true;
-		touchscreen_status.touch_duration = 0;
+		touchscreen_status.duration = 0;
 		touchscreen_status.read_initialized = false;
 	}
 }
@@ -48,6 +48,10 @@ void touchscreen_enable_irq() {
 }
 
 void touchscreen_init() {
+	touchscreen_status.duration = 0;
+	touchscreen_status.is_watching = false;
+	touchscreen_status.read_initialized = false;
+	touchscreen_status.last_read_duration = 0;
 	touchscreen_i2c_config();
 	touchscreen_config();
 	touchscreen_enable_irq();
@@ -68,8 +72,8 @@ touchscreen_info_t touchscreen_read() {
 	return touch_info;
 }
 
-bool touchscreen_is_new_event(){
-	return !touchscreen_status.is_watching && (touchscreen_status.touch_duration < TOUCHSCREEN_DURATION_IS_NEW_EVENT);
+bool touchscreen_new_event(){
+	return !touchscreen_status.is_watching && (touchscreen_status.duration > TOUCHSCREEN_DURATION_IS_NEW_EVENT);
 }
 
 void touchscreen_print_touch_event( touchscreen_info_t touch_info ){

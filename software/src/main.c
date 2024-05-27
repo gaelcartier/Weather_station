@@ -40,7 +40,7 @@ typedef enum _test_t {
 
 extern void isr_systick() {
     systick_counter ++;
-    if( touchscreen_status.touched ) touchscreen_status.touch_duration ++;
+    touchscreen_status.duration ++;
 }
 
 void blink_led() {
@@ -96,13 +96,10 @@ void test_touchscreen() {
                 touchscreen_status.first_touch = touch_info;
                 touchscreen_status.read_initialized = true;
             }
-            printf("- x : %d, y : %d, ", touch_info.x, touch_info.y);
-            touchscreen_print_touch_event( touch_info ); 
-            printf("\n");
             if( touch_info.touch_event == LIFT_UP ) {
                 touchscreen_status.is_watching = false;
-                touch_info.time = touchscreen_status.touch_duration;
-                touchscreen_status.touch_duration = 0;
+                touch_info.time = touchscreen_status.duration;
+                touchscreen_status.duration = 0;
                 touchscreen_action_t a = touchscreen_set_action_from_infos( touchscreen_status.first_touch, touch_info );
                 printf(">>> GESTURE : ");
                 touchscreen_print_gesture(a);
