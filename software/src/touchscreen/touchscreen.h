@@ -53,8 +53,10 @@
 #define TOUCH_STAT_INIT						0x1
 #define TOUCH_STAT_READ						0x2
 
+#define TOUCHSCREEN_DURATION_IS_NEW_EVENT	500
 #define TOUCHSCREEN_MOVE_TRESHOLD			10
 #define TOUCHSCREEN_LONG_TRESHOLD			400
+
 #define TOUCHSCREEN_BUFFER_SIZE				1024
 
 #define TOUCHSCREEN_X	320
@@ -99,8 +101,10 @@ typedef struct {
 
 typedef struct {
 	bool touched;
+	bool is_watching;
 	uint32_t touch_duration; 
 	uint32_t last_read_duration;
+	bool read_initialized;
 	touchscreen_info_t first_touch;
 } touchscreen_status_t;
 
@@ -113,6 +117,7 @@ void touchscreen_config();
 void touchscreen_init();
 void touchscreen_irq_callback( uint8_t gpio, uint32_t events );
 void touchscreen_enable_irq();
+bool touchscreen_is_new_event();
 touchscreen_info_t touchscreen_read();
 void touchscreen_print_touch_event( touchscreen_info_t touch_info );
 touchscreen_action_t touchscreen_set_action_from_infos( touchscreen_info_t first, touchscreen_info_t last );
