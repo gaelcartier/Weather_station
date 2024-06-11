@@ -2,13 +2,12 @@
 
 
 add_library(
-    station 
-    station.c 
-    station.h
+    weather_mode 
+    weather_mode.c 
+    weather_mode.h
 )
 
-target_link_libraries(  station
-                        weather_mode
+target_link_libraries(  weather_mode 
                         hardware_spi
                         hardware_i2c
                         hardware_uart

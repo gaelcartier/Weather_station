@@ -2,18 +2,14 @@
 
 
 add_library(
-    station 
-    station.c 
-    station.h
+    buffer_loop 
+    buffer_loop.c 
+    buffer_loop.h
 )
 
-target_link_libraries(  station
-                        weather_mode
+target_link_libraries(  buffer_loop 
                         hardware_spi
                         hardware_i2c
                         hardware_uart
-                        # bme_280
-                        # veml7700
-                        # RN4870
                         pico_stdlib )
 

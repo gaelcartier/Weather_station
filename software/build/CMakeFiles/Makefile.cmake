@@ -18,6 +18,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../src/CMakeLists.txt"
   "../src/RN4870/CMakeLists.txt"
   "../src/bme280/CMakeLists.txt"
+  "../src/buffer_loop/CMakeLists.txt"
   "../src/callback/CMakeLists.txt"
   "../src/display/CMakeLists.txt"
   "../src/font/CMakeLists.txt"
@@ -29,6 +30,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../src/touchscreen/CMakeLists.txt"
   "../src/util/CMakeLists.txt"
   "../src/veml7700/CMakeLists.txt"
+  "../src/weather_mode/CMakeLists.txt"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/CMakeLists.txt"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/cmake/Platform/PICO.cmake"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/cmake/pico_pre_load_platform.cmake"
@@ -260,6 +262,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/systick/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/i2c_non_blocking/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/callback/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/weather_mode/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/buffer_loop/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -284,4 +288,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/systick/CMakeFiles/systick.dir/DependInfo.cmake"
   "src/i2c_non_blocking/CMakeFiles/i2c_non_blocking.dir/DependInfo.cmake"
   "src/callback/CMakeFiles/callback.dir/DependInfo.cmake"
+  "src/weather_mode/CMakeFiles/weather_mode.dir/DependInfo.cmake"
+  "src/buffer_loop/CMakeFiles/buffer_loop.dir/DependInfo.cmake"
   )

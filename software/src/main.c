@@ -88,24 +88,7 @@ void test_touchscreen() {
     lcd_backlight_on();
 
     while (true) {
-        if( touchscreen_status.is_watching ) {
-            touchscreen_info_t touch_info = touchscreen_read();
-            // lcd_fill_rect( touch_info.x-2, touch_info.x+2, touch_info.y-2, touch_info.y+2, LCD_YELLOW );
-            if( touch_info.touch_event == PRESS_DOWN && !touchscreen_status.read_initialized ) {
-                touch_info.time = 0;
-                touchscreen_status.first_touch = touch_info;
-                touchscreen_status.read_initialized = true;
-            }
-            if( touch_info.touch_event == LIFT_UP ) {
-                touchscreen_status.is_watching = false;
-                touch_info.time = touchscreen_status.duration;
-                touchscreen_status.duration = 0;
-                touchscreen_action_t a = touchscreen_set_action_from_infos( touchscreen_status.first_touch, touch_info );
-                printf(">>> GESTURE : ");
-                touchscreen_print_gesture(a);
-                printf(" x: %d, y: %d, x_area: %d, y_area: %d, duration: %d \n", a.x, a.y, a.x_area, a.y_area, a.duration);
-            }
-        }
+        touchscreen_handler();
     }
 }
 

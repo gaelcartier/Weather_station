@@ -81,4 +81,12 @@ src/station/CMakeFiles/station.dir/station.c.obj: \
  /home/gael/git/Weather_station/software/src/station/../led_rgb/led_rgb.h \
  /home/gael/git/Weather_station/software/src/station/../RN4870/RN4870.h \
  /home/gael/git/Weather_station/software/src/station/../RN4870/../util/util.h \
- /home/gael/git/Weather_station/software/src/station/../RN4870/../util/../board.h
+ /home/gael/git/Weather_station/software/src/station/../RN4870/../util/../board.h \
+ /home/gael/git/Weather_station/software/src/station/../weather_mode/weather_mode.h \
+ /home/gael/git/Weather_station/software/src/station/../weather_mode/../board.h \
+ /home/gael/git/Weather_station/software/src/station/../weather_mode/../lcd/lcd.h \
+ /home/gael/git/Weather_station/software/src/station/../weather_mode/../touchscreen/touchscreen.h \
+ /home/gael/git/Weather_station/software/src/station/../weather_mode/../bme280/bme280.h \
+ /home/gael/git/Weather_station/software/src/station/../weather_mode/../veml7700/veml7700.h \
+ /home/gael/git/Weather_station/software/src/station/../weather_mode/../led_rgb/led_rgb.h \
+ /home/gael/git/Weather_station/software/src/station/../weather_mode/../RN4870/RN4870.h

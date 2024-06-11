@@ -1,5 +1,6 @@
 #include "station.h"
 
+station_state_t station_state;
 
 void station_reset() {
     gpio_init( nRESET_GPIO );
@@ -24,6 +25,11 @@ void station_init() {
     // station_disable_ble();
     lcd_backlight_off();
     lcd_init();
+    station_state_init();
+}
+
+void station_state_init() {
+    station_state.mode = WEATHER_ALL_GRID;
 }
 
 void station_disable_ble() {

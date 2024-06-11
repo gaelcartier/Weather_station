@@ -376,6 +376,32 @@ callback/fast:
 	$(MAKE) $(MAKESILENT) -f src/callback/CMakeFiles/callback.dir/build.make src/callback/CMakeFiles/callback.dir/build
 .PHONY : callback/fast
 
+#=============================================================================
+# Target rules for targets named weather_mode
+
+# Build rule for target.
+weather_mode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 weather_mode
+.PHONY : weather_mode
+
+# fast build rule for target.
+weather_mode/fast:
+	$(MAKE) $(MAKESILENT) -f src/weather_mode/CMakeFiles/weather_mode.dir/build.make src/weather_mode/CMakeFiles/weather_mode.dir/build
+.PHONY : weather_mode/fast
+
+#=============================================================================
+# Target rules for targets named buffer_loop
+
+# Build rule for target.
+buffer_loop: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 buffer_loop
+.PHONY : buffer_loop
+
+# fast build rule for target.
+buffer_loop/fast:
+	$(MAKE) $(MAKESILENT) -f src/buffer_loop/CMakeFiles/buffer_loop.dir/build.make src/buffer_loop/CMakeFiles/buffer_loop.dir/build
+.PHONY : buffer_loop/fast
+
 home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 
@@ -1944,6 +1970,7 @@ help:
 	@echo "... RN4870"
 	@echo "... bme280"
 	@echo "... bs2_default"
+	@echo "... buffer_loop"
 	@echo "... callback"
 	@echo "... display"
 	@echo "... font"
@@ -1955,6 +1982,7 @@ help:
 	@echo "... touchscreen"
 	@echo "... util"
 	@echo "... veml7700"
+	@echo "... weather_mode"
 	@echo "... weather_station"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"

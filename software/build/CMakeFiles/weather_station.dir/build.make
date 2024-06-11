@@ -1222,12 +1222,14 @@ weather_station.elf: src/util/libutil.a
 weather_station.elf: src/callback/libcallback.a
 weather_station.elf: src/systick/libsystick.a
 weather_station.elf: src/station/libstation.a
+weather_station.elf: src/weather_mode/libweather_mode.a
 weather_station.elf: src/lcd/liblcd.a
 weather_station.elf: src/font/libfont.a
 weather_station.elf: src/touchscreen/libtouchscreen.a
 weather_station.elf: src/bme280/libbme280.a
 weather_station.elf: src/veml7700/libveml7700.a
 weather_station.elf: src/RN4870/libRN4870.a
+weather_station.elf: src/buffer_loop/libbuffer_loop.a
 weather_station.elf: src/display/libdisplay.a
 weather_station.elf: src/i2c_non_blocking/libi2c_non_blocking.a
 weather_station.elf: src/util/libutil.a

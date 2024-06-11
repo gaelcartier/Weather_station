@@ -122,5 +122,6 @@ touchscreen_info_t touchscreen_read();
 void touchscreen_print_touch_event( touchscreen_info_t touch_info );
 touchscreen_action_t touchscreen_set_action_from_infos( touchscreen_info_t first, touchscreen_info_t last );
 void touchscreen_print_gesture( touchscreen_action_t a );
+void touchscreen_handler();
 
 #endif 

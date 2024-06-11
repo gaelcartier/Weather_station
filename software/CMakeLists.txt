@@ -27,6 +27,7 @@ target_link_libraries(  weather_station
                         callback
                         systick
                         station 
+                        weather_mode
                         pico_stdlib 
                         lcd 
                         font 
@@ -34,6 +35,7 @@ target_link_libraries(  weather_station
                         bme280 
                         veml7700 
                         RN4870 
+                        buffer_loop
                         display )
 
 # create map/bin/hex/uf2 file in addition to ELF.

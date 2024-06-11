@@ -1672,4 +1672,12 @@ src/station/CMakeFiles/station.dir/station.c.obj
  /home/gael/git/Weather_station/software/src/RN4870/RN4870.h
  /home/gael/git/Weather_station/software/src/util/util.h
  /home/gael/git/Weather_station/software/src/board.h
+ /home/gael/git/Weather_station/software/src/weather_mode/weather_mode.h
+ /home/gael/git/Weather_station/software/src/board.h
+ /home/gael/git/Weather_station/software/src/lcd/lcd.h
+ /home/gael/git/Weather_station/software/src/touchscreen/touchscreen.h
+ /home/gael/git/Weather_station/software/src/bme280/bme280.h
+ /home/gael/git/Weather_station/software/src/veml7700/veml7700.h
+ /home/gael/git/Weather_station/software/src/led_rgb/led_rgb.h
+ /home/gael/git/Weather_station/software/src/RN4870/RN4870.h
 

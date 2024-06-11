@@ -2977,6 +2977,14 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   ../src/RN4870/RN4870.h \
   ../src/util/util.h \
   ../src/board.h \
+  ../src/weather_mode/weather_mode.h \
+  ../src/board.h \
+  ../src/lcd/lcd.h \
+  ../src/touchscreen/touchscreen.h \
+  ../src/bme280/bme280.h \
+  ../src/veml7700/veml7700.h \
+  ../src/led_rgb/led_rgb.h \
+  ../src/RN4870/RN4870.h \
   ../src/lcd/lcd.h \
   ../src/display/display.h \
   ../src/board.h \
@@ -3237,6 +3245,8 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h:
 
 /usr/include/newlib/stdio.h:
+
+../src/weather_mode/weather_mode.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/datetime.c:
 
