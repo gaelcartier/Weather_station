@@ -85,9 +85,8 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/include"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include"
-  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_stdlib/include"
+  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/include"
@@ -103,6 +102,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/include"
   "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/boot_stage2/include"
+  "/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include"
   )
 
 # The set of dependency files which are needed:
@@ -148,7 +148,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/gael/git/Weather_station/software/build/src/display/CMakeFiles/display.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/weather_mode/CMakeFiles/weather_mode.dir/DependInfo.cmake"
+  "/home/gael/git/Weather_station/software/build/src/lcd/CMakeFiles/lcd.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

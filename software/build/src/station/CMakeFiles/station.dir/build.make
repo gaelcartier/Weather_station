@@ -390,19 +390,19 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
-src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: src/station/CMakeFiles/station.dir/flags.make
-src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
-src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
-	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
+src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: src/station/CMakeFiles/station.dir/flags.make
+src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
+src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
+	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 
-src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i"
-	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c > CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i"
+	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c > CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
-src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s"
-	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s"
+	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c
@@ -418,23 +418,9 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.s"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
-src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: src/station/CMakeFiles/station.dir/flags.make
-src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
-src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
-	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
-
-src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i"
-	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c > CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
-
-src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s"
-	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
-
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj   -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
@@ -448,7 +434,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
@@ -462,7 +448,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
@@ -475,7 +461,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj   -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
@@ -489,7 +475,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i: cmake_force
@@ -502,7 +488,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj   -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.i: cmake_force
@@ -515,7 +501,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj   -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.i: cmake_force
@@ -529,7 +515,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i: cmake_force
@@ -543,7 +529,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
@@ -556,7 +542,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj   -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.i: cmake_force
@@ -569,7 +555,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj   -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i: cmake_force
@@ -582,7 +568,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj   -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.i: cmake_force
@@ -596,7 +582,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i: cmake_force
@@ -610,7 +596,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
@@ -623,7 +609,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj   -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.i: cmake_force
@@ -637,7 +623,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i: cmake_force
@@ -650,7 +636,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj   -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i: cmake_force
@@ -663,7 +649,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj   -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.i: cmake_force
@@ -677,7 +663,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i: cmake_force
@@ -691,7 +677,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i: cmake_force
@@ -705,7 +691,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
@@ -719,7 +705,7 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: src/station/CMakeFiles/station.dir/flags.make
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
 
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i: cmake_force
@@ -729,6 +715,20 @@ src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2
 src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
 	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+
+src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: src/station/CMakeFiles/station.dir/flags.make
+src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
+src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: src/station/CMakeFiles/station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
+	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -MF CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj.d -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -c /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
+
+src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i"
+	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c > CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+
+src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s"
+	cd /home/gael/git/Weather_station/software/build/src/station && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c -o CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 
 # Object files for target station
 station_OBJECTS = \
@@ -755,9 +755,8 @@ station_OBJECTS = \
 "CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj" \
 "CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj" \
 "CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj" \
-"CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj" \
-"CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj" \
 "CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" \
+"CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj" \
 "CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj" \
 "CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj" \
 "CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj" \
@@ -779,7 +778,8 @@ station_OBJECTS = \
 "CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" \
 "CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj" \
 "CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
-"CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
+"CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" \
+"CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
 
 # External object files for target station
 station_EXTERNAL_OBJECTS =
@@ -807,9 +807,8 @@ src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH
 src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -832,6 +831,7 @@ src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH
 src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+src/station/libstation.a: src/station/CMakeFiles/station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 src/station/libstation.a: src/station/CMakeFiles/station.dir/build.make
 src/station/libstation.a: src/station/CMakeFiles/station.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Linking CXX static library libstation.a"

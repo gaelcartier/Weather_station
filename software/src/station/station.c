@@ -30,6 +30,7 @@ void station_init() {
 
 void station_state_init() {
     station_state.mode = WEATHER_ALL_GRID;
+    station_state.mode_initialized = false;
 }
 
 void station_disable_ble() {
@@ -76,4 +77,34 @@ void station_main() {
         lcd_print_int( measures_l.ambient_light, 250, 150, LCD_YELLOW, SmallFont );
         sleep_ms( 1000 );
     }
+}
+
+void station_run(){
+    station_init();
+    while(true) {
+        switch(station_state.mode){
+            case WEATHER_ALL_GRID: 
+                if(!station_state.mode_initialized) {
+                    station_init_i2c_sensor();
+                    BME280_config();
+                    VEML7700_config();
+                    lcd_backlight_on();
+                    station_draw_title();
+                    weather_mode_init();
+                    station_state.mode_initialized = true;
+                } else {
+                    weather_mode_measure_data();
+                    weather_mode_update_data_on_screen();
+                    printf("display data\n");
+                    sleep_ms(1000);
+                }
+                break;
+            default: 
+                break;
+        }
+    }
+}
+
+void station_draw_title(){
+    lcd_draw_string(STATION_TITLE, STATION_TITLE_X, STATION_TITLE_Y, LCD_LIGHT_GREEN, BigFont );
 }

@@ -8,12 +8,17 @@
 #include "../board.h"
 
 #include "../lcd/lcd.h"
+#include "../display/display.h"
 #include "../touchscreen/touchscreen.h"
 #include "../bme280/bme280.h"
 #include "../veml7700/veml7700.h"
 #include "../led_rgb/led_rgb.h"
 #include "../RN4870/RN4870.h"
 #include "../weather_mode/weather_mode.h"
+
+#define STATION_TITLE_X             2 
+#define STATION_TITLE_Y             2
+#define STATION_TITLE               "Weather"
 
 typedef enum {
     WEATHER_ALL_GRID,
@@ -29,6 +34,7 @@ typedef enum {
 
 typedef struct {
     station_mode_t mode;
+    bool mode_initialized;
 } station_state_t;
 
 extern station_state_t station_state;
@@ -40,5 +46,7 @@ void station_enable_ble();
 void station_main();
 void station_init_i2c_sensor();
 void station_state_init();
+void station_run();
+void station_draw_title();
 
 #endif

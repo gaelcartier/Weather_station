@@ -1624,6 +1624,10 @@ src/station/CMakeFiles/station.dir/station.c.obj: ../src/station/station.c \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
+  ../src/display/display.h \
+  ../src/board.h \
+  ../src/lcd/lcd.h \
+  ../src/font/font.h \
   ../src/touchscreen/touchscreen.h \
   ../src/board.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
@@ -1638,6 +1642,7 @@ src/station/CMakeFiles/station.dir/station.c.obj: ../src/station/station.c \
   ../src/weather_mode/weather_mode.h \
   ../src/board.h \
   ../src/lcd/lcd.h \
+  ../src/display/display.h \
   ../src/touchscreen/touchscreen.h \
   ../src/bme280/bme280.h \
   ../src/veml7700/veml7700.h \
@@ -1648,6 +1653,8 @@ src/station/CMakeFiles/station.dir/station.c.obj: ../src/station/station.c \
 ../src/led_rgb/led_rgb.h:
 
 ../src/touchscreen/touchscreen.h:
+
+../src/display/display.h:
 
 ../src/lcd/lcd.h:
 

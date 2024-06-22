@@ -71,6 +71,10 @@ src/station/CMakeFiles/station.dir/station.c.obj: \
  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
+ /home/gael/git/Weather_station/software/src/station/../display/display.h \
+ /home/gael/git/Weather_station/software/src/station/../display/../board.h \
+ /home/gael/git/Weather_station/software/src/station/../display/../lcd/lcd.h \
+ /home/gael/git/Weather_station/software/src/station/../display/../font/font.h \
  /home/gael/git/Weather_station/software/src/station/../touchscreen/touchscreen.h \
  /home/gael/git/Weather_station/software/src/station/../touchscreen/../board.h \
  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
@@ -85,6 +89,7 @@ src/station/CMakeFiles/station.dir/station.c.obj: \
  /home/gael/git/Weather_station/software/src/station/../weather_mode/weather_mode.h \
  /home/gael/git/Weather_station/software/src/station/../weather_mode/../board.h \
  /home/gael/git/Weather_station/software/src/station/../weather_mode/../lcd/lcd.h \
+ /home/gael/git/Weather_station/software/src/station/../weather_mode/../display/display.h \
  /home/gael/git/Weather_station/software/src/station/../weather_mode/../touchscreen/touchscreen.h \
  /home/gael/git/Weather_station/software/src/station/../weather_mode/../bme280/bme280.h \
  /home/gael/git/Weather_station/software/src/station/../weather_mode/../veml7700/veml7700.h \

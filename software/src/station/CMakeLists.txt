@@ -8,6 +8,7 @@ add_library(
 )
 
 target_link_libraries(  station
+                        display
                         weather_mode
                         hardware_spi
                         hardware_i2c

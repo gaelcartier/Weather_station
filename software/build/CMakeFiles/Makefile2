@@ -2204,6 +2204,8 @@ src/display/CMakeFiles/display.dir/clean:
 
 # All Build rule for target.
 src/station/CMakeFiles/station.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
+src/station/CMakeFiles/station.dir/all: src/lcd/CMakeFiles/lcd.dir/all
+src/station/CMakeFiles/station.dir/all: src/display/CMakeFiles/display.dir/all
 src/station/CMakeFiles/station.dir/all: src/weather_mode/CMakeFiles/weather_mode.dir/all
 	$(MAKE) $(MAKESILENT) -f src/station/CMakeFiles/station.dir/build.make src/station/CMakeFiles/station.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/station/CMakeFiles/station.dir/build.make src/station/CMakeFiles/station.dir/build
@@ -2212,7 +2214,7 @@ src/station/CMakeFiles/station.dir/all: src/weather_mode/CMakeFiles/weather_mode
 
 # Build rule for subdir invocation for target.
 src/station/CMakeFiles/station.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/station/CMakeFiles/station.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gael/git/Weather_station/software/build/CMakeFiles 0
 .PHONY : src/station/CMakeFiles/station.dir/rule

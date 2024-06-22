@@ -2966,6 +2966,10 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
+  ../src/display/display.h \
+  ../src/board.h \
+  ../src/lcd/lcd.h \
+  ../src/font/font.h \
   ../src/touchscreen/touchscreen.h \
   ../src/board.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
@@ -2980,6 +2984,7 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   ../src/weather_mode/weather_mode.h \
   ../src/board.h \
   ../src/lcd/lcd.h \
+  ../src/display/display.h \
   ../src/touchscreen/touchscreen.h \
   ../src/bme280/bme280.h \
   ../src/veml7700/veml7700.h \
@@ -2987,9 +2992,6 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   ../src/RN4870/RN4870.h \
   ../src/lcd/lcd.h \
   ../src/display/display.h \
-  ../src/board.h \
-  ../src/lcd/lcd.h \
-  ../src/font/font.h \
   ../src/touchscreen/touchscreen.h \
   ../src/bme280/bme280.h \
   ../src/veml7700/veml7700.h \
@@ -3002,11 +3004,11 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/include/pico/i2c_slave.h
 
 
-../src/display/display.h:
-
 ../src/led_rgb/led_rgb.h:
 
 ../src/touchscreen/touchscreen.h:
+
+../src/display/display.h:
 
 ../src/lcd/lcd.h:
 

@@ -6,6 +6,8 @@ src/systick/libsystick.a(systick.c.obj)
                               CMakeFiles/weather_station.dir/src/main.c.obj (systick_init)
 src/station/libstation.a(station.c.obj)
                               CMakeFiles/weather_station.dir/src/main.c.obj (station_init)
+src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                              src/station/libstation.a(station.c.obj) (weather_mode_init)
 src/lcd/liblcd.a(lcd.c.obj)   src/station/libstation.a(station.c.obj) (lcd_backlight_off)
 src/font/libfont.a(font.c.obj)
                               src/station/libstation.a(station.c.obj) (BigFont)
@@ -94,6 +96,8 @@ Discarded input sections
                 0x0000000000000000       0x17 CMakeFiles/weather_station.dir/src/main.c.obj
  .text.test_lcd
                 0x0000000000000000       0x74 CMakeFiles/weather_station.dir/src/main.c.obj
+ .text.test_touchscreen
+                0x0000000000000000       0x2c CMakeFiles/weather_station.dir/src/main.c.obj
  .rodata.test_bme280.str1.4
                 0x0000000000000000       0x1e CMakeFiles/weather_station.dir/src/main.c.obj
  .text.test_bme280
@@ -141,8 +145,6 @@ Discarded input sections
                 0x0000000000000000       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .text.i2c_read_timeout_per_char_us
                 0x0000000000000000       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- .data.i2c1_inst
-                0x0000000000000000        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
@@ -394,6 +396,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .text.gpio_default_irq_handler
+                0x0000000000000000      0x248 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_get_pad
                 0x0000000000000000       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_get_function
@@ -422,6 +426,8 @@ Discarded input sections
                 0x0000000000000000       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_set_irq_enabled
                 0x0000000000000000       0x54 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .text.gpio_set_irq_enabled_with_callback
+                0x0000000000000000       0xb0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_set_irq_callback
                 0x0000000000000000       0x40 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_add_raw_irq_handler_with_order_priority_masked
@@ -442,6 +448,10 @@ Discarded input sections
                 0x0000000000000000       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_init_mask
                 0x0000000000000000       0x68 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .bss.callbacks
+                0x0000000000000000        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .bss.raw_irq_mask
+                0x0000000000000000        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -556,10 +566,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._out_buffer
-                0x0000000000000000        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text.__wrap_sprintf
-                0x0000000000000000       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.__wrap_snprintf
                 0x0000000000000000       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.__wrap_vsnprintf
@@ -597,8 +603,6 @@ Discarded input sections
                 0x0000000000000000        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .text.pop_r8_r11
                 0x0000000000000000        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_dcmpeq
-                0x0000000000000000       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .text.__wrap___aeabi_ui2d
                 0x0000000000000000       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .text.double2int
@@ -626,8 +630,6 @@ Discarded input sections
  .text.double2fix
                 0x0000000000000000       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .text.double2ufix
-                0x0000000000000000       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .text.__wrap___aeabi_d2f
                 0x0000000000000000       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .text.__wrap_srqt
                 0x0000000000000000       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -735,8 +737,6 @@ Discarded input sections
                 0x0000000000000000        0xe CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.double2int64_shim
                 0x0000000000000000       0x1a CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .text.double2float_shim
-                0x0000000000000000       0x5c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.x2double_shims
                 0x0000000000000000       0x90 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .text.dreduce  0x0000000000000000       0x82 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -758,8 +758,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .data          0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .text.__wrap___aeabi_farithmetic
-                0x0000000000000000       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.__wrap___aeabi_cfcmple
                 0x0000000000000000       0x50 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.__wrap___aeabi_fcmpeq
@@ -778,15 +776,9 @@ Discarded input sections
                 0x0000000000000000        0xa CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.__wrap___aeabi_i2f
                 0x0000000000000000       0x44 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .text.__wrap___aeabi_f2iz
-                0x0000000000000000       0x4e CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .text.float2int
-                0x0000000000000000       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.float2fix
                 0x0000000000000000       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.float2ufix
-                0x0000000000000000        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .text.__wrap___aeabi_f2uiz
                 0x0000000000000000        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.fix2float
                 0x0000000000000000        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
@@ -911,8 +903,6 @@ Discarded input sections
                 0x0000000000000000       0x44 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .text.fatan2_shim
                 0x0000000000000000       0x88 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .text.float232_shims
-                0x0000000000000000       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .text.float264_shims
                 0x0000000000000000       0x4c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .text.d2fix_a_float
@@ -1262,6 +1252,11 @@ Discarded input sections
  .text          0x0000000000000000        0x0 src/systick/libsystick.a(systick.c.obj)
  .data          0x0000000000000000        0x0 src/systick/libsystick.a(systick.c.obj)
  .bss           0x0000000000000000        0x0 src/systick/libsystick.a(systick.c.obj)
+ .text.systick_init
+                0x0000000000000000       0x28 src/systick/libsystick.a(systick.c.obj)
+ .comment       0x0000000000000000       0x34 src/systick/libsystick.a(systick.c.obj)
+ .ARM.attributes
+                0x0000000000000000       0x2c src/systick/libsystick.a(systick.c.obj)
  .text          0x0000000000000000        0x0 src/station/libstation.a(station.c.obj)
  .data          0x0000000000000000        0x0 src/station/libstation.a(station.c.obj)
  .bss           0x0000000000000000        0x0 src/station/libstation.a(station.c.obj)
@@ -1281,6 +1276,13 @@ Discarded input sections
                 0x0000000000000000       0x6a src/station/libstation.a(station.c.obj)
  .text.station_main
                 0x0000000000000000      0x158 src/station/libstation.a(station.c.obj)
+ .text.station_draw_title
+                0x0000000000000000       0x24 src/station/libstation.a(station.c.obj)
+ .text          0x0000000000000000        0x0 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+ .data          0x0000000000000000        0x0 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+ .bss           0x0000000000000000        0x0 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+ .text.weather_mode_draw_grid
+                0x0000000000000000       0x70 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
  .text          0x0000000000000000        0x0 src/lcd/liblcd.a(lcd.c.obj)
  .data          0x0000000000000000        0x0 src/lcd/liblcd.a(lcd.c.obj)
  .bss           0x0000000000000000        0x0 src/lcd/liblcd.a(lcd.c.obj)
@@ -1290,30 +1292,16 @@ Discarded input sections
                 0x0000000000000000       0x24 src/lcd/liblcd.a(lcd.c.obj)
  .text.lcd_write_Data
                 0x0000000000000000       0x24 src/lcd/liblcd.a(lcd.c.obj)
- .text.lcd_draw_char
-                0x0000000000000000      0x43c src/lcd/liblcd.a(lcd.c.obj)
- .text.lcd_draw_string
-                0x0000000000000000       0x40 src/lcd/liblcd.a(lcd.c.obj)
- .rodata.lcd_print_int.str1.4
-                0x0000000000000000        0x3 src/lcd/liblcd.a(lcd.c.obj)
- .text.lcd_print_int
-                0x0000000000000000       0x50 src/lcd/liblcd.a(lcd.c.obj)
  .rodata.lcd_print_double.str1.4
                 0x0000000000000000        0x6 src/lcd/liblcd.a(lcd.c.obj)
  .text.lcd_print_double
                 0x0000000000000000       0x5c src/lcd/liblcd.a(lcd.c.obj)
  .text.lcd_write_Data16
                 0x0000000000000000       0x3c src/lcd/liblcd.a(lcd.c.obj)
- .text.lcd_set_zone
-                0x0000000000000000       0xf0 src/lcd/liblcd.a(lcd.c.obj)
- .text.lcd_set_pixel
+ .text.lcd_clear
                 0x0000000000000000      0x11c src/lcd/liblcd.a(lcd.c.obj)
  .text.lcd_draw_circle
                 0x0000000000000000      0x2fc src/lcd/liblcd.a(lcd.c.obj)
- .text.lcd_fill_rect
-                0x0000000000000000      0x158 src/lcd/liblcd.a(lcd.c.obj)
- .text.lcd_rect
-                0x0000000000000000      0x25c src/lcd/liblcd.a(lcd.c.obj)
  .text.lcd_h_line
                 0x0000000000000000      0x130 src/lcd/liblcd.a(lcd.c.obj)
  .text.lcd_v_line
@@ -1333,24 +1321,21 @@ Discarded input sections
  .text          0x0000000000000000        0x0 src/font/libfont.a(font.c.obj)
  .data          0x0000000000000000        0x0 src/font/libfont.a(font.c.obj)
  .bss           0x0000000000000000        0x0 src/font/libfont.a(font.c.obj)
- .rodata.BigFont
-                0x0000000000000000      0xbe4 src/font/libfont.a(font.c.obj)
  .rodata.SevenSegNumFont
                 0x0000000000000000      0x7d4 src/font/libfont.a(font.c.obj)
- .rodata.SmallFont
-                0x0000000000000000      0x478 src/font/libfont.a(font.c.obj)
- .comment       0x0000000000000000       0x34 src/font/libfont.a(font.c.obj)
- .ARM.attributes
-                0x0000000000000000       0x32 src/font/libfont.a(font.c.obj)
  .text          0x0000000000000000        0x0 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .data          0x0000000000000000        0x0 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .bss           0x0000000000000000        0x0 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+ .text.touchscreen_irq_callback
+                0x0000000000000000       0x20 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text.touchscreen_i2c_config
                 0x0000000000000000       0x34 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text.touchscreen_config
                 0x0000000000000000       0x50 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text.touchscreen_enable_irq
                 0x0000000000000000       0x14 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+ .text.touchscreen_init
+                0x0000000000000000       0x98 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text.touchscreen_read
                 0x0000000000000000       0x60 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text.touchscreen_new_event
@@ -1361,20 +1346,22 @@ Discarded input sections
                 0x0000000000000000       0x48 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text.touchscreen_set_action_from_infos
                 0x0000000000000000       0x74 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+ .rodata.touchscreen_print_gesture.str1.4
+                0x0000000000000000       0x46 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text.touchscreen_print_gesture
                 0x0000000000000000       0x78 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .rodata.touchscreen_print_gesture
                 0x0000000000000000       0x74 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+ .rodata.touchscreen_handler.str1.4
+                0x0000000000000000       0x47 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+ .text.touchscreen_handler
+                0x0000000000000000      0x174 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .bss.TOUCHED   0x0000000000000000        0x4 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text          0x0000000000000000        0x0 src/bme280/libbme280.a(bme280.c.obj)
  .data          0x0000000000000000        0x0 src/bme280/libbme280.a(bme280.c.obj)
  .bss           0x0000000000000000        0x0 src/bme280/libbme280.a(bme280.c.obj)
  .text.BME280_i2c_config
                 0x0000000000000000       0x24 src/bme280/libbme280.a(bme280.c.obj)
- .text.BME280_init_calib
-                0x0000000000000000      0x120 src/bme280/libbme280.a(bme280.c.obj)
- .text.BME280_config
-                0x0000000000000000       0x5c src/bme280/libbme280.a(bme280.c.obj)
  .text.BME280_init
                 0x0000000000000000       0x78 src/bme280/libbme280.a(bme280.c.obj)
  .text.BME280_set_ctrl_hum
@@ -1391,49 +1378,14 @@ Discarded input sections
                 0x0000000000000000       0x24 src/bme280/libbme280.a(bme280.c.obj)
  .text.BME280_compensate_T
                 0x0000000000000000      0x134 src/bme280/libbme280.a(bme280.c.obj)
- .text.BME280_compensate_P
-                0x0000000000000000      0x23c src/bme280/libbme280.a(bme280.c.obj)
- .text.BME280_compensate_H
-                0x0000000000000000      0x190 src/bme280/libbme280.a(bme280.c.obj)
- .text.BME280_read
-                0x0000000000000000      0x1f0 src/bme280/libbme280.a(bme280.c.obj)
  .bss.bme_data  0x0000000000000000        0xc src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_H1    0x0000000000000000        0x1 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_H2    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_H3    0x0000000000000000        0x1 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_H4    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_H5    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_H6    0x0000000000000000        0x1 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_P1    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_P2    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_P3    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_P4    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_P5    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_P6    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_P7    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_P8    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_P9    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_T1    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_T2    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.dig_T3    0x0000000000000000        0x2 src/bme280/libbme280.a(bme280.c.obj)
- .bss.t_fine    0x0000000000000000        0x4 src/bme280/libbme280.a(bme280.c.obj)
- .comment       0x0000000000000000       0x34 src/bme280/libbme280.a(bme280.c.obj)
- .ARM.attributes
-                0x0000000000000000       0x2c src/bme280/libbme280.a(bme280.c.obj)
  .text          0x0000000000000000        0x0 src/veml7700/libveml7700.a(veml7700.c.obj)
  .data          0x0000000000000000        0x0 src/veml7700/libveml7700.a(veml7700.c.obj)
  .bss           0x0000000000000000        0x0 src/veml7700/libveml7700.a(veml7700.c.obj)
  .text.VEML7700_i2c_config
                 0x0000000000000000       0x24 src/veml7700/libveml7700.a(veml7700.c.obj)
- .text.VEML7700_config
-                0x0000000000000000       0x28 src/veml7700/libveml7700.a(veml7700.c.obj)
  .text.VEML7700_init
                 0x0000000000000000       0x44 src/veml7700/libveml7700.a(veml7700.c.obj)
- .text.VEML7700_read
-                0x0000000000000000       0x40 src/veml7700/libveml7700.a(veml7700.c.obj)
- .comment       0x0000000000000000       0x34 src/veml7700/libveml7700.a(veml7700.c.obj)
- .ARM.attributes
-                0x0000000000000000       0x2c src/veml7700/libveml7700.a(veml7700.c.obj)
  .text          0x0000000000000000        0x0 src/RN4870/libRN4870.a(RN4870.c.obj)
  .data          0x0000000000000000        0x0 src/RN4870/libRN4870.a(RN4870.c.obj)
  .bss           0x0000000000000000        0x0 src/RN4870/libRN4870.a(RN4870.c.obj)
@@ -1459,13 +1411,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 src/display/libdisplay.a(display.c.obj)
  .data          0x0000000000000000        0x0 src/display/libdisplay.a(display.c.obj)
  .bss           0x0000000000000000        0x0 src/display/libdisplay.a(display.c.obj)
- .text.display_create_zone_matrix
-                0x0000000000000000       0xc0 src/display/libdisplay.a(display.c.obj)
- .text.display_draw_zone
-                0x0000000000000000       0x38 src/display/libdisplay.a(display.c.obj)
- .comment       0x0000000000000000       0x34 src/display/libdisplay.a(display.c.obj)
- .ARM.attributes
-                0x0000000000000000       0x2c src/display/libdisplay.a(display.c.obj)
  .text          0x0000000000000000        0x0 src/util/libutil.a(util.c.obj)
  .data          0x0000000000000000        0x0 src/util/libutil.a(util.c.obj)
  .bss           0x0000000000000000        0x0 src/util/libutil.a(util.c.obj)
@@ -1492,9 +1437,9 @@ Discarded input sections
  .comment       0x0000000000000000       0x34 src/led_rgb/libled_rgb.a(led_rgb.c.obj)
  .ARM.attributes
                 0x0000000000000000       0x2c src/led_rgb/libled_rgb.a(led_rgb.c.obj)
- .text          0x0000000000000000        0x0 /tmp/ccVbMoIA.o
- .data          0x0000000000000000        0x0 /tmp/ccVbMoIA.o
- .bss           0x0000000000000000        0x0 /tmp/ccVbMoIA.o
+ .text          0x0000000000000000        0x0 /tmp/ccT7r41L.o
+ .data          0x0000000000000000        0x0 /tmp/ccT7r41L.o
+ .bss           0x0000000000000000        0x0 /tmp/ccT7r41L.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atexit.o)
@@ -1758,11 +1703,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/ccVbMoIA.o
+ .boot2         0x0000000010000000      0x100 /tmp/ccT7r41L.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0x7a20
+.text           0x0000000010000100     0x8ad0
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1825,628 +1770,702 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  .text.isr_systick
                 0x0000000010000354       0x1c CMakeFiles/weather_station.dir/src/main.c.obj
                 0x0000000010000354                isr_systick
- .text.test_touchscreen
-                0x0000000010000370       0x2c CMakeFiles/weather_station.dir/src/main.c.obj
-                0x0000000010000370                test_touchscreen
  .text.startup.main
-                0x000000001000039c       0x10 CMakeFiles/weather_station.dir/src/main.c.obj
-                0x000000001000039c                main
+                0x0000000010000370       0x14 CMakeFiles/weather_station.dir/src/main.c.obj
+                0x0000000010000370                main
  .text.i2c_set_baudrate
-                0x00000000100003ac       0xc4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x00000000100003ac                i2c_set_baudrate
+                0x0000000010000384       0xc4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000010000384                i2c_set_baudrate
  .text.i2c_init
-                0x0000000010000470       0x54 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x0000000010000470                i2c_init
+                0x0000000010000448       0x54 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000010000448                i2c_init
  .text.i2c_write_blocking
-                0x00000000100004c4       0xd0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x00000000100004c4                i2c_write_blocking
+                0x000000001000049c       0xd0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x000000001000049c                i2c_write_blocking
  .text.i2c_read_blocking
-                0x0000000010000594       0xac CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x0000000010000594                i2c_read_blocking
+                0x000000001000056c       0xac CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x000000001000056c                i2c_read_blocking
  .text.running_on_fpga
-                0x0000000010000640       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x0000000010000640                running_on_fpga
+                0x0000000010000618       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x0000000010000618                running_on_fpga
  .text.hw_claim_or_assert
-                0x0000000010000650       0x44 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010000650                hw_claim_or_assert
+                0x0000000010000628       0x44 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010000628                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x0000000010000694       0x9c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010000694                hw_claim_unused_from_range
+                0x000000001000066c       0x9c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x000000001000066c                hw_claim_unused_from_range
  .text.spin_locks_reset
-                0x0000000010000730       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000730                spin_locks_reset
+                0x0000000010000708       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010000708                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x000000001000074c       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x000000001000074c                next_striped_spin_lock_num
+                0x0000000010000724       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010000724                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x0000000010000764       0x20 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000764                spin_lock_claim_unused
+                0x000000001000073c       0x20 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x000000001000073c                spin_lock_claim_unused
  .text.timer_pool_entry_comparator
-                0x0000000010000784       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000784                timer_pool_entry_comparator
+                0x000000001000075c       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000075c                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x00000000100007b8       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000790       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock.isra.0
-                0x00000000100007e8      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100007c0      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x00000000100008e8      0x1b8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100008c0      0x1b8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x0000000010000aa0       0x6c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000aa0                alarm_pool_init_default
+                0x0000000010000a78       0x6c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000a78                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x0000000010000b0c        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000b0c                alarm_pool_get_default
+                0x0000000010000ae4        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000ae4                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x0000000010000b14      0x17c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000b14                alarm_pool_add_alarm_at
+                0x0000000010000aec      0x17c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000aec                alarm_pool_add_alarm_at
  .text.alarm_pool_cancel_alarm
-                0x0000000010000c90       0x74 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000c90                alarm_pool_cancel_alarm
+                0x0000000010000c68       0x74 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000c68                alarm_pool_cancel_alarm
  .text.alarm_pool_core_num
-                0x0000000010000d04        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000d04                alarm_pool_core_num
+                0x0000000010000cdc        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000cdc                alarm_pool_core_num
  .text.sleep_until
-                0x0000000010000d08       0xc4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000d08                sleep_until
+                0x0000000010000ce0       0xc4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000ce0                sleep_until
  .text.sleep_ms
-                0x0000000010000dcc       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000dcc                sleep_ms
+                0x0000000010000da4       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000da4                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x0000000010000e00       0x78 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000e00                best_effort_wfe_or_timeout
+                0x0000000010000dd8       0x78 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000dd8                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x0000000010000e78       0xbc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010000e50       0xbc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x0000000010000f34       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000f34                hardware_alarm_claim
+                0x0000000010000f0c       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010000f0c                hardware_alarm_claim
  .text.time_us_64
-                0x0000000010000f4c       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000f4c                time_us_64
+                0x0000000010000f24       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010000f24                time_us_64
  .text.busy_wait_until
-                0x0000000010000f60       0x20 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000f60                busy_wait_until
+                0x0000000010000f38       0x20 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010000f38                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x0000000010000f80       0x8c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000f80                hardware_alarm_set_callback
+                0x0000000010000f58       0x8c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010000f58                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x000000001000100c       0xe0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x000000001000100c                hardware_alarm_set_target
+                0x0000000010000fe4       0xe0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010000fe4                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x00000000100010ec       0x3c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100010ec                hardware_alarm_cancel
+                0x00000000100010c4       0x3c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100010c4                hardware_alarm_cancel
  .text.irq_set_enabled
-                0x0000000010001128       0x24 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001128                irq_set_enabled
+                0x0000000010001100       0x24 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001100                irq_set_enabled
  .text.irq_set_pending
-                0x000000001000114c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x000000001000114c                irq_set_pending
+                0x0000000010001124       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001124                irq_set_pending
  .text.irq_has_shared_handler
-                0x000000001000115c       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x000000001000115c                irq_has_shared_handler
+                0x0000000010001134       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001134                irq_has_shared_handler
  .text.irq_get_vtable_handler
-                0x0000000010001188       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001188                irq_get_vtable_handler
+                0x0000000010001160       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001160                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x0000000010001198       0x54 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001198                irq_set_exclusive_handler
+                0x0000000010001170       0x54 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001170                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x00000000100011ec      0x1e8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100011ec                irq_add_shared_handler
+                0x00000000100011c4      0x1e8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100011c4                irq_add_shared_handler
  .text.irq_remove_handler
-                0x00000000100013d4      0x1b0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100013d4                irq_remove_handler
+                0x00000000100013ac      0x1b0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100013ac                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x0000000010001584       0xb4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001584                irq_add_tail_to_free_list
+                0x000000001000155c       0xb4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000155c                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x0000000010001638       0x24 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001638                irq_init_priorities
+                0x0000000010001610       0x24 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001610                irq_init_priorities
  .text.user_irq_claim_unused
-                0x000000001000165c       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x000000001000165c                user_irq_claim_unused
+                0x0000000010001634       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001634                user_irq_claim_unused
  .text.lock_init
-                0x0000000010001684       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x0000000010001684                lock_init
+                0x000000001000165c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x000000001000165c                lock_init
  .text.mutex_init
-                0x0000000010001694       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010001694                mutex_init
+                0x000000001000166c       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x000000001000166c                mutex_init
  .text.recursive_mutex_init
-                0x00000000100016b0       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x00000000100016b0                recursive_mutex_init
+                0x0000000010001688       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x0000000010001688                recursive_mutex_init
  .text.critical_section_init
-                0x00000000100016cc       0x20 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x00000000100016cc                critical_section_init
+                0x00000000100016a4       0x20 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x00000000100016a4                critical_section_init
  .text.critical_section_init_with_lock_num
-                0x00000000100016ec       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x00000000100016ec                critical_section_init_with_lock_num
+                0x00000000100016c4       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x00000000100016c4                critical_section_init_with_lock_num
  .text.ph_merge_nodes
-                0x0000000010001700       0x68 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000000100016d8       0x68 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x0000000010001768       0x3c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001768                ph_post_alloc_init
+                0x0000000010001740       0x3c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001740                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x00000000100017a4       0x90 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x00000000100017a4                ph_merge_two_pass
+                0x000000001000177c       0x90 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000177c                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x0000000010001834      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000180c      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x0000000010001934      0x104 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001934                ph_remove_head
+                0x000000001000190c      0x104 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000190c                ph_remove_head
  .text.ph_remove_and_free_node
-                0x0000000010001a38       0x7c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001a38                ph_remove_and_free_node
+                0x0000000010001a10       0x7c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001a10                ph_remove_and_free_node
  .text.clocks_init
-                0x0000000010001ab4      0x2bc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010001ab4                clocks_init
+                0x0000000010001a8c      0x2bc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010001a8c                clocks_init
  .text.clock_get_hz
-                0x0000000010001d70        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010001d70                clock_get_hz
- .text.gpio_default_irq_handler
-                0x0000000010001d7c      0x248 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010001d48        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010001d48                clock_get_hz
  .text.gpio_set_function
-                0x0000000010001fc4       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010001fc4                gpio_set_function
- .text.gpio_set_irq_enabled_with_callback
-                0x0000000010001ff4       0xb0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010001ff4                gpio_set_irq_enabled_with_callback
+                0x0000000010001d54       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010001d54                gpio_set_function
  .text.gpio_init
-                0x00000000100020a4       0x3c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x00000000100020a4                gpio_init
+                0x0000000010001d84       0x3c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010001d84                gpio_init
  .text.pll_init
-                0x00000000100020e0       0xb0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x00000000100020e0                pll_init
+                0x0000000010001dc0       0xb0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x0000000010001dc0                pll_init
  .text.watchdog_start_tick
-                0x0000000010002190       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010002190                watchdog_start_tick
+                0x0000000010001e70       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010001e70                watchdog_start_tick
  .text.watchdog_reboot
-                0x00000000100021a0       0x98 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x00000000100021a0                watchdog_reboot
+                0x0000000010001e80       0x98 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010001e80                watchdog_reboot
  .text.xosc_init
-                0x0000000010002238       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x0000000010002238                xosc_init
+                0x0000000010001f18       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x0000000010001f18                xosc_init
  .text.runtime_init
-                0x0000000010002260       0xf0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002260                runtime_init
- .text._exit    0x0000000010002350        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002350                _exit
- .text.exit     0x0000000010002354        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002354                exit
- .text.panic    0x000000001000235c       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x000000001000235c                panic
+                0x0000000010001f40       0xf0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010001f40                runtime_init
+ .text._exit    0x0000000010002030        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002030                _exit
+ .text.exit     0x0000000010002034        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002034                exit
+ .text.panic    0x000000001000203c       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000001000203c                panic
  .text.hard_assertion_failure
-                0x000000001000238c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x000000001000238c                hard_assertion_failure
+                0x000000001000206c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000001000206c                hard_assertion_failure
+ .text._out_buffer
+                0x0000000010002078        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_null
-                0x0000000010002398        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002080        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x000000001000239c       0x9c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002084       0x9c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x0000000010002438      0x1cc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002120      0x1cc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_char
-                0x0000000010002604       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100022ec       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x0000000010002614       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._etoa    0x0000000010002624      0x44c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x0000000010002a70      0x398 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100022fc       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._etoa    0x000000001000230c      0x44c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x0000000010002758      0x398 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x0000000010002e08      0xb04 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002af0      0xb04 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text.__wrap_sprintf
+                0x00000000100035f4       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100035f4                __wrap_sprintf
  .text.vfctprintf
-                0x000000001000390c       0x20 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x000000001000390c                vfctprintf
+                0x000000001000361c       0x20 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000361c                vfctprintf
  .text.weak_raw_vprintf
-                0x000000001000392c       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x000000001000392c                weak_raw_vprintf
- .text          0x000000001000395c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x000000001000363c       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000363c                weak_raw_vprintf
+ .text          0x000000001000366c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x000000001000396c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x000000001000396c                rom_func_lookup
+                0x000000001000367c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000367c                rom_func_lookup
  .text.rom_data_lookup
-                0x000000001000397c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x000000001000397c                rom_data_lookup
+                0x000000001000368c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000368c                rom_data_lookup
  .text.rom_funcs_lookup
-                0x000000001000398c       0x44 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x000000001000398c                rom_funcs_lookup
+                0x000000001000369c       0x44 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000369c                rom_funcs_lookup
  .text.__wrap___aeabi_idiv
-                0x00000000100039d0       0x50 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x00000000100039d0                __wrap___aeabi_idivmod
-                0x00000000100039d0                divmod_s32s32
-                0x00000000100039d0                div_s32s32
-                0x00000000100039d0                __wrap___aeabi_idiv
-                0x00000000100039d8                divmod_s32s32_unsafe
-                0x0000000010003a04                divmod_s32s32_savestate
+                0x00000000100036e0       0x50 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x00000000100036e0                __wrap___aeabi_idivmod
+                0x00000000100036e0                divmod_s32s32
+                0x00000000100036e0                div_s32s32
+                0x00000000100036e0                __wrap___aeabi_idiv
+                0x00000000100036e8                divmod_s32s32_unsafe
+                0x0000000010003714                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x0000000010003a20       0x4c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010003a20                __wrap___aeabi_uidiv
-                0x0000000010003a20                __wrap___aeabi_uidivmod
-                0x0000000010003a20                div_u32u32
-                0x0000000010003a20                divmod_u32u32
-                0x0000000010003a28                divmod_u32u32_unsafe
-                0x0000000010003a50                divmod_u32u32_savestate
+                0x0000000010003730       0x4c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010003730                __wrap___aeabi_uidiv
+                0x0000000010003730                __wrap___aeabi_uidivmod
+                0x0000000010003730                div_u32u32
+                0x0000000010003730                divmod_u32u32
+                0x0000000010003738                divmod_u32u32_unsafe
+                0x0000000010003760                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x0000000010003a6c      0x424 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010003a6c                div_s64s64
-                0x0000000010003a6c                divmod_s64s64
-                0x0000000010003a6c                __wrap___aeabi_ldivmod
-                0x0000000010003a9c                div_u64u64
-                0x0000000010003a9c                divmod_u64u64
-                0x0000000010003a9c                __wrap___aeabi_uldivmod
-                0x0000000010003aac                divmod_u64u64_savestate
-                0x0000000010003acc                divmod_s64s64_unsafe
-                0x0000000010003b54                divmod_u64u64_unsafe
+                0x000000001000377c      0x424 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x000000001000377c                div_s64s64
+                0x000000001000377c                divmod_s64s64
+                0x000000001000377c                __wrap___aeabi_ldivmod
+                0x00000000100037ac                div_u64u64
+                0x00000000100037ac                divmod_u64u64
+                0x00000000100037ac                __wrap___aeabi_uldivmod
+                0x00000000100037bc                divmod_u64u64_savestate
+                0x00000000100037dc                divmod_s64s64_unsafe
+                0x0000000010003864                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x0000000010003e90       0x80 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003e90                __wrap___aeabi_drsub
-                0x0000000010003e96                __wrap___aeabi_dsub
-                0x0000000010003ea8                __wrap___aeabi_dadd
-                0x0000000010003eba                __wrap___aeabi_ddiv
-                0x0000000010003ef6                __wrap___aeabi_dmul
+                0x0000000010003ba0       0x80 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003ba0                __wrap___aeabi_drsub
+                0x0000000010003ba6                __wrap___aeabi_dsub
+                0x0000000010003bb8                __wrap___aeabi_dadd
+                0x0000000010003bca                __wrap___aeabi_ddiv
+                0x0000000010003c06                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x0000000010003f10       0x6c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003f10                __wrap___aeabi_cdrcmple
-                0x0000000010003f20                __wrap___aeabi_cdcmple
-                0x0000000010003f20                __wrap___aeabi_cdcmpeq
+                0x0000000010003c20       0x6c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003c20                __wrap___aeabi_cdrcmple
+                0x0000000010003c30                __wrap___aeabi_cdcmple
+                0x0000000010003c30                __wrap___aeabi_cdcmpeq
+ .text.__wrap___aeabi_dcmpeq
+                0x0000000010003c8c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003c8c                __wrap___aeabi_dcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x0000000010003f7c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003f7c                __wrap___aeabi_dcmplt
+                0x0000000010003c9c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003c9c                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x0000000010003f88       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003f88                __wrap___aeabi_dcmple
+                0x0000000010003ca8       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003ca8                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x0000000010003f98       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003f98                __wrap___aeabi_dcmpge
+                0x0000000010003cb8       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003cb8                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x0000000010003fa8        0xa CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003fa8                __wrap___aeabi_dcmpgt
+                0x0000000010003cc8        0xa CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003cc8                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x0000000010003fb2       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003fb2                __wrap___aeabi_dcmpun
- *fill*         0x0000000010003fce        0x2 
+                0x0000000010003cd2       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003cd2                __wrap___aeabi_dcmpun
+ *fill*         0x0000000010003cee        0x2 
  .text.__wrap___aeabi_i2d
-                0x0000000010003fd0       0x38 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010003fd0                __wrap___aeabi_ui2d
-                0x0000000010003fd8                __wrap___aeabi_i2d
+                0x0000000010003cf0       0x38 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003cf0                __wrap___aeabi_ui2d
+                0x0000000010003cf8                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x0000000010004008       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004008                __wrap___aeabi_d2iz
-                0x0000000010004008                double2int_z
+                0x0000000010003d28       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003d28                __wrap___aeabi_d2iz
+                0x0000000010003d28                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x0000000010004050       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004050                double2uint
-                0x0000000010004050                __wrap___aeabi_d2uiz
+                0x0000000010003d70       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003d70                double2uint
+                0x0000000010003d70                __wrap___aeabi_d2uiz
+ .text.__wrap___aeabi_d2f
+                0x0000000010003d88       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010003d88                __wrap___aeabi_d2f
  .text.__aeabi_double_init
-                0x0000000010004068       0x94 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000010004068                __aeabi_double_init
+                0x0000000010003da0       0x94 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000010003da0                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x00000000100040fc       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100040fc                double_table_shim_on_use_helper
+                0x0000000010003e34       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003e34                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x0000000010004128       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004128                drsub_shim
-                0x000000001000412e                dsub_shim
+                0x0000000010003e60       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003e60                drsub_shim
+                0x0000000010003e66                dsub_shim
  .text.dadd_shim
-                0x0000000010004138      0x15c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004138                dadd_shim
+                0x0000000010003e70      0x15c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003e70                dadd_shim
  .text.dmul_shim
-                0x0000000010004294      0x15c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004294                dmul_shim
+                0x0000000010003fcc      0x15c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010003fcc                dmul_shim
  .text.ddiv_shim
-                0x00000000100043f0      0x1b0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100043f0                ddiv_shim
+                0x0000000010004128      0x1b0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004128                ddiv_shim
  .text.double2uint_shim
-                0x00000000100045a0        0xe CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100045a0                double2uint_shim
-                0x00000000100045a2                double2ufix_shim
- *fill*         0x00000000100045ae        0x2 
+                0x00000000100042d8        0xe CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100042d8                double2uint_shim
+                0x00000000100042da                double2ufix_shim
+ *fill*         0x00000000100042e6        0x2 
  .text.double2uint64_shim
-                0x00000000100045b0       0x70 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100045b0                double2uint64_shim
-                0x00000000100045b2                double2ufix64_shim
-                0x00000000100045d2                d2fix_a
+                0x00000000100042e8       0x70 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100042e8                double2uint64_shim
+                0x00000000100042ea                double2ufix64_shim
+                0x000000001000430a                d2fix_a
+ .text.double2float_shim
+                0x0000000010004358       0x5c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004358                double2float_shim
  .text.dunpacks
-                0x0000000010004620       0x3c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004620                dunpacks
+                0x00000000100043b4       0x3c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100043b4                dunpacks
  .text.__aeabi_lmul
-                0x000000001000465c       0x32 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x000000001000465c                __wrap___aeabi_lmul
- *fill*         0x000000001000468e        0x2 
+                0x00000000100043f0       0x32 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x00000000100043f0                __wrap___aeabi_lmul
+ *fill*         0x0000000010004422        0x2 
+ .text.__wrap___aeabi_farithmetic
+                0x0000000010004424       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x0000000010004424                __wrap___aeabi_frsub
+                0x000000001000442a                __wrap___aeabi_fsub
+                0x0000000010004430                __wrap___aeabi_fadd
+                0x0000000010004436                __wrap___aeabi_fdiv
+                0x000000001000445e                __wrap___aeabi_fmul
+ .text.__wrap___aeabi_f2iz
+                0x000000001000446c       0x4e CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x000000001000446c                __wrap___aeabi_f2iz
+                0x000000001000446c                float2int_z
+ *fill*         0x00000000100044ba        0x2 
+ .text.float2int
+                0x00000000100044bc       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000000100044bc                float2int
+ .text.__wrap___aeabi_f2uiz
+                0x00000000100044d0        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000000100044d0                __wrap___aeabi_f2uiz
  .text.__aeabi_float_init
-                0x0000000010004690       0x64 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000010004690                __aeabi_float_init
+                0x00000000100044dc       0x64 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x00000000100044dc                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x00000000100046f4       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x00000000100046f4                float_table_shim_on_use_helper
- .text          0x0000000010004720       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010004720                __aeabi_mem_init
- .text.memset   0x0000000010004730        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010004730                __wrap_memset
- .text.memcpy   0x000000001000473c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x000000001000473c                __wrap___aeabi_memcpy
-                0x000000001000473c                __wrap_memcpy
+                0x0000000010004540       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x0000000010004540                float_table_shim_on_use_helper
+ .text.float232_shims
+                0x000000001000456c       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x000000001000456c                float2int_shim
+                0x000000001000456e                float2fix_shim
+ .text          0x0000000010004584       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010004584                __aeabi_mem_init
+ .text.memset   0x0000000010004594        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010004594                __wrap_memset
+ .text.memcpy   0x00000000100045a0        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000000100045a0                __wrap___aeabi_memcpy
+                0x00000000100045a0                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x0000000010004748       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100045ac       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_out_chars_crlf
-                0x0000000010004758       0xb4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100045bc       0xb4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x000000001000480c       0x64 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004670       0x64 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_put_string.isra.0
-                0x0000000010004870       0xfc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100046d4       0xfc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x000000001000496c       0x98 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x000000001000496c                __wrap_putchar
+                0x00000000100047d0       0x98 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100047d0                __wrap_putchar
  .text.__wrap_puts
-                0x0000000010004a04       0x3c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004a04                __wrap_puts
+                0x0000000010004868       0x3c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004868                __wrap_puts
  .text.stdio_set_driver_enabled
-                0x0000000010004a40       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004a40                stdio_set_driver_enabled
+                0x00000000100048a4       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100048a4                stdio_set_driver_enabled
  .text.__wrap_vprintf
-                0x0000000010004a70       0xd8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004a70                __wrap_vprintf
+                0x00000000100048d4       0xd8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100048d4                __wrap_vprintf
  .text.__wrap_printf
-                0x0000000010004b48       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004b48                __wrap_printf
+                0x00000000100049ac       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100049ac                __wrap_printf
  .text.stdio_init_all
-                0x0000000010004b60        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004b60                stdio_init_all
+                0x00000000100049c4        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100049c4                stdio_init_all
  .text.resetd_init
-                0x0000000010004b68        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100049cc        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_reset
-                0x0000000010004b6c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100049d0        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_open
-                0x0000000010004b78       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100049dc       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_xfer_cb
-                0x0000000010004ba0        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010004a04        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_control_xfer_cb
-                0x0000000010004ba4       0x64 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010004a08       0x64 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.usbd_app_driver_get_cb
-                0x0000000010004c08        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x0000000010004c08                usbd_app_driver_get_cb
+                0x0000000010004a6c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010004a6c                usbd_app_driver_get_cb
  .text.tud_cdc_line_coding_cb
-                0x0000000010004c14       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x0000000010004c14                tud_cdc_line_coding_cb
+                0x0000000010004a78       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010004a78                tud_cdc_line_coding_cb
  .text.stdio_usb_set_chars_available_callback
-                0x0000000010004c48       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010004c48                stdio_usb_set_chars_available_callback
- .text.usb_irq  0x0000000010004c5c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004aac       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004aac                stdio_usb_set_chars_available_callback
+ .text.usb_irq  0x0000000010004ac0       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.timer_task
-                0x0000000010004c6c       0x54 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004ad0       0x54 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.stdio_usb_in_chars
-                0x0000000010004cc0       0x90 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010004cc0                stdio_usb_in_chars
+                0x0000000010004b24       0x90 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004b24                stdio_usb_in_chars
  .text.stdio_usb_out_chars
-                0x0000000010004d50      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004bb4      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.low_priority_worker_irq
-                0x0000000010004e50       0xa8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004cb4       0xa8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.tud_cdc_rx_cb
-                0x0000000010004ef8       0x20 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010004ef8                tud_cdc_rx_cb
+                0x0000000010004d5c       0x20 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004d5c                tud_cdc_rx_cb
  .text.stdio_usb_init
-                0x0000000010004f18       0xdc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010004f18                stdio_usb_init
+                0x0000000010004d7c       0xdc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010004d7c                stdio_usb_init
  .text.tud_descriptor_device_cb
-                0x0000000010004ff4        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010004ff4                tud_descriptor_device_cb
+                0x0000000010004e58        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010004e58                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x0000000010004ffc        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010004ffc                tud_descriptor_configuration_cb
+                0x0000000010004e60        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010004e60                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x0000000010005004       0x74 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010005004                tud_descriptor_string_cb
+                0x0000000010004e68       0x74 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010004e68                tud_descriptor_string_cb
  .text.startup._retrieve_unique_id_on_boot
-                0x0000000010005078       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010004edc       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .text.pico_get_unique_board_id_string
-                0x0000000010005088      0x1a8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x0000000010005088                pico_get_unique_board_id_string
+                0x0000000010004eec      0x1a8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010004eec                pico_get_unique_board_id_string
  .text.flash_get_unique_id
-                0x0000000010005230       0x40 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x0000000010005230                flash_get_unique_id
+                0x0000000010005094       0x40 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x0000000010005094                flash_get_unique_id
  .text.dcd_int_enable
-                0x0000000010005270        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005270                dcd_int_enable
+                0x00000000100050d4        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100050d4                dcd_int_enable
  .text.dcd_set_address
-                0x000000001000527c       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000527c                dcd_set_address
+                0x00000000100050e0       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100050e0                dcd_set_address
  .text.dcd_connect
-                0x0000000010005290       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005290                dcd_connect
+                0x00000000100050f4       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100050f4                dcd_connect
  .text.dcd_init
-                0x00000000100052a0       0x98 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100052a0                dcd_init
+                0x0000000010005104       0x98 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005104                dcd_init
  .text.dcd_edpt0_status_complete
-                0x0000000010005338       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005338                dcd_edpt0_status_complete
+                0x000000001000519c       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000519c                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x0000000010005354      0x108 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005354                dcd_edpt_open
+                0x00000000100051b8      0x108 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100051b8                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x000000001000545c        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000545c                dcd_edpt_close_all
+                0x00000000100052c0        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100052c0                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x0000000010005464       0x24 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005464                dcd_edpt_xfer
+                0x00000000100052c8       0x24 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100052c8                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x0000000010005488       0x38 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005488                dcd_edpt_stall
+                0x00000000100052ec       0x38 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100052ec                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x00000000100054c0       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100054c0                dcd_edpt_clear_stall
+                0x0000000010005324       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005324                dcd_edpt_clear_stall
  .text.rp2040_usb_init
-                0x00000000100054f0       0x4c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x00000000100054f0                rp2040_usb_init
+                0x0000000010005354       0x4c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010005354                rp2040_usb_init
  .text.hw_endpoint_xfer_start
-                0x000000001000553c       0x50 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x000000001000553c                hw_endpoint_xfer_start
+                0x00000000100053a0       0x50 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x00000000100053a0                hw_endpoint_xfer_start
  .text.tud_mounted
-                0x000000001000558c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000558c                tud_mounted
+                0x00000000100053f0       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000100053f0                tud_mounted
  .text.tud_suspended
-                0x000000001000559c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000559c                tud_suspended
+                0x0000000010005400       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005400                tud_suspended
  .text.tud_inited
-                0x00000000100055ac       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100055ac                tud_inited
+                0x0000000010005410       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005410                tud_inited
  .text.tud_init
-                0x00000000100055c0       0xe4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100055c0                tud_init
+                0x0000000010005424       0xe4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005424                tud_init
  .text.tud_task_ext
-                0x00000000100056a4      0x854 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100056a4                tud_task_ext
+                0x0000000010005508      0x854 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005508                tud_task_ext
  .text.usbd_open_edpt_pair
-                0x0000000010005ef8       0x9c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005ef8                usbd_open_edpt_pair
+                0x0000000010005d5c       0x9c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005d5c                usbd_open_edpt_pair
  .text.usbd_defer_func
-                0x0000000010005f94       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005f94                usbd_defer_func
+                0x0000000010005df8       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005df8                usbd_defer_func
  .text.usbd_edpt_open
-                0x0000000010005fdc       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005fdc                usbd_edpt_open
+                0x0000000010005e40       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005e40                usbd_edpt_open
  .text.usbd_edpt_claim
-                0x0000000010006010       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006010                usbd_edpt_claim
+                0x0000000010005e74       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005e74                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x0000000010006038       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006038                usbd_edpt_release
+                0x0000000010005e9c       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005e9c                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x0000000010006060       0x4c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006060                usbd_edpt_xfer
+                0x0000000010005ec4       0x4c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005ec4                usbd_edpt_xfer
  .text.tud_control_status
-                0x00000000100060ac       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x00000000100060ac                tud_control_status
+                0x0000000010005f10       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010005f10                tud_control_status
  .text.tud_control_xfer
-                0x00000000100060dc       0xbc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x00000000100060dc                tud_control_xfer
+                0x0000000010005f40       0xbc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010005f40                tud_control_xfer
  .text.usbd_control_reset
-                0x0000000010006198       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006198                usbd_control_reset
+                0x0000000010005ffc       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010005ffc                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x00000000100061ac        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x00000000100061ac                usbd_control_set_complete_callback
+                0x0000000010006010        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006010                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x00000000100061b8       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x00000000100061b8                usbd_control_set_request
+                0x000000001000601c       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x000000001000601c                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x00000000100061d4       0xfc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x00000000100061d4                usbd_control_xfer_cb
+                0x0000000010006038       0xfc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006038                usbd_control_xfer_cb
  .text.tud_cdc_n_connected
-                0x00000000100062d0       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x00000000100062d0                tud_cdc_n_connected
+                0x0000000010006134       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006134                tud_cdc_n_connected
  .text.tud_cdc_n_available
-                0x0000000010006300       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006300                tud_cdc_n_available
+                0x0000000010006164       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006164                tud_cdc_n_available
  .text.tud_cdc_n_read
-                0x0000000010006318       0x70 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006318                tud_cdc_n_read
+                0x000000001000617c       0x70 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000617c                tud_cdc_n_read
  .text.tud_cdc_n_write_flush
-                0x0000000010006388       0x78 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006388                tud_cdc_n_write_flush
+                0x00000000100061ec       0x78 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x00000000100061ec                tud_cdc_n_write_flush
  .text.tud_cdc_n_write
-                0x0000000010006400       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006400                tud_cdc_n_write
+                0x0000000010006264       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006264                tud_cdc_n_write
  .text.tud_cdc_n_write_available
-                0x0000000010006434       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006434                tud_cdc_n_write_available
+                0x0000000010006298       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006298                tud_cdc_n_write_available
  .text.cdcd_init
-                0x000000001000644c       0x7c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000644c                cdcd_init
+                0x00000000100062b0       0x7c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x00000000100062b0                cdcd_init
  .text.cdcd_reset
-                0x00000000100064c8       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x00000000100064c8                cdcd_reset
+                0x000000001000632c       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000632c                cdcd_reset
  .text.cdcd_open
-                0x00000000100064f4       0xe8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x00000000100064f4                cdcd_open
+                0x0000000010006358       0xe8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006358                cdcd_open
  .text.cdcd_control_xfer_cb
-                0x00000000100065dc       0xe4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x00000000100065dc                cdcd_control_xfer_cb
+                0x0000000010006440       0xe4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006440                cdcd_control_xfer_cb
  .text.cdcd_xfer_cb
-                0x00000000100066c0      0x148 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x00000000100066c0                cdcd_xfer_cb
+                0x0000000010006524      0x148 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006524                cdcd_xfer_cb
  .text.tusb_init
-                0x0000000010006808        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010006808                tusb_init
+                0x000000001000666c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000000001000666c                tusb_init
  .text.tusb_inited
-                0x0000000010006814        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010006814                tusb_inited
+                0x0000000010006678        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000000010006678                tusb_inited
  .text.tu_edpt_claim
-                0x000000001000681c       0x50 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000681c                tu_edpt_claim
+                0x0000000010006680       0x50 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000000010006680                tu_edpt_claim
  .text.tu_edpt_release
-                0x000000001000686c       0x38 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000686c                tu_edpt_release
+                0x00000000100066d0       0x38 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100066d0                tu_edpt_release
  .text.tu_edpt_validate
-                0x00000000100068a4       0x78 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x00000000100068a4                tu_edpt_validate
+                0x0000000010006708       0x78 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000000010006708                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x000000001000691c       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000691c                tu_edpt_bind_driver
+                0x0000000010006780       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000000010006780                tu_edpt_bind_driver
  .text.tu_fifo_config
-                0x0000000010006950       0x70 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006950                tu_fifo_config
+                0x00000000100067b4       0x70 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100067b4                tu_fifo_config
  .text.tu_fifo_count
-                0x00000000100069c0       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100069c0                tu_fifo_count
+                0x0000000010006824       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006824                tu_fifo_count
  .text.tu_fifo_empty
-                0x00000000100069ec       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100069ec                tu_fifo_empty
+                0x0000000010006850       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006850                tu_fifo_empty
  .text.tu_fifo_remaining
-                0x00000000100069fc       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100069fc                tu_fifo_remaining
+                0x0000000010006860       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006860                tu_fifo_remaining
  .text.tu_fifo_read
-                0x0000000010006a28       0xa0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006a28                tu_fifo_read
+                0x000000001000688c       0xa0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000688c                tu_fifo_read
  .text.tu_fifo_read_n
-                0x0000000010006ac8       0xec CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006ac8                tu_fifo_read_n
+                0x000000001000692c       0xec CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000692c                tu_fifo_read_n
  .text.tu_fifo_write
-                0x0000000010006bb4       0x88 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006bb4                tu_fifo_write
+                0x0000000010006a18       0x88 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006a18                tu_fifo_write
  .text.tu_fifo_write_n
-                0x0000000010006c3c      0x168 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006c3c                tu_fifo_write_n
+                0x0000000010006aa0      0x168 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006aa0                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x0000000010006da4       0x40 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006da4                tu_fifo_clear
+                0x0000000010006c08       0x40 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006c08                tu_fifo_clear
  .text.tu_fifo_set_overwritable
-                0x0000000010006de4       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010006de4                tu_fifo_set_overwritable
+                0x0000000010006c48       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010006c48                tu_fifo_set_overwritable
  .text.spi_init
-                0x0000000010006e2c       0xf8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-                0x0000000010006e2c                spi_init
- .text.systick_init
-                0x0000000010006f24       0x28 src/systick/libsystick.a(systick.c.obj)
-                0x0000000010006f24                systick_init
+                0x0000000010006c90       0xf8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+                0x0000000010006c90                spi_init
  .text.station_init
-                0x0000000010006f4c       0x4c src/station/libstation.a(station.c.obj)
-                0x0000000010006f4c                station_init
+                0x0000000010006d88       0x4c src/station/libstation.a(station.c.obj)
+                0x0000000010006d88                station_init
+ .text.station_run
+                0x0000000010006dd4       0xa4 src/station/libstation.a(station.c.obj)
+                0x0000000010006dd4                station_run
+ .text.weather_mode_init
+                0x0000000010006e78       0xc4 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000010006e78                weather_mode_init
+ .text.weather_mode_measure_data
+                0x0000000010006f3c       0x4c src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000010006f3c                weather_mode_measure_data
+ .text.weather_mode_update_data_on_screen
+                0x0000000010006f88       0xe0 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000010006f88                weather_mode_update_data_on_screen
  .text.lcd_backlight_off
-                0x0000000010006f98        0xc src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010006f98                lcd_backlight_off
+                0x0000000010007068        0xc src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007068                lcd_backlight_off
  .text.lcd_backlight_on
-                0x0000000010006fa4        0xc src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010006fa4                lcd_backlight_on
+                0x0000000010007074        0xc src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007074                lcd_backlight_on
  .text.lcd_config
-                0x0000000010006fb0      0x5a4 src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010006fb0                lcd_config
+                0x0000000010007080      0x5a4 src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007080                lcd_config
  .text.lcd_init
-                0x0000000010007554      0x144 src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010007554                lcd_init
- .text.lcd_clear
-                0x0000000010007698      0x11c src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010007698                lcd_clear
- .text.touchscreen_irq_callback
-                0x00000000100077b4       0x20 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x00000000100077b4                touchscreen_irq_callback
- .text.touchscreen_init
-                0x00000000100077d4       0x98 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x00000000100077d4                touchscreen_init
- .text.touchscreen_handler
-                0x000000001000786c      0x174 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x000000001000786c                touchscreen_handler
- .text          0x00000000100079e0       0x5c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x00000000100079e0                strlen
+                0x0000000010007624      0x144 src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007624                lcd_init
+ .text.lcd_draw_char
+                0x0000000010007768      0x43c src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007768                lcd_draw_char
+ .text.lcd_draw_string
+                0x0000000010007ba4       0x40 src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007ba4                lcd_draw_string
+ .text.lcd_print_int
+                0x0000000010007be4       0x50 src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007be4                lcd_print_int
+ .text.lcd_set_zone
+                0x0000000010007c34       0xf0 src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007c34                lcd_set_zone
+ .text.lcd_set_pixel
+                0x0000000010007d24      0x11c src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007d24                lcd_set_pixel
+ .text.lcd_fill_rect
+                0x0000000010007e40      0x158 src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007e40                lcd_fill_rect
+ .text.lcd_rect
+                0x0000000010007f98      0x25c src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007f98                lcd_rect
+ .text.BME280_init_calib
+                0x00000000100081f4      0x120 src/bme280/libbme280.a(bme280.c.obj)
+                0x00000000100081f4                BME280_init_calib
+ .text.BME280_config
+                0x0000000010008314       0x5c src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000010008314                BME280_config
+ .text.BME280_compensate_P
+                0x0000000010008370      0x23c src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000010008370                BME280_compensate_P
+ .text.BME280_compensate_H
+                0x00000000100085ac      0x190 src/bme280/libbme280.a(bme280.c.obj)
+                0x00000000100085ac                BME280_compensate_H
+ .text.BME280_read
+                0x000000001000873c      0x1f0 src/bme280/libbme280.a(bme280.c.obj)
+                0x000000001000873c                BME280_read
+ .text.VEML7700_config
+                0x000000001000892c       0x28 src/veml7700/libveml7700.a(veml7700.c.obj)
+                0x000000001000892c                VEML7700_config
+ .text.VEML7700_read
+                0x0000000010008954       0x40 src/veml7700/libveml7700.a(veml7700.c.obj)
+                0x0000000010008954                VEML7700_read
+ .text.display_create_zone_matrix
+                0x0000000010008994       0xc0 src/display/libdisplay.a(display.c.obj)
+                0x0000000010008994                display_create_zone_matrix
+ .text.display_draw_zone
+                0x0000000010008a54       0x38 src/display/libdisplay.a(display.c.obj)
+                0x0000000010008a54                display_draw_zone
+ .text          0x0000000010008a8c       0x5c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x0000000010008a8c                strlen
  *(.fini)
- .fini          0x0000000010007a3c        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x0000000010007a3c                _fini
- .fini.__stub   0x0000000010007a40       0xe0 linker stubs
+ .fini          0x0000000010008ae8        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x0000000010008ae8                _fini
+ *fill*         0x0000000010008aec        0x4 
+ .fini.__stub   0x0000000010008af0       0xe0 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2458,129 +2477,137 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x0000000010007b20        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000010007b20                . = ALIGN (0x4)
+ .eh_frame      0x0000000010008bd0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010008bd0                . = ALIGN (0x4)
 
-.glue_7         0x0000000010007b20        0x0
- .glue_7        0x0000000010007b20        0x0 linker stubs
+.glue_7         0x0000000010008bd0        0x0
+ .glue_7        0x0000000010008bd0        0x0 linker stubs
 
-.glue_7t        0x0000000010007b20        0x0
- .glue_7t       0x0000000010007b20        0x0 linker stubs
+.glue_7t        0x0000000010008bd0        0x0
+ .glue_7t       0x0000000010008bd0        0x0 linker stubs
 
-.vfp11_veneer   0x0000000010007b20        0x0
- .vfp11_veneer  0x0000000010007b20        0x0 linker stubs
+.vfp11_veneer   0x0000000010008bd0        0x0
+ .vfp11_veneer  0x0000000010008bd0        0x0 linker stubs
 
-.v4_bx          0x0000000010007b20        0x0
- .v4_bx         0x0000000010007b20        0x0 linker stubs
+.v4_bx          0x0000000010008bd0        0x0
+ .v4_bx         0x0000000010008bd0        0x0 linker stubs
 
-.iplt           0x0000000010007b20        0x0
- .iplt          0x0000000010007b20        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000010008bd0        0x0
+ .iplt          0x0000000010008bd0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000010007b20      0x5ac
+.rodata         0x0000000010008bd0     0x15c4
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.spin_lock_claim_unused.str1.4
-                0x0000000010007b20       0x1b CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x0000000010007b3b        0x1 
+                0x0000000010008bd0       0x1b CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x0000000010008beb        0x1 
  .rodata.hardware_alarm_claim.str1.4
-                0x0000000010007b3c       0x22 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x0000000010007b5e        0x2 
+                0x0000000010008bec       0x22 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x0000000010008c0e        0x2 
  .rodata.user_irq_claim_unused.str1.4
-                0x0000000010007b60       0x1b CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010007b7b        0x1 
+                0x0000000010008c10       0x1b CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010008c2b        0x1 
  .rodata.panic.str1.4
-                0x0000000010007b7c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010008c2c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                          0x12 (size before relaxing)
  .rodata.hard_assertion_failure.str1.4
-                0x0000000010007b8c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010008c3c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x0000000010007b98       0x15 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x0000000010007bad        0x3 
+                0x0000000010008c48       0x15 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x0000000010008c5d        0x3 
  .rodata._vsnprintf
-                0x0000000010007bb0      0x1e0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010008c60      0x1e0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.pow10.0
-                0x0000000010007d90       0x50 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010008e40       0x50 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.str1.4
-                0x0000000010007de0       0x44 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008e90       0x44 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x0000000010007e24        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008ed4        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x0000000010007e30        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008ee0        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x0000000010007e3c        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008eec        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x0000000010007e48        0x2 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x0000000010007e4a        0x2 
+                0x0000000010008ef8        0x2 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x0000000010008efa        0x2 
  .rodata._resetd_driver
-                0x0000000010007e4c       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010008efc       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.str1.4
-                0x0000000010007e64       0x13 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x0000000010007e77        0x1 
+                0x0000000010008f14       0x13 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x0000000010008f27        0x1 
  .rodata.__bi_188.0
-                0x0000000010007e78        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010008f28        0xc CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x0000000010007e84       0x2a CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x0000000010007eae        0x2 
+                0x0000000010008f34       0x2a CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x0000000010008f5e        0x2 
  .rodata.usbd_desc_cfg
-                0x0000000010007eb0       0x54 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010008f60       0x54 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x0000000010007f04       0x12 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x0000000010007f16        0x2 
+                0x0000000010008fb4       0x12 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x0000000010008fc6        0x2 
  .rodata.usbd_desc_str
-                0x0000000010007f18       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010008fc8       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.str1.4
-                0x0000000010007f30       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010008fe0       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x0000000010007f44       0x53 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x0000000010007f97        0x1 
+                0x0000000010008ff4       0x53 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x0000000010009047        0x1 
  .rodata.tud_task_ext
-                0x0000000010007f98       0x8c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010009048       0x8c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x0000000010008024       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .rodata.touchscreen_print_gesture.str1.4
-                0x000000001000803c       0x46 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
- *fill*         0x0000000010008082        0x2 
- .rodata.touchscreen_handler.str1.4
-                0x0000000010008084       0x47 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x00000000100080cc                . = ALIGN (0x4)
- *fill*         0x00000000100080cb        0x1 
+                0x00000000100090d4       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .rodata.station_run.str1.4
+                0x00000000100090ec       0x15 src/station/libstation.a(station.c.obj)
+ *fill*         0x0000000010009101        0x3 
+ .rodata.weather_mode_update_data_on_screen.str1.4
+                0x0000000010009104       0x30 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+ .rodata.lcd_print_int.str1.4
+                0x0000000010009134        0x3 src/lcd/liblcd.a(lcd.c.obj)
+ *fill*         0x0000000010009137        0x1 
+ .rodata.BigFont
+                0x0000000010009138      0xbe4 src/font/libfont.a(font.c.obj)
+                0x0000000010009138                BigFont
+ .rodata.SmallFont
+                0x0000000010009d1c      0x478 src/font/libfont.a(font.c.obj)
+                0x0000000010009d1c                SmallFont
+                0x000000001000a194                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x00000000100080cc                . = ALIGN (0x4)
+                0x000000001000a194                . = ALIGN (0x4)
 
-.rel.dyn        0x00000000100080cc        0x0
- .rel.iplt      0x00000000100080cc        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x000000001000a194        0x0
+ .rel.iplt      0x000000001000a194        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000000100080cc                __exidx_start = .
+                0x000000001000a194                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000000100080cc                __exidx_end = .
-                0x00000000100080cc                . = ALIGN (0x4)
-                0x00000000100080cc                __binary_info_start = .
+                0x000000001000a194                __exidx_end = .
+                0x000000001000a194                . = ALIGN (0x4)
+                0x000000001000a194                __binary_info_start = .
 
-.binary_info    0x00000000100080cc       0x20
+.binary_info    0x000000001000a194       0x20
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x00000000100080cc        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a194        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x00000000100080d0        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a198        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x00000000100080d4        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a19c        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x00000000100080d8        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a1a0        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x00000000100080dc        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a1a4        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x00000000100080e0        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a1a8        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x00000000100080e4        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000a1ac        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr188
-                0x00000000100080e8        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x00000000100080ec                __binary_info_end = .
-                0x00000000100080ec                . = ALIGN (0x4)
-                0x00000000100080ec                __etext = .
+                0x000000001000a1b0        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000000001000a1b4                __binary_info_end = .
+                0x000000001000a1b4                . = ALIGN (0x4)
+                0x000000001000a1b4                __etext = .
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -2589,7 +2616,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x0000000020000000       0xc0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0      0xea0 load address 0x00000000100080ec
+.data           0x00000000200000c0      0xf40 load address 0x000000001000a1b4
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2660,225 +2687,279 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  .data.i2c0_inst
                 0x0000000020000e60        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
                 0x0000000020000e60                i2c0_inst
+ .data.i2c1_inst
+                0x0000000020000e68        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000020000e68                i2c1_inst
  .data.striped_spin_lock_num
-                0x0000000020000e68        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x0000000020000e69        0x3 
+                0x0000000020000e70        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x0000000020000e71        0x3 
  .data.default_alarm_pool
-                0x0000000020000e6c       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020000e74       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
  .data.default_alarm_pool_heap
-                0x0000000020000e84       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
- .data          0x0000000020000e94       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-                0x0000000020000e94                irq_handler_chain_slots
-                0x0000000020000ec4                irq_handler_chain_first_slot
-                0x0000000020000ece                irq_handler_chain_remove_tail
- *fill*         0x0000000020000edc        0x4 
+                0x0000000020000e8c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+ .data          0x0000000020000e9c       0x48 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+                0x0000000020000e9c                irq_handler_chain_slots
+                0x0000000020000ecc                irq_handler_chain_first_slot
+                0x0000000020000ed6                irq_handler_chain_remove_tail
+ *fill*         0x0000000020000ee4        0xc 
  .data.aeabi_bits_funcs
-                0x0000000020000ee0       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-                0x0000000020000ee0                aeabi_bits_funcs
-                0x0000000020000ef0                aeabi_bits_funcs_end
+                0x0000000020000ef0       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000020000ef0                aeabi_bits_funcs
+                0x0000000020000f00                aeabi_bits_funcs_end
  .data.aeabi_mem_funcs
-                0x0000000020000ef0       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000020000ef0                aeabi_mem_funcs
-                0x0000000020000f00                aeabi_mem_funcs_end
+                0x0000000020000f00       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000020000f00                aeabi_mem_funcs
+                0x0000000020000f10                aeabi_mem_funcs_end
  .data.stdio_usb
-                0x0000000020000f00       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000020000f00                stdio_usb
+                0x0000000020000f10       0x18 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000020000f10                stdio_usb
  .data.ep_dir_string
-                0x0000000020000f18        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x0000000020000f18                ep_dir_string
+                0x0000000020000f28        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000020000f28                ep_dir_string
  .data._usbd_qdef
-                0x0000000020000f20       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000020000f20                _usbd_qdef
+                0x0000000020000f30       0x1c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000020000f30                _usbd_qdef
  .data._usbd_rhport
-                0x0000000020000f3c        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000020000f40                . = ALIGN (0x4)
- *fill*         0x0000000020000f3d        0x3 
+                0x0000000020000f4c        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x0000000020000f4d        0x3 
+ .data.humidity
+                0x0000000020000f50       0x24 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020000f50                humidity
+ .data.light    0x0000000020000f74       0x24 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020000f74                light
+ .data.pressure
+                0x0000000020000f98       0x24 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020000f98                pressure
+ .data.temperature
+                0x0000000020000fbc       0x24 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020000fbc                temperature
+                0x0000000020000fe0                . = ALIGN (0x4)
  *(.after_data.*)
-                0x0000000020000f40                . = ALIGN (0x4)
-                0x0000000020000f40                PROVIDE (__mutex_array_start = .)
+                0x0000000020000fe0                . = ALIGN (0x4)
+                0x0000000020000fe0                PROVIDE (__mutex_array_start = .)
  *(SORT_BY_NAME(.mutex_array.*))
  *(.mutex_array)
- .mutex_array   0x0000000020000f40        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000020000f48                PROVIDE (__mutex_array_end = .)
-                0x0000000020000f48                . = ALIGN (0x4)
-                0x0000000020000f48                PROVIDE (__preinit_array_start = .)
+ .mutex_array   0x0000000020000fe0        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000020000fe8                PROVIDE (__mutex_array_end = .)
+                0x0000000020000fe8                . = ALIGN (0x4)
+                0x0000000020000fe8                PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00001
-                0x0000000020000f48        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000020000fe8        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .preinit_array.00010
-                0x0000000020000f4c        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000020000fec        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .preinit_array.00020
-                0x0000000020000f50        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000020000ff0        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .preinit_array.00020
-                0x0000000020000f54        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x0000000020000ff4        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  *(.preinit_array)
-                0x0000000020000f58                PROVIDE (__preinit_array_end = .)
-                0x0000000020000f58                . = ALIGN (0x4)
-                0x0000000020000f58                PROVIDE (__init_array_start = .)
+                0x0000000020000ff8                PROVIDE (__preinit_array_end = .)
+                0x0000000020000ff8                . = ALIGN (0x4)
+                0x0000000020000ff8                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x0000000020000f58        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
- .init_array    0x0000000020000f5c        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x0000000020000f60                PROVIDE (__init_array_end = .)
-                0x0000000020000f60                . = ALIGN (0x4)
-                0x0000000020000f60                PROVIDE (__fini_array_start = .)
+ .init_array    0x0000000020000ff8        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .init_array    0x0000000020000ffc        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000020001000                PROVIDE (__init_array_end = .)
+                0x0000000020001000                . = ALIGN (0x4)
+                0x0000000020001000                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
-                0x0000000020000f60                PROVIDE (__fini_array_end = .)
+                0x0000000020001000                PROVIDE (__fini_array_end = .)
  *(.jcr)
-                0x0000000020000f60                . = ALIGN (0x4)
-                0x0000000020000f60                __data_end__ = .
+                0x0000000020001000                . = ALIGN (0x4)
+                0x0000000020001000                __data_end__ = .
 
 .tm_clone_table
-                0x0000000020000f60        0x0 load address 0x0000000010008f8c
+                0x0000000020001000        0x0 load address 0x000000001000b0f4
  .tm_clone_table
-                0x0000000020000f60        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000020001000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
-                0x0000000020000f60        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
+                0x0000000020001000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x0000000020000f60        0x0 load address 0x0000000010008f8c
- .igot.plt      0x0000000020000f60        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.igot.plt       0x0000000020001000        0x0 load address 0x000000001000b0f4
+ .igot.plt      0x0000000020001000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x0000000020000f60        0x0 load address 0x0000000010008f8c
-                0x0000000020000f60                . = ALIGN (0x4)
+                0x0000000020001000        0x0 load address 0x000000001000b0f4
+                0x0000000020001000                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x0000000010008f8c
+.scratch_x      0x0000000020040000        0x0 load address 0x000000001000b0f4
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x0000000010008f8c                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x000000001000b0f4                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x0000000010008f8c
+.scratch_y      0x0000000020041000        0x0 load address 0x000000001000b0f4
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x0000000010008f8c                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x000000001000b0f4                __scratch_y_source__ = LOADADDR (.scratch_y)
 
-.bss            0x0000000020000f60      0xdbc
-                0x0000000020000f60                . = ALIGN (0x4)
-                0x0000000020000f60                __bss_start__ = .
+.bss            0x0000000020001000      0xe58
+                0x0000000020001000                . = ALIGN (0x4)
+                0x0000000020001000                __bss_start__ = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
  .bss.default_alarm_pool_entries
-                0x0000000020000f60      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020001000      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
  .bss.last_avail_time.1
-                0x0000000020001060        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .bss.sd_table  0x0000000020001068      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000020001068                sd_table
- .bss.sf_table  0x0000000020001168      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000020001168                sf_table
- .bss           0x0000000020001268       0x1c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000020001100        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .bss.sd_table  0x0000000020001108      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000020001108                sd_table
+ .bss.sf_table  0x0000000020001208      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x0000000020001208                sf_table
+ .bss           0x0000000020001308       0x1c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  .bss._app_driver
-                0x0000000020001284        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000020001324        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._cdcd_itf
-                0x0000000020001288      0x2c8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000020001328      0x2c8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
  .bss._ctrl_xfer
-                0x0000000020001550       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x00000000200015f0       0x14 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .bss._ubsd_mutexdef
-                0x0000000020001564        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000020001604        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._usbd_ctrl_buf
-                0x000000002000156c       0x40 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x000000002000160c       0x40 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .bss._usbd_dev
-                0x00000000200015ac       0x53 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x00000000200015ff        0x1 
+                0x000000002000164c       0x53 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x000000002000169f        0x1 
  .bss._usbd_mutex
-                0x0000000020001600        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .bss._usbd_q   0x0000000020001604        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000200016a0        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .bss._usbd_q   0x00000000200016a4        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._usbd_qdef_buf
-                0x0000000020001608       0xc0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000020001608                _usbd_qdef_buf
+                0x00000000200016a8       0xc0 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000200016a8                _usbd_qdef_buf
  .bss.alarm_callbacks
-                0x00000000200016c8       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020001768       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.boot2_copyout
-                0x00000000200016d8      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .bss.callbacks
-                0x00000000200017d8        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000020001778      0x100 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .bss.chars_available_callback
-                0x00000000200017e0        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000020001878        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.chars_available_param
-                0x00000000200017e4        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .bss.claimed   0x00000000200017e8        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x000000002000187c        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .bss.claimed   0x0000000020001880        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  .bss.configured_freq
-                0x00000000200017ec       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000020001884       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .bss.default_alarm_pool_entry_ids_high
-                0x0000000020001814       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000200018ac       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
  .bss.default_alarm_pool_heap_nodes
-                0x0000000020001824       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000200018bc       0x30 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
  .bss.desc_str.0
-                0x0000000020001854       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .bss.drivers   0x000000002000187c        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000200018ec       0x28 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .bss.drivers   0x0000000020001914        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .bss.e15_last_sof
-                0x0000000020001880        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x0000000020001880                e15_last_sof
- .bss.filter    0x0000000020001884        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000020001918        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000020001918                e15_last_sof
+ .bss.filter    0x000000002000191c        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.grid      0x0000000020001920       0x60 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020001920                grid
  .bss.hw_endpoints
-                0x0000000020001888      0x400 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000020001980      0x400 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .bss.lazy_vsnprintf
-                0x0000000020001c88        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000020001d80        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .bss.load_value
-                0x0000000020001c8c        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000020001d84        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
  .bss.next_buffer_ptr
-                0x0000000020001c90        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000020001d88        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .bss.one_shot_timer_crit_sec
-                0x0000000020001c94        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .bss.pools     0x0000000020001c9c       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
- .bss.raw_irq_mask
-                0x0000000020001cac        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000020001d8c        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .bss.pools     0x0000000020001d94       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
  .bss.retrieved_id
-                0x0000000020001cb4        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000020001da4        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .bss.sf_clz_func
-                0x0000000020001cbc        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000020001cbc                sf_clz_func
+                0x0000000020001dac        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000020001dac                sf_clz_func
  .bss.sleep_notifier
-                0x0000000020001cc0        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020001db0        0x4 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time/time.c.obj
  .bss.station_state
-                0x0000000020001cc4        0x1 src/station/libstation.a(station.c.obj)
-                0x0000000020001cc4                station_state
- *fill*         0x0000000020001cc5        0x3 
+                0x0000000020001db4        0x2 src/station/libstation.a(station.c.obj)
+                0x0000000020001db4                station_state
+ *fill*         0x0000000020001db6        0x2 
  .bss.stdio_usb_mutex
-                0x0000000020001cc8        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000020001db8        0x8 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.systick_counter
-                0x0000000020001cd0        0x4 CMakeFiles/weather_station.dir/src/main.c.obj
-                0x0000000020001cd0                systick_counter
+                0x0000000020001dc0        0x4 CMakeFiles/weather_station.dir/src/main.c.obj
+                0x0000000020001dc0                systick_counter
+ .bss.t_fine    0x0000000020001dc4        0x4 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001dc4                t_fine
  .bss.target_hi
-                0x0000000020001cd4       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020001dc8       0x10 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.touchscreen_status
-                0x0000000020001ce4       0x1c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x0000000020001ce4                touchscreen_status
+                0x0000000020001dd8       0x1c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+                0x0000000020001dd8                touchscreen_status
  .bss.usbd_serial_str
-                0x0000000020001d00       0x11 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000020001df4       0x11 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x0000000020001e05        0x3 
+ .bss.weather_grid
+                0x0000000020001e08       0x24 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020001e08                weather_grid
+ .bss.dig_H2    0x0000000020001e2c        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e2c                dig_H2
+ .bss.dig_H4    0x0000000020001e2e        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e2e                dig_H4
+ .bss.dig_H5    0x0000000020001e30        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e30                dig_H5
+ .bss.dig_P1    0x0000000020001e32        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e32                dig_P1
+ .bss.dig_P2    0x0000000020001e34        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e34                dig_P2
+ .bss.dig_P3    0x0000000020001e36        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e36                dig_P3
+ .bss.dig_P4    0x0000000020001e38        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e38                dig_P4
+ .bss.dig_P5    0x0000000020001e3a        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e3a                dig_P5
+ .bss.dig_P6    0x0000000020001e3c        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e3c                dig_P6
+ .bss.dig_P7    0x0000000020001e3e        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e3e                dig_P7
+ .bss.dig_P8    0x0000000020001e40        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e40                dig_P8
+ .bss.dig_P9    0x0000000020001e42        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e42                dig_P9
+ .bss.dig_T1    0x0000000020001e44        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e44                dig_T1
+ .bss.dig_T2    0x0000000020001e46        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e46                dig_T2
+ .bss.dig_T3    0x0000000020001e48        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e48                dig_T3
  .bss._app_driver_count
-                0x0000000020001d11        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000020001e4a        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._sof_enable
-                0x0000000020001d12        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000020001e4b        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .bss.boot2_copyout_valid
-                0x0000000020001d13        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .bss.claimed   0x0000000020001d14        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020001e4c        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .bss.claimed   0x0000000020001e4d        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .bss.dig_H1    0x0000000020001e4e        0x1 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e4e                dig_H1
+ .bss.dig_H3    0x0000000020001e4f        0x1 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e4f                dig_H3
+ .bss.dig_H6    0x0000000020001e50        0x1 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020001e50                dig_H6
  .bss.irq_hander_chain_free_slot_head
-                0x0000000020001d15        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .bss.itf_num   0x0000000020001d16        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000020001e51        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .bss.itf_num   0x0000000020001e52        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .bss.low_priority_irq_num
-                0x0000000020001d17        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000020001e53        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.one_shot_timer_pending
-                0x0000000020001d18        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000020001e54        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.timer_callbacks_pending
-                0x0000000020001d19        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020001e55        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.user_irq_claimed
-                0x0000000020001d1a        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000020001e56        0x1 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  *(COMMON)
-                0x0000000020001d1c                . = ALIGN (0x4)
- *fill*         0x0000000020001d1b        0x1 
-                0x0000000020001d1c                __bss_end__ = .
+                0x0000000020001e58                . = ALIGN (0x4)
+ *fill*         0x0000000020001e57        0x1 
+                0x0000000020001e58                __bss_end__ = .
 
-.heap           0x0000000020001d1c      0x800
-                0x0000000020001d1c                __end__ = .
-                0x0000000020001d1c                end = __end__
+.heap           0x0000000020001e58      0x800
+                0x0000000020001e58                __end__ = .
+                0x0000000020001e58                end = __end__
  *(.heap*)
- .heap          0x0000000020001d1c      0x800 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-                0x000000002000251c                __HeapLimit = .
+ .heap          0x0000000020001e58      0x800 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x0000000020002658                __HeapLimit = .
 
 .stack1_dummy   0x0000000020040000        0x0
  *(.stack1*)
@@ -2887,8 +2968,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x0000000010008f8c        0x0
-                0x0000000010008f8c                __flash_binary_end = .
+.flash_end      0x000000001000b0f4        0x0
+                0x000000001000b0f4                __flash_binary_end = .
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2988,7 +3069,7 @@ LOAD src/util/libutil.a
 LOAD src/callback/libcallback.a
 LOAD src/lcd/liblcd.a
 LOAD src/led_rgb/libled_rgb.a
-LOAD /tmp/ccVbMoIA.o
+LOAD /tmp/ccT7r41L.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -3106,21 +3187,29 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000000000007d4       0x2c CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
  .ARM.attributes
-                0x0000000000000800       0x2c src/systick/libsystick.a(systick.c.obj)
+                0x0000000000000800       0x2c src/station/libstation.a(station.c.obj)
  .ARM.attributes
-                0x000000000000082c       0x2c src/station/libstation.a(station.c.obj)
+                0x000000000000082c       0x2c src/weather_mode/libweather_mode.a(weather_mode.c.obj)
  .ARM.attributes
                 0x0000000000000858       0x2c src/lcd/liblcd.a(lcd.c.obj)
  .ARM.attributes
-                0x0000000000000884       0x2c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+                0x0000000000000884       0x32 src/font/libfont.a(font.c.obj)
  .ARM.attributes
-                0x00000000000008b0       0x22 /tmp/ccVbMoIA.o
+                0x00000000000008b6       0x2c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .ARM.attributes
-                0x00000000000008d2       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x00000000000008e2       0x2c src/bme280/libbme280.a(bme280.c.obj)
  .ARM.attributes
-                0x00000000000008f0       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x000000000000090e       0x2c src/veml7700/libveml7700.a(veml7700.c.obj)
  .ARM.attributes
-                0x000000000000091c       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
+                0x000000000000093a       0x2c src/display/libdisplay.a(display.c.obj)
+ .ARM.attributes
+                0x0000000000000966       0x22 /tmp/ccT7r41L.o
+ .ARM.attributes
+                0x0000000000000988       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000000000009a6       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+ .ARM.attributes
+                0x00000000000009d2       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
 
 .comment        0x0000000000000000       0x33
  .comment       0x0000000000000000       0x33 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
@@ -3162,10 +3251,14 @@ LOAD linker stubs
  .comment       0x0000000000000033       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .comment       0x0000000000000033       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .comment       0x0000000000000033       0x34 CMakeFiles/weather_station.dir/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .comment       0x0000000000000033       0x34 src/systick/libsystick.a(systick.c.obj)
  .comment       0x0000000000000033       0x34 src/station/libstation.a(station.c.obj)
+ .comment       0x0000000000000033       0x34 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
  .comment       0x0000000000000033       0x34 src/lcd/liblcd.a(lcd.c.obj)
+ .comment       0x0000000000000033       0x34 src/font/libfont.a(font.c.obj)
  .comment       0x0000000000000033       0x34 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+ .comment       0x0000000000000033       0x34 src/bme280/libbme280.a(bme280.c.obj)
+ .comment       0x0000000000000033       0x34 src/veml7700/libveml7700.a(veml7700.c.obj)
+ .comment       0x0000000000000033       0x34 src/display/libdisplay.a(display.c.obj)
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
 

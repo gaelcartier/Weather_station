@@ -35,6 +35,7 @@ typedef enum _test_t {
     I2C_NB,
     CALLBACK,
     METEO,
+    STATION,
     OTHER
 } test_t;
 
@@ -210,7 +211,7 @@ void test_callback(){
 
 int main() {
     
-    test_t TEST = TOUCHSCREEN;
+    test_t TEST = STATION;
 
    stdio_init_all();
    station_init();
@@ -250,6 +251,10 @@ int main() {
             break;
         
         case METEO : station_main();
+            break;
+
+        case STATION : station_run();
+            break;
         
         default: blink_led(); // run only on pico
             
