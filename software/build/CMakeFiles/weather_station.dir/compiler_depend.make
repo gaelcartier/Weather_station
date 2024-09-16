@@ -2990,6 +2990,13 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   ../src/veml7700/veml7700.h \
   ../src/led_rgb/led_rgb.h \
   ../src/RN4870/RN4870.h \
+  ../src/wellcome_mode/wellcome_mode.h \
+  ../src/board.h \
+  ../src/lcd/lcd.h \
+  ../src/display/display.h \
+  ../src/touchscreen/touchscreen.h \
+  ../src/systick/systick.h \
+  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h \
   ../src/lcd/lcd.h \
   ../src/display/display.h \
   ../src/touchscreen/touchscreen.h \
@@ -2999,7 +3006,6 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   ../src/RN4870/RN4870.h \
   ../src/util/util.h \
   ../src/systick/systick.h \
-  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h \
   ../src/i2c_non_blocking/i2c_non_blocking.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/pico_i2c_slave/include/pico/i2c_slave.h
 
@@ -3101,6 +3107,8 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_qspi.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/ssi.h:
+
+../src/wellcome_mode/wellcome_mode.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_flash/flash.c:
 

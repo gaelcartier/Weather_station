@@ -1647,8 +1647,17 @@ src/station/CMakeFiles/station.dir/station.c.obj: ../src/station/station.c \
   ../src/bme280/bme280.h \
   ../src/veml7700/veml7700.h \
   ../src/led_rgb/led_rgb.h \
-  ../src/RN4870/RN4870.h
+  ../src/RN4870/RN4870.h \
+  ../src/wellcome_mode/wellcome_mode.h \
+  ../src/board.h \
+  ../src/lcd/lcd.h \
+  ../src/display/display.h \
+  ../src/touchscreen/touchscreen.h \
+  ../src/systick/systick.h \
+  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h
 
+
+../src/wellcome_mode/wellcome_mode.h:
 
 ../src/led_rgb/led_rgb.h:
 
@@ -1798,6 +1807,8 @@ src/station/CMakeFiles/station.dir/station.c.obj: ../src/station/station.c \
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h:
 
+/home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h:
+
 /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h:
 
 /usr/include/newlib/_newlib_version.h:
@@ -1817,6 +1828,8 @@ src/station/CMakeFiles/station.dir/station.c.obj: ../src/station/station.c \
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/psm.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h:
+
+../src/systick/systick.h:
 
 /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h:
 

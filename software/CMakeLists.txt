@@ -28,6 +28,7 @@ target_link_libraries(  weather_station
                         systick
                         station 
                         weather_mode
+                        wellcome_mode
                         pico_stdlib 
                         lcd 
                         font 

@@ -1223,6 +1223,7 @@ weather_station.elf: src/callback/libcallback.a
 weather_station.elf: src/systick/libsystick.a
 weather_station.elf: src/station/libstation.a
 weather_station.elf: src/weather_mode/libweather_mode.a
+weather_station.elf: src/wellcome_mode/libwellcome_mode.a
 weather_station.elf: src/lcd/liblcd.a
 weather_station.elf: src/font/libfont.a
 weather_station.elf: src/touchscreen/libtouchscreen.a

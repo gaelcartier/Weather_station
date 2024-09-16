@@ -377,6 +377,19 @@ callback/fast:
 .PHONY : callback/fast
 
 #=============================================================================
+# Target rules for targets named buffer_loop
+
+# Build rule for target.
+buffer_loop: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 buffer_loop
+.PHONY : buffer_loop
+
+# fast build rule for target.
+buffer_loop/fast:
+	$(MAKE) $(MAKESILENT) -f src/buffer_loop/CMakeFiles/buffer_loop.dir/build.make src/buffer_loop/CMakeFiles/buffer_loop.dir/build
+.PHONY : buffer_loop/fast
+
+#=============================================================================
 # Target rules for targets named weather_mode
 
 # Build rule for target.
@@ -390,17 +403,17 @@ weather_mode/fast:
 .PHONY : weather_mode/fast
 
 #=============================================================================
-# Target rules for targets named buffer_loop
+# Target rules for targets named wellcome_mode
 
 # Build rule for target.
-buffer_loop: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 buffer_loop
-.PHONY : buffer_loop
+wellcome_mode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 wellcome_mode
+.PHONY : wellcome_mode
 
 # fast build rule for target.
-buffer_loop/fast:
-	$(MAKE) $(MAKESILENT) -f src/buffer_loop/CMakeFiles/buffer_loop.dir/build.make src/buffer_loop/CMakeFiles/buffer_loop.dir/build
-.PHONY : buffer_loop/fast
+wellcome_mode/fast:
+	$(MAKE) $(MAKESILENT) -f src/wellcome_mode/CMakeFiles/wellcome_mode.dir/build.make src/wellcome_mode/CMakeFiles/wellcome_mode.dir/build
+.PHONY : wellcome_mode/fast
 
 home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
@@ -1984,6 +1997,7 @@ help:
 	@echo "... veml7700"
 	@echo "... weather_mode"
 	@echo "... weather_station"
+	@echo "... wellcome_mode"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/gael/hepia/CSH/pico_sdk/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"

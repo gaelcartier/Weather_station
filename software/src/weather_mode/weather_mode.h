@@ -42,6 +42,8 @@ typedef struct {
     int data;
 } weather_grid_content_t;
 
+extern zone_matrix_t weather_grid;
+
 void weather_mode_init();
 void weather_mode_draw_grid();
 void weather_mode_measure_data();

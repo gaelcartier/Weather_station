@@ -2,6 +2,11 @@
 
 station_state_t station_state;
 
+extern void isr_systick() {
+    station_state.systick_counter ++;
+    touchscreen_status.duration ++;
+}
+
 void station_reset() {
     gpio_init( nRESET_GPIO );
 	gpio_set_dir( nRESET_GPIO, GPIO_OUT );
@@ -26,10 +31,13 @@ void station_init() {
     lcd_backlight_off();
     lcd_init();
     station_state_init();
+    systick_init( 124999UL );
+    touchscreen_init();
 }
 
 void station_state_init() {
-    station_state.mode = WEATHER_ALL_GRID;
+    station_state.systick_counter = 0;
+    station_state.mode = STATION_WELLCOME;
     station_state.mode_initialized = false;
 }
 
@@ -83,14 +91,26 @@ void station_run(){
     station_init();
     while(true) {
         switch(station_state.mode){
+            case STATION_WELLCOME:
+                if(!station_state.mode_initialized){
+                    lcd_backlight_on();
+                    station_draw_title( STATION_WELLCOME_MODE_TITLE );
+                    wellcome_mode_init();
+                    station_state.current_matrix = &wellcome_grid;
+                    station_state.mode_initialized = true;
+                } else {
+
+                }
+                break;
             case WEATHER_ALL_GRID: 
                 if(!station_state.mode_initialized) {
                     station_init_i2c_sensor();
                     BME280_config();
                     VEML7700_config();
                     lcd_backlight_on();
-                    station_draw_title();
+                    station_draw_title( STATION_WEATHER_MODE_TITLE );
                     weather_mode_init();
+                    station_state.current_matrix = &weather_grid;
                     station_state.mode_initialized = true;
                 } else {
                     weather_mode_measure_data();
@@ -102,9 +122,16 @@ void station_run(){
             default: 
                 break;
         }
+        touchscreen_handler( &station_gesture_handler );
     }
 }
 
-void station_draw_title(){
-    lcd_draw_string(STATION_TITLE, STATION_TITLE_X, STATION_TITLE_Y, LCD_LIGHT_GREEN, BigFont );
+void station_draw_title( char* title ){
+    lcd_draw_string(title, STATION_TITLE_X, STATION_TITLE_Y, LCD_LIGHT_GREEN, BigFont );
+}
+
+void station_gesture_handler( touchscreen_action_t gesture_event ){
+    if( gesture_event.gesture != NO_GESTURE ){
+        
+    }
 }

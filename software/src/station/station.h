@@ -15,12 +15,17 @@
 #include "../led_rgb/led_rgb.h"
 #include "../RN4870/RN4870.h"
 #include "../weather_mode/weather_mode.h"
+#include "../wellcome_mode/wellcome_mode.h"
+#include "../systick/systick.h"
 
-#define STATION_TITLE_X             2 
-#define STATION_TITLE_Y             2
-#define STATION_TITLE               "Weather"
+#define STATION_TITLE_X                     2 
+#define STATION_TITLE_Y                     2
+#define STATION_WEATHER_MODE_TITLE          "Weather"
+#define STATION_WELLCOME_MODE_TITLE         "Wellcome"      
 
 typedef enum {
+    STATION_WELLCOME,
+    DRAWING,
     WEATHER_ALL_GRID,
     WEATHER_TEMP_NUM,
     WEATHER_HUM_NUM,
@@ -34,7 +39,9 @@ typedef enum {
 
 typedef struct {
     station_mode_t mode;
+    zone_matrix_t* current_matrix;
     bool mode_initialized;
+    uint systick_counter;
 } station_state_t;
 
 extern station_state_t station_state;
@@ -47,6 +54,7 @@ void station_main();
 void station_init_i2c_sensor();
 void station_state_init();
 void station_run();
-void station_draw_title();
+void station_draw_title( char* title );
+void station_gesture_handler( touchscreen_action_t geture_event );
 
 #endif

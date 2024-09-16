@@ -193,6 +193,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/gael/git/Weather_station/software/build/src/systick/CMakeFiles/systick.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/station/CMakeFiles/station.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/weather_mode/CMakeFiles/weather_mode.dir/DependInfo.cmake"
+  "/home/gael/git/Weather_station/software/build/src/wellcome_mode/CMakeFiles/wellcome_mode.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/lcd/CMakeFiles/lcd.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/font/CMakeFiles/font.dir/DependInfo.cmake"
   "/home/gael/git/Weather_station/software/build/src/touchscreen/CMakeFiles/touchscreen.dir/DependInfo.cmake"

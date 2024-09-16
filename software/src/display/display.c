@@ -22,3 +22,9 @@ void display_create_zone_matrix( zone_matrix_t* zm, zone_t* zone_array, uint row
 void display_draw_zone( zone_t z, uint16_t color ) {
     if(z.has_border) lcd_rect( z.p1.x, z.p2.x, z.p1.y, z.p2.y, color );
 }
+
+// void display_zone_matrix_content_init( zone_matrix_t* zm, void* contents ){
+//     for(int i = 0; i < zm->row*zm->col; i++){
+//         zm->z[i].content = contents[i];
+//     }
+// }

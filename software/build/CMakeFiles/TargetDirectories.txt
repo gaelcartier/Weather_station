@@ -206,9 +206,12 @@
 /home/gael/git/Weather_station/software/build/src/callback/CMakeFiles/callback.dir
 /home/gael/git/Weather_station/software/build/src/callback/CMakeFiles/edit_cache.dir
 /home/gael/git/Weather_station/software/build/src/callback/CMakeFiles/rebuild_cache.dir
-/home/gael/git/Weather_station/software/build/src/weather_mode/CMakeFiles/weather_mode.dir
-/home/gael/git/Weather_station/software/build/src/weather_mode/CMakeFiles/edit_cache.dir
-/home/gael/git/Weather_station/software/build/src/weather_mode/CMakeFiles/rebuild_cache.dir
 /home/gael/git/Weather_station/software/build/src/buffer_loop/CMakeFiles/buffer_loop.dir
 /home/gael/git/Weather_station/software/build/src/buffer_loop/CMakeFiles/edit_cache.dir
 /home/gael/git/Weather_station/software/build/src/buffer_loop/CMakeFiles/rebuild_cache.dir
+/home/gael/git/Weather_station/software/build/src/weather_mode/CMakeFiles/weather_mode.dir
+/home/gael/git/Weather_station/software/build/src/weather_mode/CMakeFiles/edit_cache.dir
+/home/gael/git/Weather_station/software/build/src/weather_mode/CMakeFiles/rebuild_cache.dir
+/home/gael/git/Weather_station/software/build/src/wellcome_mode/CMakeFiles/wellcome_mode.dir
+/home/gael/git/Weather_station/software/build/src/wellcome_mode/CMakeFiles/edit_cache.dir
+/home/gael/git/Weather_station/software/build/src/wellcome_mode/CMakeFiles/rebuild_cache.dir

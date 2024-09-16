@@ -44,7 +44,7 @@ void touchscreen_irq_callback( uint8_t gpio, uint32_t events ) {
 }
 
 void touchscreen_enable_irq() {
-	gpio_set_irq_enabled_with_callback( TOUCHSCREEN_I2C_IRQ_GPIO, GPIO_IRQ_EDGE_RISE, true, &touchscreen_irq_callback );
+	gpio_set_irq_enabled_with_callback( TOUCHSCREEN_I2C_IRQ_GPIO, GPIO_IRQ_EDGE_RISE, true, (gpio_irq_callback_t)&touchscreen_irq_callback );
 }
 
 void touchscreen_init() {
@@ -124,7 +124,7 @@ void touchscreen_print_gesture( touchscreen_action_t a ){
 	}
 }
 
-void touchscreen_handler() {
+void touchscreen_handler( void (*gesture_handler)(touchscreen_action_t) ) {
 	if( touchscreen_status.is_watching ) {
 		touchscreen_info_t touch_info = touchscreen_read();
 		if( touch_info.touch_event == PRESS_DOWN && !touchscreen_status.read_initialized ) {
@@ -136,10 +136,12 @@ void touchscreen_handler() {
 			touchscreen_status.is_watching = false;
 			touch_info.time = touchscreen_status.duration;
 			touchscreen_status.duration = 0;
-			touchscreen_action_t a = touchscreen_set_action_from_infos( touchscreen_status.first_touch, touch_info );
-			printf(">>> GESTURE : ");
-			touchscreen_print_gesture(a);
-			printf(" x: %d, y: %d, x_area: %d, y_area: %d, duration: %d \n", a.x, a.y, a.x_area, a.y_area, a.duration);
+			touchscreen_action_t gesture_event = touchscreen_set_action_from_infos( touchscreen_status.first_touch, touch_info );
+			gesture_handler( gesture_event );
+			// touchscreen_status.action = touchscreen_set_action_from_infos( touchscreen_status.first_touch, touch_info );
+			// printf(">>> GESTURE : ");
+			// touchscreen_print_gesture(a);
+			// printf(" x: %d, y: %d, x_area: %d, y_area: %d, duration: %d \n", a.x, a.y, a.x_area, a.y_area, a.duration);
 		}
 	}
 }

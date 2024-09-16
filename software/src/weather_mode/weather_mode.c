@@ -1,6 +1,6 @@
 #include "weather_mode.h"
 
-zone_t grid[WEATHER_GRID_COL*WEATHER_GRID_ROW];
+zone_t weather_zone_grid[WEATHER_GRID_COL*WEATHER_GRID_ROW];
 zone_matrix_t weather_grid;
 
 weather_grid_content_t temperature = {"Temperature", 0};
@@ -12,7 +12,7 @@ weather_grid_content_t light = {"Light", 0};
 void weather_mode_init(){
     // BME280_init();
     // VEML7700_init();
-    display_create_zone_matrix( &weather_grid, grid, WEATHER_GRID_ROW, WEATHER_GRID_COL, (point_t){0,20}, (point_t){320,220} );
+    display_create_zone_matrix( &weather_grid, weather_zone_grid, WEATHER_GRID_ROW, WEATHER_GRID_COL, (point_t){0,20}, (point_t){320,220} );
     weather_grid.z[WEATHER_ZONE_TEMP].content = &temperature;
     weather_grid.z[WEATHER_ZONE_HUM].content = &humidity;
     weather_grid.z[WEATHER_ZONE_PRESS].content = &pressure;

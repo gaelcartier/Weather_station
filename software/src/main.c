@@ -39,10 +39,6 @@ typedef enum _test_t {
     OTHER
 } test_t;
 
-extern void isr_systick() {
-    systick_counter ++;
-    touchscreen_status.duration ++;
-}
 
 void blink_led() {
     gpio_init( 25 );
@@ -81,16 +77,16 @@ void test_lcd() {
 }
 
 void test_touchscreen() {
-    systick_counter = 0;
-    systick_init( 124999UL );
+    // systick_counter = 0;
+    // systick_init( 124999UL );
 
-    touchscreen_init();
-    lcd_clear( LCD_BLACK );
-    lcd_backlight_on();
+    // touchscreen_init();
+    // lcd_clear( LCD_BLACK );
+    // lcd_backlight_on();
 
-    while (true) {
-        touchscreen_handler();
-    }
+    // while (true) {
+    //     touchscreen_handler();
+    // }
 }
 
 void test_bme280() {

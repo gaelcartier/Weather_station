@@ -106,6 +106,7 @@ typedef struct {
 	uint32_t last_read_duration;
 	bool read_initialized;
 	touchscreen_info_t first_touch;
+	// touchscreen_action_t action;
 } touchscreen_status_t;
 
 
@@ -122,6 +123,6 @@ touchscreen_info_t touchscreen_read();
 void touchscreen_print_touch_event( touchscreen_info_t touch_info );
 touchscreen_action_t touchscreen_set_action_from_infos( touchscreen_info_t first, touchscreen_info_t last );
 void touchscreen_print_gesture( touchscreen_action_t a );
-void touchscreen_handler();
+void touchscreen_handler( void (*gesture_handler)(touchscreen_action_t) );
 
 #endif 
