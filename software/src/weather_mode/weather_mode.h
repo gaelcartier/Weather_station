@@ -22,8 +22,8 @@
 #define WEATHER_TITLE_X_OFFSET          5
 #define WEATHER_TITLE_Y_OFFSET          5
 
-#define WEATHER_DATA_X(zone)            ((zone.p2.x - zone.p1.x)/2 - 30)
-#define WEATHER_DATA_Y(zone)            ((zone.p2.y - zone.p1.y)/2)
+#define WEATHER_DATA_POS_X(data_zone)            (data_zone.p2.x - (data_zone.p2.x - data_zone.p1.x)/2 - 30)
+#define WEATHER_DATA_POS_Y(data_zone)            (data_zone.p2.y - (data_zone.p2.y - data_zone.p1.y)/2)
 
 #define WEATHER_ZONE_TEMP               0
 #define WEATHER_ZONE_HUM                1

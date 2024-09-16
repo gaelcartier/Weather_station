@@ -34,7 +34,11 @@ typedef struct zone_matrix_t {
     point_t start, end;
     uint row, col;
     uint z_width, z_height;
-    zone_t *z; // size = col x row
+    zone_t *z; // pointer to zone_t array - size = col x row
+    void (*swipe_right_handler)();
+    void (*swipe_left_handler)();
+    void (*swipe_top_handler)();
+    void (*swipe_bottom_handler)();
 } zone_matrix_t;
 
 void display_create_zone_matrix( zone_matrix_t *zm, zone_t* zone_array, uint row, uint col, point_t start, point_t end );

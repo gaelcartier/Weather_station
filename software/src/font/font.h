@@ -3,6 +3,10 @@
  *
  *  Created on: 19 avr. 2016
  *      Author: cma
+ * 
+ *
+ * pour d'autres fonts voir : http://www.rinkydinkelectronics.com/r_fonts.php
+ *
  */
 
 

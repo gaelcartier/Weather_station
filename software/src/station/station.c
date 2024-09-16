@@ -95,7 +95,7 @@ void station_run(){
                 } else {
                     weather_mode_measure_data();
                     weather_mode_update_data_on_screen();
-                    printf("display data\n");
+                    // printf("display data\n");
                     sleep_ms(1000);
                 }
                 break;

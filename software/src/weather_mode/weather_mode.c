@@ -40,10 +40,9 @@ void weather_mode_measure_data() {
 void weather_mode_update_data_on_screen(){
     for(int i = 0; i<WEATHER_GRID_ROW*WEATHER_GRID_COL; i++) {
         weather_grid_content_t *content = weather_grid.z[i].content;
-        printf("data: %d, x: %d, y: %d, p.x: %d, p.y: %d\n", (int)content->data, WEATHER_DATA_X(weather_grid.z[i]), WEATHER_DATA_Y(weather_grid.z[i]), weather_grid.z[i].p1.x, weather_grid.z[i].p1.y);
-        lcd_fill_rect(WEATHER_DATA_X(weather_grid.z[i]), WEATHER_DATA_X(weather_grid.z[i])+30, WEATHER_DATA_Y(weather_grid.z[i]), WEATHER_DATA_Y(weather_grid.z[i])-8, LCD_BLACK);
-        lcd_print_int((int)content->data, WEATHER_DATA_X(weather_grid.z[i]), WEATHER_DATA_Y(weather_grid.z[i]), LCD_LIGHT_BLUE, SmallFont);
-        printf("%d\n", content->data);
+        lcd_fill_rect(WEATHER_DATA_POS_X(weather_grid.z[i]), WEATHER_DATA_POS_X(weather_grid.z[i])+40, WEATHER_DATA_POS_Y(weather_grid.z[i]), WEATHER_DATA_POS_Y(weather_grid.z[i])+8, LCD_BLACK);
+        lcd_print_int((int)content->data, WEATHER_DATA_POS_X(weather_grid.z[i]), WEATHER_DATA_POS_Y(weather_grid.z[i]), LCD_LIGHT_BLUE, SmallFont);
+        printf(" data : %d\n", content->data);
     }
 }
 
