@@ -11,6 +11,8 @@
 #include "../lcd/lcd.h"
 #include "../display/display.h"
 #include "../touchscreen/touchscreen.h"
+#include "../weather_mode/weather_mode.h"
+#include "../station/station.h"
 
 #define WELLCOME_GRID_COL                4
 #define WELLCOME_GRID_ROW                1

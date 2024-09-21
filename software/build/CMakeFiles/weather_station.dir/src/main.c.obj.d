@@ -96,11 +96,14 @@ CMakeFiles/weather_station.dir/src/main.c.obj: \
  /home/gael/git/Weather_station/software/src/station/../weather_mode/../veml7700/veml7700.h \
  /home/gael/git/Weather_station/software/src/station/../weather_mode/../led_rgb/led_rgb.h \
  /home/gael/git/Weather_station/software/src/station/../weather_mode/../RN4870/RN4870.h \
+ /home/gael/git/Weather_station/software/src/station/../weather_mode/../station/station.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/wellcome_mode.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../board.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../lcd/lcd.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../display/display.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../touchscreen/touchscreen.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../weather_mode/weather_mode.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../station/station.h \
  /home/gael/git/Weather_station/software/src/station/../systick/systick.h \
  /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h \
  /home/gael/git/Weather_station/software/src/lcd/lcd.h \

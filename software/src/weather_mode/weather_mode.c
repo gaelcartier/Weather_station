@@ -21,11 +21,18 @@ void weather_mode_init(){
 }
 
 void weather_mode_draw_grid(){
+    station_init_i2c_sensor();
+    BME280_config();
+    VEML7700_config();
+    lcd_clear(LCD_BLACK);
+    lcd_backlight_on();
+    station_draw_title( STATION_WEATHER_MODE_TITLE );
     for(int i = 0; i<WEATHER_GRID_ROW*WEATHER_GRID_COL; i++){
         display_draw_zone(weather_grid.z[i], WEATHER_GRID_COLOR);
         weather_grid_content_t *content = weather_grid.z[i].content;
         lcd_draw_string((char*)(content->name), weather_grid.z[i].p1.x+WEATHER_TITLE_X_OFFSET, weather_grid.z[i].p1.y+WEATHER_TITLE_Y_OFFSET, LCD_YELLOW, SmallFont);
     }
+    station_change_mode( WEATHER_ALL_GRID );
 }
 
 void weather_mode_measure_data() {

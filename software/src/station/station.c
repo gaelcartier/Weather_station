@@ -107,6 +107,7 @@ void station_run(){
                     station_init_i2c_sensor();
                     BME280_config();
                     VEML7700_config();
+                    lcd_clear(LCD_BLACK);
                     lcd_backlight_on();
                     station_draw_title( STATION_WEATHER_MODE_TITLE );
                     weather_mode_init();
@@ -130,8 +131,32 @@ void station_draw_title( char* title ){
     lcd_draw_string(title, STATION_TITLE_X, STATION_TITLE_Y, LCD_LIGHT_GREEN, BigFont );
 }
 
+void station_change_mode(station_mode_t next_mode){
+    station_state.mode = next_mode;
+    station_state.mode_initialized = false;
+}
+
 void station_gesture_handler( touchscreen_action_t gesture_event ){
     if( gesture_event.gesture != NO_GESTURE ){
-        
+        switch(gesture_event.gesture){
+            case MOVE_UP: 
+                lcd_clear(LCD_LIGHT_BLUE);
+                break;
+            case MOVE_DOWN: 
+                lcd_clear(LCD_LIGHT_GREEN);
+                break;
+            case MOVE_RIGHT:
+                lcd_clear(LCD_ORANGE);
+                break;
+            case MOVE_LEFT: 
+                lcd_clear(LCD_YELLOW);
+                break;
+            default: {
+                zone_t* zone_touched = display_find_zone_from_coordinates( station_state.current_matrix, gesture_event.x, gesture_event.y);
+                if(gesture_event.gesture == POINT) zone_touched->point_handler();
+                else if(gesture_event.gesture == LONG_POINT) zone_touched->long_point_handler();
+                break;
+            }
+        }
     }
 }

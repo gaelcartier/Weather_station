@@ -56,5 +56,6 @@ void station_state_init();
 void station_run();
 void station_draw_title( char* title );
 void station_gesture_handler( touchscreen_action_t geture_event );
+void station_change_mode(station_mode_t next_mode);
 
 #endif

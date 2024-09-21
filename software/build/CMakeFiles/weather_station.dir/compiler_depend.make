@@ -2990,11 +2990,14 @@ CMakeFiles/weather_station.dir/src/main.c.obj: ../src/main.c \
   ../src/veml7700/veml7700.h \
   ../src/led_rgb/led_rgb.h \
   ../src/RN4870/RN4870.h \
+  ../src/station/station.h \
   ../src/wellcome_mode/wellcome_mode.h \
   ../src/board.h \
   ../src/lcd/lcd.h \
   ../src/display/display.h \
   ../src/touchscreen/touchscreen.h \
+  ../src/weather_mode/weather_mode.h \
+  ../src/station/station.h \
   ../src/systick/systick.h \
   /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h \
   ../src/lcd/lcd.h \

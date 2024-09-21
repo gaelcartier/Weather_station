@@ -28,6 +28,8 @@ typedef struct zone_t {
     point_t p2;
     void* content;
     bool has_border;
+    void (*point_handler)();
+    void (*long_point_handler)();
 } zone_t;
 
 typedef struct zone_matrix_t {
@@ -43,6 +45,7 @@ typedef struct zone_matrix_t {
 
 void display_create_zone_matrix( zone_matrix_t *zm, zone_t* zone_array, uint row, uint col, point_t start, point_t end );
 void display_draw_zone( zone_t z, uint16_t color );
+zone_t* display_find_zone_from_coordinates( zone_matrix_t *zm, uint16_t x, uint16_t y );
   
 
 

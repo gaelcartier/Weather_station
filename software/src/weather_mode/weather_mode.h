@@ -14,6 +14,7 @@
 #include "../veml7700/veml7700.h"
 #include "../led_rgb/led_rgb.h"
 #include "../RN4870/RN4870.h"
+#include "../station/station.h"
 
 #define WEATHER_GRID_COL                2
 #define WEATHER_GRID_ROW                2

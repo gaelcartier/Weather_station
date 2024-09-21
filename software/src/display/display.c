@@ -23,6 +23,13 @@ void display_draw_zone( zone_t z, uint16_t color ) {
     if(z.has_border) lcd_rect( z.p1.x, z.p2.x, z.p1.y, z.p2.y, color );
 }
 
+zone_t* display_find_zone_from_coordinates( zone_matrix_t *zm, uint16_t x, uint16_t y ){
+    for(int i = 0; i < zm->col*zm->row; i ++){
+        if( x >= zm->z[i].p1.x && x < zm->z[i].p2.x && y >= zm->z[i].p1.y && y < zm->z[i].p2.y )
+            return &zm->z[i];
+    }
+}
+
 // void display_zone_matrix_content_init( zone_matrix_t* zm, void* contents ){
 //     for(int i = 0; i < zm->row*zm->col; i++){
 //         zm->z[i].content = contents[i];
