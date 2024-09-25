@@ -842,10 +842,346 @@ CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj -c /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj -c /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj -c /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: /home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj -c /home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: /home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj -c /home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: /home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj -c /home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: CMakeFiles/weather_station.dir/flags.make
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: /home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj -c /home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c > CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+
+CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+
 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj: CMakeFiles/weather_station.dir/flags.make
 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj: /home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c
 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj -c /home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c
 
 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.i: cmake_force
@@ -859,7 +1195,7 @@ CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_sl
 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/weather_station.dir/flags.make
 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: /home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c
 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/weather_station.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -MF CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d -o CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -c /home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c
 
 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
@@ -928,6 +1264,30 @@ weather_station_OBJECTS = \
 "CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj" \
 "CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj" \
 "CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj" \
+"CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj" \
 "CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj" \
 "CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
 
@@ -990,6 +1350,30 @@ weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/r
 weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
 weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
 weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c.obj
 weather_station.elf: CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 weather_station.elf: CMakeFiles/weather_station.dir/build.make
@@ -1013,10 +1397,11 @@ weather_station.elf: src/util/libutil.a
 weather_station.elf: src/callback/libcallback.a
 weather_station.elf: src/lcd/liblcd.a
 weather_station.elf: src/led_rgb/libled_rgb.a
+weather_station.elf: src/drawing_mode/libdrawing_mode.a
 weather_station.elf: pico-sdk/src/rp2040/boot_stage2/bs2_default_padded_checksummed.S
 weather_station.elf: /home/gael/git/pico-sdk/src/rp2_common/pico_crt0/rp2040/memmap_default.ld
 weather_station.elf: CMakeFiles/weather_station.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Linking CXX executable weather_station.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gael/git/Weather_station/software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Linking CXX executable weather_station.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/weather_station.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objdump -h /home/gael/git/Weather_station/software/build/weather_station.elf > weather_station.dis
 	/usr/bin/arm-none-eabi-objdump -d /home/gael/git/Weather_station/software/build/weather_station.elf >> weather_station.dis

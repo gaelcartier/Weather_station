@@ -143,32 +143,6 @@ bs2_default/fast:
 .PHONY : bs2_default/fast
 
 #=============================================================================
-# Target rules for targets named picotoolForceReconfigure
-
-# Build rule for target.
-picotoolForceReconfigure: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolForceReconfigure
-.PHONY : picotoolForceReconfigure
-
-# fast build rule for target.
-picotoolForceReconfigure/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/picotoolForceReconfigure.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/picotoolForceReconfigure.dir/build
-.PHONY : picotoolForceReconfigure/fast
-
-#=============================================================================
-# Target rules for targets named picotoolBuild
-
-# Build rule for target.
-picotoolBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolBuild
-.PHONY : picotoolBuild
-
-# fast build rule for target.
-picotoolBuild/fast:
-	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/picotoolBuild.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/picotoolBuild.dir/build
-.PHONY : picotoolBuild/fast
-
-#=============================================================================
 # Target rules for targets named bs2_default_bin
 
 # Build rule for target.
@@ -193,6 +167,32 @@ bs2_default_padded_checksummed_asm: cmake_check_build_system
 bs2_default_padded_checksummed_asm/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build
 .PHONY : bs2_default_padded_checksummed_asm/fast
+
+#=============================================================================
+# Target rules for targets named pioasmBuild
+
+# Build rule for target.
+pioasmBuild: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pioasmBuild
+.PHONY : pioasmBuild
+
+# fast build rule for target.
+pioasmBuild/fast:
+	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/build
+.PHONY : pioasmBuild/fast
+
+#=============================================================================
+# Target rules for targets named cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
+
+# Build rule for target.
+cyw43_driver_picow_cyw43_bus_pio_spi_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
+.PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
+
+# fast build rule for target.
+cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
+.PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
 #=============================================================================
 # Target rules for targets named font
@@ -401,6 +401,451 @@ wellcome_mode: cmake_check_build_system
 wellcome_mode/fast:
 	$(MAKE) $(MAKESILENT) -f src/wellcome_mode/CMakeFiles/wellcome_mode.dir/build.make src/wellcome_mode/CMakeFiles/wellcome_mode.dir/build
 .PHONY : wellcome_mode/fast
+
+#=============================================================================
+# Target rules for targets named drawing_mode
+
+# Build rule for target.
+drawing_mode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 drawing_mode
+.PHONY : drawing_mode
+
+# fast build rule for target.
+drawing_mode/fast:
+	$(MAKE) $(MAKESILENT) -f src/drawing_mode/CMakeFiles/drawing_mode.dir/build.make src/drawing_mode/CMakeFiles/drawing_mode.dir/build
+.PHONY : drawing_mode/fast
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.obj: home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.i: home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.s: home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+
+home/gael/git/pico-sdk/lib/tinyusb/src/tusb.obj: home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/tusb.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj
+
+home/gael/git/pico-sdk/lib/tinyusb/src/tusb.i: home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/tusb.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.i
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.i
+
+home/gael/git/pico-sdk/lib/tinyusb/src/tusb.s: home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/tusb.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.s
+.PHONY : home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.s
 
 home/gael/git/pico-sdk/src/common/hardware_claim/claim.obj: home/gael/git/pico-sdk/src/common/hardware_claim/claim.c.obj
 .PHONY : home/gael/git/pico-sdk/src/common/hardware_claim/claim.obj
@@ -721,6 +1166,30 @@ home/gael/git/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/gael/gi
 home/gael/git/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : home/gael/git/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+
+home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.obj: home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+
+home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+
+home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
 home/gael/git/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/gael/git/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : home/gael/git/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj
@@ -1250,6 +1719,30 @@ home/gael/git/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.ob
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
 .PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
 
+home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+
+home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+
+home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+
 home/gael/git/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj: home/gael/git/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
 .PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj
 
@@ -1570,6 +2063,78 @@ home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+
 home/gael/git/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/gael/git/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj
 
@@ -1593,6 +2158,30 @@ home/gael/git/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/gael/git/pico-s
 home/gael/git/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+
+home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj
+
+# target to build an object file
+home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+
+home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i
+
+# target to preprocess a source file
+home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+
+home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s
+
+# target to generate assembly for a file
+home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/weather_station.dir/build.make CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+.PHONY : home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
 src/main.obj: src/main.c.obj
 .PHONY : src/main.obj
@@ -1628,14 +2217,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
 	@echo "... bs2_default_padded_checksummed_asm"
-	@echo "... picotoolBuild"
-	@echo "... picotoolForceReconfigure"
+	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
+	@echo "... pioasmBuild"
 	@echo "... RN4870"
 	@echo "... bme280"
 	@echo "... bs2_default"
 	@echo "... buffer_loop"
 	@echo "... callback"
 	@echo "... display"
+	@echo "... drawing_mode"
 	@echo "... font"
 	@echo "... i2c_non_blocking"
 	@echo "... lcd"
@@ -1648,6 +2238,60 @@ help:
 	@echo "... weather_mode"
 	@echo "... weather_station"
 	@echo "... wellcome_mode"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/class/video/video_device.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/device/usbd_control.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/tusb.obj"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/tusb.i"
+	@echo "... home/gael/git/pico-sdk/lib/tinyusb/src/tusb.s"
 	@echo "... home/gael/git/pico-sdk/src/common/hardware_claim/claim.obj"
 	@echo "... home/gael/git/pico-sdk/src/common/hardware_claim/claim.i"
 	@echo "... home/gael/git/pico-sdk/src/common/hardware_claim/claim.s"
@@ -1688,6 +2332,9 @@ help:
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/hardware_divider/divider.obj"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.obj"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.i"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/hardware_flash/flash.s"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
@@ -1754,6 +2401,9 @@ help:
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_double/double_math.i"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_double/double_math.s"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i"
@@ -1794,9 +2444,21 @@ help:
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.obj"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
+	@echo "... home/gael/git/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

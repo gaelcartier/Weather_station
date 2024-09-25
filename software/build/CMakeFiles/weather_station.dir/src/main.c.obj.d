@@ -58,6 +58,7 @@ CMakeFiles/weather_station.dir/src/main.c.obj: \
  /home/gael/git/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
  /home/gael/git/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
  /home/gael/git/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
+ /home/gael/git/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
  /home/gael/git/Weather_station/software/src/board.h \
  /home/gael/git/Weather_station/software/src/station/station.h \
  /home/gael/git/Weather_station/software/src/station/../board.h \
@@ -106,6 +107,13 @@ CMakeFiles/weather_station.dir/src/main.c.obj: \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../display/display.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../touchscreen/touchscreen.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../weather_mode/weather_mode.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/drawing_mode.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../board.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../lcd/lcd.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../display/display.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../touchscreen/touchscreen.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../weather_mode/weather_mode.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../station/station.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../station/station.h \
  /home/gael/git/Weather_station/software/src/station/../systick/systick.h \
  /home/gael/git/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h \

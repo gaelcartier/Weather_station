@@ -55,6 +55,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/gael/git/Weather_station/software/build/src/buffer_loop/cmake_install.cmake")
   include("/home/gael/git/Weather_station/software/build/src/weather_mode/cmake_install.cmake")
   include("/home/gael/git/Weather_station/software/build/src/wellcome_mode/cmake_install.cmake")
+  include("/home/gael/git/Weather_station/software/build/src/drawing_mode/cmake_install.cmake")
 
 endif()
 

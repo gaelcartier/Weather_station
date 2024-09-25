@@ -106,6 +106,13 @@ src/station/CMakeFiles/station.dir/station.c.obj: \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../display/display.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../touchscreen/touchscreen.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../weather_mode/weather_mode.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/drawing_mode.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../board.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../lcd/lcd.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../display/display.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../touchscreen/touchscreen.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../weather_mode/weather_mode.h \
+ /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../drawing_mode/../station/station.h \
  /home/gael/git/Weather_station/software/src/station/../wellcome_mode/../station/station.h \
  /home/gael/git/Weather_station/software/src/station/../systick/systick.h \
  /home/gael/git/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h
