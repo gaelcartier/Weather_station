@@ -1,4 +1,4 @@
-# Install script for directory: /home/gael/hepia/CSH/pico_sdk/pico-sdk/tools
+# Install script for directory: /home/gael/git/pico-sdk/tools
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

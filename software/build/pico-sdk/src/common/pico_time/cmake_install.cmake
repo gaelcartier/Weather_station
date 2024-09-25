@@ -1,4 +1,4 @@
-# Install script for directory: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/common/pico_time
+# Install script for directory: /home/gael/git/pico-sdk/src/common/pico_time
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

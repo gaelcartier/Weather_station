@@ -1,4 +1,4 @@
-# Install script for directory: /home/gael/hepia/CSH/pico_sdk/pico-sdk/src/rp2_common/hardware_dma
+# Install script for directory: /home/gael/git/pico-sdk/src/rp2_common/hardware_dma
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
