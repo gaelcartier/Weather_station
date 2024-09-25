@@ -59,9 +59,13 @@
 
 #define TOUCHSCREEN_BUFFER_SIZE				1024
 
-#define TOUCHSCREEN_X	320
-#define TOUCHSCREEN_Y	240
+#define TOUCHSCREEN_X						320
+#define TOUCHSCREEN_Y						240
 
+#define GESTURE_MODE						true
+#define SIMPLE_TOUCH_MODE					false
+
+typedef bool touchscreen_mode_t;
 
 typedef enum {
 	PRESS_DOWN = 0b00,
@@ -102,11 +106,12 @@ typedef struct {
 typedef struct {
 	bool touched;
 	bool is_watching;
+	touchscreen_mode_t mode;
 	uint32_t duration; 
 	uint32_t last_read_duration;
 	bool read_initialized;
 	touchscreen_info_t first_touch;
-	// touchscreen_action_t action;
+	touchscreen_action_t action;
 } touchscreen_status_t;
 
 
@@ -124,5 +129,8 @@ void touchscreen_print_touch_event( touchscreen_info_t touch_info );
 touchscreen_action_t touchscreen_set_action_from_infos( touchscreen_info_t first, touchscreen_info_t last );
 void touchscreen_print_gesture( touchscreen_action_t a );
 void touchscreen_handler( void (*gesture_handler)(touchscreen_action_t) );
+bool touchscreen_in_gesture_mode();
+void touchscreen_switch_to_simple_touch_mode();
+void touchscreen_switch_to_gesture_mode();
 
 #endif 

@@ -18,6 +18,18 @@
 
 #include <string.h>
 
+#define ZONE_MATRIX_INIT           {.start = {0,0}, \
+                                    .end = {0,0}, \
+                                    .row = 0, \
+                                    .col = 0, \
+                                    .z_width = 0, \
+                                    .z_height = 0, \
+                                    .z = NULL, \
+                                    .swipe_bottom_handler = NULL, \
+                                    .swipe_top_handler = NULL, \
+                                    .swipe_left_handler = NULL, \
+                                    .swipe_right_handler = NULL, }
+
 typedef struct point_t {
     int x;
     int y;
@@ -46,6 +58,9 @@ typedef struct zone_matrix_t {
 void display_create_zone_matrix( zone_matrix_t *zm, zone_t* zone_array, uint row, uint col, point_t start, point_t end );
 void display_draw_zone( zone_t z, uint16_t color );
 zone_t* display_find_zone_from_coordinates( zone_matrix_t *zm, uint16_t x, uint16_t y );
+point_t display_point_init( int x , int y );
+zone_t display_zone_init();
+zone_matrix_t display_zone_matrix_init();
   
 
 

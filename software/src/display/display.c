@@ -1,6 +1,38 @@
 #include "display.h"
 
-void display_create_zone_matrix( zone_matrix_t* zm, zone_t* zone_array, uint row, uint col, point_t start, point_t end ){
+point_t display_point_init( int x , int y ) {
+    point_t point = {x, y};
+    return point;
+}
+
+zone_t display_zone_init() {
+    zone_t z;
+    z.content = NULL;
+    z.long_point_handler = NULL;
+    z.point_handler = NULL;
+    z.has_border = true;
+    z.p1 = display_point_init(0,0);
+    z.p2 = display_point_init(0,0);
+    return z;
+}
+
+// zone_matrix_t display_zone_matrix_init() {
+//     zone_matrix_t zm;
+//     zm.start = display_point_init(0,0);
+//     zm.end = display_point_init(0,0);
+//     zm.row = 0;
+//     zm.col = 0;
+//     zm.z_width = 0;
+//     zm.z_height = 0;
+//     zm.z = NULL;
+//     zm.swipe_bottom_handler = NULL;
+//     zm.swipe_top_handler = NULL;
+//     zm.swipe_left_handler = NULL;
+//     zm.swipe_right_handler = NULL;
+//     return zm;
+// }
+
+void display_create_zone_matrix( zone_matrix_t* zm, zone_t* zone_array, uint row, uint col, point_t start, point_t end ) {
     zm->start = start;
     zm->end = end;
     zm->row = row;
@@ -9,6 +41,7 @@ void display_create_zone_matrix( zone_matrix_t* zm, zone_t* zone_array, uint row
     zm->z_height = (end.y - start.y)/row;
     for( int i=0; i<row; i++ ) {
         for( int j=0; j<col; j++ ) {
+            zone_array[i*col+j] = display_zone_init();
             zone_array[i*col+j].p1.x = start.x + j * zm->z_width;
             zone_array[i*col+j].p1.y = start.y + i * zm->z_height;
             zone_array[i*col+j].p2.x = start.x + zm->z_width + j * zm->z_width;

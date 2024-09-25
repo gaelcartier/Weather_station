@@ -16,6 +16,7 @@ add_subdirectory( callback )
 add_subdirectory( buffer_loop )
 add_subdirectory( weather_mode )
 add_subdirectory( wellcome_mode )
+add_subdirectory( drawing_mode )
 
 target_link_libraries(  systick
                         i2c_non_blocking
@@ -32,5 +33,6 @@ target_link_libraries(  systick
                         buffer_loop
                         weather_mode
                         wellcome_mode
+                        drawing_mode
                         station
                         pico_stdlib)

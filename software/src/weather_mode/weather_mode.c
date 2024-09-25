@@ -1,7 +1,7 @@
 #include "weather_mode.h"
 
 zone_t weather_zone_grid[WEATHER_GRID_COL*WEATHER_GRID_ROW];
-zone_matrix_t weather_grid;
+zone_matrix_t weather_grid= ZONE_MATRIX_INIT;
 
 weather_grid_content_t temperature = {"Temperature", 0};
 weather_grid_content_t humidity = {"Humidity", 0};

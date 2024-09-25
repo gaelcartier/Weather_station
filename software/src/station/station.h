@@ -50,6 +50,7 @@ void station_reset();
 void station_init();
 void station_disable_ble();
 void station_enable_ble();
+void station_reset_systick_counter();
 void station_main();
 void station_init_i2c_sensor();
 void station_state_init();

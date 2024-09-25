@@ -52,6 +52,7 @@ void touchscreen_init() {
 	touchscreen_status.is_watching = false;
 	touchscreen_status.read_initialized = false;
 	touchscreen_status.last_read_duration = 0;
+	touchscreen_status.mode = GESTURE_MODE;
 	touchscreen_i2c_config();
 	touchscreen_config();
 	touchscreen_enable_irq();
@@ -74,6 +75,18 @@ touchscreen_info_t touchscreen_read() {
 
 bool touchscreen_new_event(){
 	return !touchscreen_status.is_watching && (touchscreen_status.duration > TOUCHSCREEN_DURATION_IS_NEW_EVENT);
+}
+
+bool touchscreen_in_gesture_mode() {
+	return touchscreen_status.mode;
+}
+
+void touchscreen_switch_to_simple_touch_mode() {
+	touchscreen_status.mode = SIMPLE_TOUCH_MODE;
+}
+
+void touchscreen_switch_to_gesture_mode() {
+	touchscreen_status.mode = GESTURE_MODE;
 }
 
 void touchscreen_print_touch_event( touchscreen_info_t touch_info ){
@@ -127,16 +140,17 @@ void touchscreen_print_gesture( touchscreen_action_t a ){
 void touchscreen_handler( void (*gesture_handler)(touchscreen_action_t) ) {
 	if( touchscreen_status.is_watching ) {
 		touchscreen_info_t touch_info = touchscreen_read();
-		if( touch_info.touch_event == PRESS_DOWN && !touchscreen_status.read_initialized ) {
+		if( touch_info.touch_event == PRESS_DOWN && !touchscreen_status.read_initialized && touchscreen_in_gesture_mode() ) {
 			touch_info.time = 0;
 			touchscreen_status.first_touch = touch_info;
 			touchscreen_status.read_initialized = true;
 		}
-		if( touch_info.touch_event == LIFT_UP ) {
+		if( touch_info.touch_event == LIFT_UP || !touchscreen_in_gesture_mode() ) {
 			touchscreen_status.is_watching = false;
 			touch_info.time = touchscreen_status.duration;
 			touchscreen_status.duration = 0;
-			touchscreen_action_t gesture_event = touchscreen_set_action_from_infos( touchscreen_status.first_touch, touch_info );
+			touchscreen_action_t gesture_event = touchscreen_set_action_from_infos( touchscreen_in_gesture_mode() ? touchscreen_status.first_touch : touch_info, touch_info );
+			touchscreen_status.action = gesture_event;
 			gesture_handler( gesture_event );
 			// touchscreen_status.action = touchscreen_set_action_from_infos( touchscreen_status.first_touch, touch_info );
 			// printf(">>> GESTURE : ");

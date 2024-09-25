@@ -27,13 +27,13 @@ void station_init_gpio() {
 void station_init() {
     station_reset();
     station_init_gpio();
-    // station_disable_ble();
+    station_disable_ble();
     lcd_backlight_off();
     lcd_init();
     station_state_init();
     systick_init( 124999UL );
     touchscreen_init();
-    // wellcome_mode_init();
+    lcd_backlight_on();
 }
 
 void station_state_init() {
@@ -58,6 +58,10 @@ void station_init_i2c_sensor() {
 
 	// gpio_pull_up( BME_I2C_SCL_GPIO ); // si nécéssaire ... ( car absent sur le circuit ou disfonctionnement random )
 	// gpio_pull_up( BME_I2C_SDA_GPIO );
+}
+
+void station_reset_systick_counter() {
+    station_state.systick_counter = 0;
 }
 
 void station_main() {
@@ -100,12 +104,15 @@ void station_run(){
                 }
                 break;
             case WEATHER_ALL_GRID:
-                if(station_state.mode_initialized) {
+                if(station_state.mode_initialized && station_state.systick_counter >= 1000) {
                     weather_mode_measure_data();
                     weather_mode_update_data_on_screen();
+                    station_reset_systick_counter();
                     // printf("display data\n");
-                    sleep_ms(1000);
+                    // sleep_ms(1000);
                 }
+                break;
+            case DRAWING :
                 break;
             default: 
                 break;
@@ -138,17 +145,17 @@ void station_gesture_handler( touchscreen_action_t gesture_event ){
                 lcd_clear(LCD_LIGHT_GREEN);
                 break;
             case MOVE_RIGHT:
-                station_state.current_matrix->swipe_right_handler();
+                if( station_state.current_matrix->swipe_right_handler != NULL ) station_state.current_matrix->swipe_right_handler();
                 // lcd_clear(LCD_ORANGE);
                 break;
             case MOVE_LEFT: 
-                station_state.current_matrix->swipe_left_handler();
-                lcd_clear(LCD_YELLOW);
+                if( station_state.current_matrix->swipe_left_handler != NULL ) station_state.current_matrix->swipe_left_handler();
+                // lcd_clear(LCD_YELLOW);
                 break;
             default: {
                 zone_t* zone_touched = display_find_zone_from_coordinates( station_state.current_matrix, gesture_event.x, gesture_event.y);
-                if(gesture_event.gesture == POINT) zone_touched->point_handler();
-                else if(gesture_event.gesture == LONG_POINT) zone_touched->long_point_handler();
+                if(gesture_event.gesture == POINT && zone_touched->point_handler!= NULL ) zone_touched->point_handler();
+                else if(gesture_event.gesture == LONG_POINT && zone_touched->long_point_handler != NULL ) zone_touched->long_point_handler();
                 break;
             }
         }

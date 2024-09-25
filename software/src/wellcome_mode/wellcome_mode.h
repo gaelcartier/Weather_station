@@ -12,6 +12,7 @@
 #include "../display/display.h"
 #include "../touchscreen/touchscreen.h"
 #include "../weather_mode/weather_mode.h"
+#include "../drawing_mode/drawing_mode.h"
 #include "../station/station.h"
 
 #define WELLCOME_GRID_COL                4
@@ -32,5 +33,6 @@ extern zone_matrix_t wellcome_grid;
 void wellcome_mode_init();
 void wellcome_mode_draw_grid();
 void wellcome_mode_switch_to_weather_mode();
+void wellcome_mode_switch_to_drawing_mode();
 
 #endif

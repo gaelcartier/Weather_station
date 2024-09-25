@@ -2,6 +2,7 @@
     "files.associations": {
         "lcd.h": "c",
         "touchscreen.h": "c",
-        "systick.h": "c"
+        "systick.h": "c",
+        "drawing_mode.h": "c"
     }
 }
