@@ -17,22 +17,23 @@ void weather_mode_init(){
     weather_grid.z[WEATHER_ZONE_HUM].content = &humidity;
     weather_grid.z[WEATHER_ZONE_PRESS].content = &pressure;
     weather_grid.z[WEATHER_ZONE_LIGHT].content = &light;
-    weather_mode_draw_grid();
-}
-
-void weather_mode_draw_grid(){
+    weather_grid.swipe_left_handler = (void*)weather_mode_switch_to_wellcome_mode;
+    weather_grid.swipe_right_handler = (void*)weather_mode_switch_to_wellcome_mode;
     station_init_i2c_sensor();
     BME280_config();
     VEML7700_config();
     lcd_clear(LCD_BLACK);
     lcd_backlight_on();
+    weather_mode_draw_grid();
+}
+
+void weather_mode_draw_grid(){
     station_draw_title( STATION_WEATHER_MODE_TITLE );
     for(int i = 0; i<WEATHER_GRID_ROW*WEATHER_GRID_COL; i++){
         display_draw_zone(weather_grid.z[i], WEATHER_GRID_COLOR);
         weather_grid_content_t *content = weather_grid.z[i].content;
         lcd_draw_string((char*)(content->name), weather_grid.z[i].p1.x+WEATHER_TITLE_X_OFFSET, weather_grid.z[i].p1.y+WEATHER_TITLE_Y_OFFSET, LCD_YELLOW, SmallFont);
     }
-    station_change_mode( WEATHER_ALL_GRID );
 }
 
 void weather_mode_measure_data() {
@@ -51,5 +52,11 @@ void weather_mode_update_data_on_screen(){
         lcd_print_int((int)content->data, WEATHER_DATA_POS_X(weather_grid.z[i]), WEATHER_DATA_POS_Y(weather_grid.z[i]), LCD_LIGHT_BLUE, SmallFont);
         printf(" data : %d\n", content->data);
     }
+}
+
+void weather_mode_switch_to_wellcome_mode() {
+    station_change_mode(WELLCOME);
+    wellcome_mode_init();
+    station_update_state_after_mode_switch(&wellcome_grid);
 }
 

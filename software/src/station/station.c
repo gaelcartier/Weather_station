@@ -33,11 +33,12 @@ void station_init() {
     station_state_init();
     systick_init( 124999UL );
     touchscreen_init();
+    // wellcome_mode_init();
 }
 
 void station_state_init() {
     station_state.systick_counter = 0;
-    station_state.mode = STATION_WELLCOME;
+    station_state.mode = WELLCOME;
     station_state.mode_initialized = false;
 }
 
@@ -91,29 +92,15 @@ void station_run(){
     station_init();
     while(true) {
         switch(station_state.mode){
-            case STATION_WELLCOME:
+            case WELLCOME:
                 if(!station_state.mode_initialized){
-                    lcd_backlight_on();
-                    station_draw_title( STATION_WELLCOME_MODE_TITLE );
                     wellcome_mode_init();
                     station_state.current_matrix = &wellcome_grid;
                     station_state.mode_initialized = true;
-                } else {
-
                 }
                 break;
-            case WEATHER_ALL_GRID: 
-                if(!station_state.mode_initialized) {
-                    station_init_i2c_sensor();
-                    BME280_config();
-                    VEML7700_config();
-                    lcd_clear(LCD_BLACK);
-                    lcd_backlight_on();
-                    station_draw_title( STATION_WEATHER_MODE_TITLE );
-                    weather_mode_init();
-                    station_state.current_matrix = &weather_grid;
-                    station_state.mode_initialized = true;
-                } else {
+            case WEATHER_ALL_GRID:
+                if(station_state.mode_initialized) {
                     weather_mode_measure_data();
                     weather_mode_update_data_on_screen();
                     // printf("display data\n");
@@ -136,6 +123,11 @@ void station_change_mode(station_mode_t next_mode){
     station_state.mode_initialized = false;
 }
 
+void station_update_state_after_mode_switch( zone_matrix_t* new_matrix ){
+    station_state.current_matrix = new_matrix;
+    station_state.mode_initialized = true;
+}
+
 void station_gesture_handler( touchscreen_action_t gesture_event ){
     if( gesture_event.gesture != NO_GESTURE ){
         switch(gesture_event.gesture){
@@ -146,9 +138,11 @@ void station_gesture_handler( touchscreen_action_t gesture_event ){
                 lcd_clear(LCD_LIGHT_GREEN);
                 break;
             case MOVE_RIGHT:
-                lcd_clear(LCD_ORANGE);
+                station_state.current_matrix->swipe_right_handler();
+                // lcd_clear(LCD_ORANGE);
                 break;
             case MOVE_LEFT: 
+                station_state.current_matrix->swipe_left_handler();
                 lcd_clear(LCD_YELLOW);
                 break;
             default: {

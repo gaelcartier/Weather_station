@@ -24,7 +24,7 @@
 #define STATION_WELLCOME_MODE_TITLE         "Wellcome"      
 
 typedef enum {
-    STATION_WELLCOME,
+    WELLCOME,
     DRAWING,
     WEATHER_ALL_GRID,
     WEATHER_TEMP_NUM,
@@ -57,5 +57,6 @@ void station_run();
 void station_draw_title( char* title );
 void station_gesture_handler( touchscreen_action_t geture_event );
 void station_change_mode(station_mode_t next_mode);
+void station_update_state_after_mode_switch( zone_matrix_t* new_matrix );
 
 #endif

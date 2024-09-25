@@ -49,5 +49,6 @@ void weather_mode_init();
 void weather_mode_draw_grid();
 void weather_mode_measure_data();
 void weather_mode_update_data_on_screen();
+void weather_mode_switch_to_wellcome_mode();
 
 #endif

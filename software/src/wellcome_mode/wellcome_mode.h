@@ -31,5 +31,6 @@ extern zone_matrix_t wellcome_grid;
 
 void wellcome_mode_init();
 void wellcome_mode_draw_grid();
+void wellcome_mode_switch_to_weather_mode();
 
 #endif
