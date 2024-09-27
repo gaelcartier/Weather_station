@@ -57,6 +57,6 @@ void weather_mode_update_data_on_screen(){
 void weather_mode_switch_to_wellcome_mode() {
     station_change_mode(WELLCOME);
     wellcome_mode_init();
-    station_update_state_after_mode_switch(&wellcome_grid);
+    station_update_state_after_mode_switch(&wellcome_main_grid);
 }
 

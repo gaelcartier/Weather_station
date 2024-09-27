@@ -14,13 +14,32 @@
 #include "../weather_mode/weather_mode.h"
 #include "../station/station.h"
 
-#define DRAWING_GRID_COL            1
-#define DRAWING_GRID_ROW            1
+// --- Top zone
+#define DRAWING_MODE_TITLE                  "Drawing"
+#define DRAWING_TOP_COL                     1
+#define DRAWING_TOP_ROW                     1
+#define DRAWING_TOP_START                   ((point_t){0,0})
+#define DRAWING_TOP_END                     ((point_t){320,30})
+#define DRAWING_TOP_GRID_BORDER_COLOR       LCD_WHITE
 
-#define DRAWING_GRID_COLOR          LCD_WHITE      
-#define DRAWING_MODE_TITLE          "Drawing"
+// --- Drawing zone
+#define DRAWING_MAIN_COL                    1
+#define DRAWING_MAIN_ROW                    1
+#define DRAWING_MAIN_START                  (point_t){0,30}
+#define DRAWING_MAIN_END                    (point_t){320,210}
+#define DRAWING_MAIN_GRID_BORDER_COLOR      LCD_WHITE
+#define DRAWING_COLOR                       LCD_YELLOW
 
-extern zone_matrix_t drawing_grid;
+// -- Bottom zone
+#define DRAWING_BOTTOM_COL                  3
+#define DRAWING_BOTTOM_ROW                  1
+#define DRAWING_BOTTOM_START                (point_t){0,210}
+#define DRAWING_BOTTOM_END                  (point_t){320,240}
+#define DRAWING_BOTTOM_GRID_BORDER_COLOR    LCD_WHITE
+
+
+extern zone_matrix_t drawing_main_grid;
+extern zone_matrix_t* drawing_mode_if[];
 
 void drawing_mode_init();
 void drawing_mode_draw_grid();

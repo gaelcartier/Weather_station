@@ -15,12 +15,29 @@
 #include "../drawing_mode/drawing_mode.h"
 #include "../station/station.h"
 
-#define WELLCOME_GRID_COL                4
-#define WELLCOME_GRID_ROW                1
-#define WELLCOME_GRID_COLOR              LCD_WHITE
+//--- Top zone
+#define WELLCOME_TITLE_X_OFFSET                     5
+#define WELLCOME_TITLE_Y_OFFSET                     5
 
-#define WELLCOME_TITLE_X_OFFSET          5
-#define WELLCOME_TITLE_Y_OFFSET          5
+#define WELLCOME_TOP_GRID_COL                       1
+#define WELLCOME_TOP_GRID_ROW                       1
+#define WELLCOME_TOP_GRID_BORDER_COLOR              LCD_WHITE
+#define WELLCOME_TOP_START                          ((point_t){0,0})                
+#define WELLCOME_TOP_END                            ((point_t){320,30})
+
+// --- Main zone
+#define WELLCOME_MAIN_GRID_COL                      4
+#define WELLCOME_MAIN_GRID_ROW                      1
+#define WELLCOME_MAIN_GRID_BORDER_COLOR             LCD_WHITE
+#define WELLCOME_MAIN_START                         ((point_t){0,30})                
+#define WELLCOME_MAIN_END                           ((point_t){320,210})
+
+// --- Bottom zone
+#define WELLCOME_BOTTOM_GRID_COL                    3
+#define WELLCOME_BOTTOM_GRID_ROW                    1
+#define WELLCOME_BOTTOM_GRID_BORDER_COLOR           LCD_WHITE
+#define WELLCOME_BOTTOM_START                       ((point_t){0,210})                
+#define WELLCOME_BOTTOM_END                         ((point_t){320,240})
 
 
 typedef struct {
@@ -28,7 +45,8 @@ typedef struct {
     char logo;
 } wellcome_grid_content_t;
 
-extern zone_matrix_t wellcome_grid;
+extern zone_matrix_t wellcome_main_grid;
+extern zone_matrix_t* wellcome_mode_if[];
 
 void wellcome_mode_init();
 void wellcome_mode_draw_grid();

@@ -941,6 +941,7 @@ CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/lib/tinyusb/src/tusb.c.obj
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/_newlib_version.h \
   /usr/include/newlib/assert.h \
+  /usr/include/newlib/ctype.h \
   /usr/include/newlib/inttypes.h \
   /usr/include/newlib/machine/_default_types.h \
   /usr/include/newlib/machine/_types.h \
@@ -3515,8 +3516,6 @@ CMakeFiles/weather_station.dir/src/main.c.obj: /home/gael/git/Weather_station/so
 
 /home/gael/git/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio/driver.h:
 
-/home/gael/git/pico-sdk/src/common/pico_time/timeout_helper.c:
-
 /home/gael/git/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h:
 
 /home/gael/git/pico-sdk/src/common/pico_time/time.c:
@@ -3584,6 +3583,8 @@ CMakeFiles/weather_station.dir/src/main.c.obj: /home/gael/git/Weather_station/so
 /usr/include/newlib/string.h:
 
 /home/gael/git/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h:
+
+/usr/include/newlib/ctype.h:
 
 /home/gael/git/pico-sdk/src/rp2_common/pico_time_adapter/include/pico/time_adapter.h:
 
@@ -3861,6 +3862,8 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/gael/git/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c:
 
+/home/gael/git/pico-sdk/src/common/pico_time/timeout_helper.c:
+
 /home/gael/git/pico-sdk/src/common/pico_time/include/pico/timeout_helper.h:
 
 /home/gael/git/pico-sdk/src/common/pico_util/datetime.c:
@@ -4027,6 +4030,12 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/gael/git/pico-sdk/src/rp2_common/pico_float/include/pico/float.h:
 
+/home/gael/git/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h:
+
+/usr/include/newlib/c++/13.2.1/cstdlib:
+
+/usr/lib/gcc/arm-none-eabi/13.2.1/include/float.h:
+
 /home/gael/git/pico-sdk/src/rp2_common/pico_i2c_slave/i2c_slave.c:
 
 /home/gael/git/pico-sdk/src/rp2_common/pico_malloc/malloc.c:
@@ -4044,9 +4053,3 @@ generated/pico_base/pico/config_autogen.h:
 /home/gael/git/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c:
 
 /home/gael/git/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h:
-
-/usr/include/newlib/c++/13.2.1/cstdlib:
-
-/usr/lib/gcc/arm-none-eabi/13.2.1/include/float.h:
-
-/home/gael/git/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h:

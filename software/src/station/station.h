@@ -18,6 +18,7 @@
 #include "../wellcome_mode/wellcome_mode.h"
 #include "../systick/systick.h"
 
+#define STATION_MATRIX_NUMBER_IN_IF         3
 #define STATION_TITLE_X                     2 
 #define STATION_TITLE_Y                     2
 #define STATION_WEATHER_MODE_TITLE          "Weather"
@@ -40,6 +41,7 @@ typedef enum {
 typedef struct {
     station_mode_t mode;
     zone_matrix_t* current_matrix;
+    zone_matrix_t** current_if;
     bool mode_initialized;
     uint systick_counter;
 } station_state_t;

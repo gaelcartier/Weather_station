@@ -104,14 +104,14 @@ typedef struct {
 } touchscreen_action_t;
 
 typedef struct {
-	bool touched;
+	// bool touched;
 	bool is_watching;
 	touchscreen_mode_t mode;
 	uint32_t duration; 
 	uint32_t last_read_duration;
 	bool read_initialized;
 	touchscreen_info_t first_touch;
-	touchscreen_action_t action;
+	// touchscreen_action_t action;
 } touchscreen_status_t;
 
 
@@ -124,12 +124,16 @@ void touchscreen_init();
 void touchscreen_irq_callback( uint8_t gpio, uint32_t events );
 void touchscreen_enable_irq();
 bool touchscreen_new_event();
+void touchscreen_status_reset_watching();
+touchscreen_info_t touchscreen_info_init();
 touchscreen_info_t touchscreen_read();
 void touchscreen_print_touch_event( touchscreen_info_t touch_info );
 touchscreen_action_t touchscreen_set_action_from_infos( touchscreen_info_t first, touchscreen_info_t last );
 void touchscreen_print_gesture( touchscreen_action_t a );
-void touchscreen_handler( void (*gesture_handler)(touchscreen_action_t) );
+void touchscreen_handler_in_gesture_mode( void (*gesture_handler)(touchscreen_action_t) );
+touchscreen_info_t touchscreen_handler_in_simple_touch_mode();
 bool touchscreen_in_gesture_mode();
+bool touchscreen_in_simple_touch_mode();
 void touchscreen_switch_to_simple_touch_mode();
 void touchscreen_switch_to_gesture_mode();
 

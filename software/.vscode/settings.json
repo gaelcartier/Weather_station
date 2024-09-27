@@ -3,6 +3,7 @@
         "lcd.h": "c",
         "touchscreen.h": "c",
         "systick.h": "c",
-        "drawing_mode.h": "c"
+        "drawing_mode.h": "c",
+        "weather_mode.h": "c"
     }
 }

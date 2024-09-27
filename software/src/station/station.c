@@ -99,7 +99,8 @@ void station_run(){
             case WELLCOME:
                 if(!station_state.mode_initialized){
                     wellcome_mode_init();
-                    station_state.current_matrix = &wellcome_grid;
+                    station_state.current_matrix = &wellcome_main_grid;
+                    station_state.current_if = wellcome_mode_if;
                     station_state.mode_initialized = true;
                 }
                 break;
@@ -113,11 +114,12 @@ void station_run(){
                 }
                 break;
             case DRAWING :
+                drawing_mode_draw();
                 break;
             default: 
                 break;
         }
-        touchscreen_handler( &station_gesture_handler );
+        touchscreen_handler_in_gesture_mode( &station_gesture_handler );
     }
 }
 
@@ -153,7 +155,8 @@ void station_gesture_handler( touchscreen_action_t gesture_event ){
                 // lcd_clear(LCD_YELLOW);
                 break;
             default: {
-                zone_t* zone_touched = display_find_zone_from_coordinates( station_state.current_matrix, gesture_event.x, gesture_event.y);
+                zone_matrix_t* zm_touched = display_find_zone_matrix_from_coordiantes( station_state.current_if, STATION_MATRIX_NUMBER_IN_IF, gesture_event.x, gesture_event.y );
+                zone_t* zone_touched = display_find_zone_from_coordinates( zm_touched, gesture_event.x, gesture_event.y);
                 if(gesture_event.gesture == POINT && zone_touched->point_handler!= NULL ) zone_touched->point_handler();
                 else if(gesture_event.gesture == LONG_POINT && zone_touched->long_point_handler != NULL ) zone_touched->long_point_handler();
                 break;

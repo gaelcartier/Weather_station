@@ -73,6 +73,15 @@ touchscreen_info_t touchscreen_read() {
 	return touch_info;
 }
 
+touchscreen_info_t touchscreen_info_init() {
+	return (touchscreen_info_t){
+		.touch_event = NO_EVENT,
+		.x = 0,
+		.y = 0,
+		.time = 0,
+	};
+}
+
 bool touchscreen_new_event(){
 	return !touchscreen_status.is_watching && (touchscreen_status.duration > TOUCHSCREEN_DURATION_IS_NEW_EVENT);
 }
@@ -81,12 +90,26 @@ bool touchscreen_in_gesture_mode() {
 	return touchscreen_status.mode;
 }
 
+bool touchscreen_in_simple_touch_mode() {
+	return !touchscreen_status.mode;
+}
+
 void touchscreen_switch_to_simple_touch_mode() {
 	touchscreen_status.mode = SIMPLE_TOUCH_MODE;
 }
 
 void touchscreen_switch_to_gesture_mode() {
 	touchscreen_status.mode = GESTURE_MODE;
+}
+
+void touchscreen_status_init_watching(){
+	touchscreen_status.is_watching = true;
+	touchscreen_status.read_initialized = false;
+	touchscreen_status.duration = 0;
+}
+
+void touchscreen_status_reset_watching() {
+	touchscreen_status.is_watching = false;
 }
 
 void touchscreen_print_touch_event( touchscreen_info_t touch_info ){
@@ -137,20 +160,21 @@ void touchscreen_print_gesture( touchscreen_action_t a ){
 	}
 }
 
-void touchscreen_handler( void (*gesture_handler)(touchscreen_action_t) ) {
-	if( touchscreen_status.is_watching ) {
+void touchscreen_handler_in_gesture_mode( void (*gesture_handler)(touchscreen_action_t) ) {
+	if( touchscreen_status.is_watching && touchscreen_in_gesture_mode() ) {
 		touchscreen_info_t touch_info = touchscreen_read();
-		if( touch_info.touch_event == PRESS_DOWN && !touchscreen_status.read_initialized && touchscreen_in_gesture_mode() ) {
+		if( touch_info.touch_event == PRESS_DOWN && !touchscreen_status.read_initialized ) {
 			touch_info.time = 0;
 			touchscreen_status.first_touch = touch_info;
 			touchscreen_status.read_initialized = true;
 		}
-		if( touch_info.touch_event == LIFT_UP || !touchscreen_in_gesture_mode() ) {
-			touchscreen_status.is_watching = false;
+		if( touch_info.touch_event == LIFT_UP ) {
+			// touchscreen_status.is_watching = false;
 			touch_info.time = touchscreen_status.duration;
-			touchscreen_status.duration = 0;
-			touchscreen_action_t gesture_event = touchscreen_set_action_from_infos( touchscreen_in_gesture_mode() ? touchscreen_status.first_touch : touch_info, touch_info );
-			touchscreen_status.action = gesture_event;
+			// touchscreen_status.duration = 0;
+			touchscreen_status_reset_watching();
+			touchscreen_action_t gesture_event = touchscreen_set_action_from_infos( touchscreen_status.first_touch, touch_info );
+			// touchscreen_status.action = gesture_event;
 			gesture_handler( gesture_event );
 			// touchscreen_status.action = touchscreen_set_action_from_infos( touchscreen_status.first_touch, touch_info );
 			// printf(">>> GESTURE : ");
@@ -158,4 +182,9 @@ void touchscreen_handler( void (*gesture_handler)(touchscreen_action_t) ) {
 			// printf(" x: %d, y: %d, x_area: %d, y_area: %d, duration: %d \n", a.x, a.y, a.x_area, a.y_area, a.duration);
 		}
 	}
+}
+
+touchscreen_info_t touchscreen_handler_in_simple_touch_mode() {
+	if( touchscreen_in_simple_touch_mode() ) return touchscreen_read();
+	else touchscreen_info_init();
 }
