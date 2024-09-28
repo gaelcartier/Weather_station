@@ -5,6 +5,7 @@
 // based on PICO_CONFIG_HEADER_FILES:
 
 #include "/home/gael/git/pico-sdk/src/boards/include/boards/pico.h"
-#include "/home/gael/git/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h"
 
 // based on PICO_RP2040_CONFIG_HEADER_FILES:
+
+#include "/home/gael/git/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h"

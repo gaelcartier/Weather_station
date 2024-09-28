@@ -16,20 +16,39 @@
 #include "../RN4870/RN4870.h"
 #include "../station/station.h"
 
-#define WEATHER_GRID_COL                2
-#define WEATHER_GRID_ROW                2
-#define WEATHER_GRID_COLOR              LCD_WHITE
+// --- Top zone
+#define WEATHER_TOP_GRID_COL                        1
+#define WEATHER_TOP_GRID_ROW                        1
+#define WEATHER_TOP_GRID_BORDER_COLOR               LCD_WHITE
+#define WEATHER_TOP_START                           ((point_t){0,0})
+#define WEATHER_TOP_END                             ((point_t){320,30})
 
-#define WEATHER_TITLE_X_OFFSET          5
-#define WEATHER_TITLE_Y_OFFSET          5
+// --- Main zone
+#define WEATHER_MAIN_GRID_COL                       2
+#define WEATHER_MAIN_GRID_ROW                       2
+#define WEATHER_MAIN_GRID_BORDER_COLOR              LCD_WHITE
+#define WEATHER_MAIN_START                          ((point_t){0,30})
+#define WEATHER_MAIN_END                            ((point_t){320,210})
 
-#define WEATHER_DATA_POS_X(data_zone)            (data_zone.p2.x - (data_zone.p2.x - data_zone.p1.x)/2 - 30)
-#define WEATHER_DATA_POS_Y(data_zone)            (data_zone.p2.y - (data_zone.p2.y - data_zone.p1.y)/2)
+#define WEATHER_TITLE_X_OFFSET                      5
+#define WEATHER_TITLE_Y_OFFSET                      5
 
-#define WEATHER_ZONE_TEMP               0
-#define WEATHER_ZONE_HUM                1
-#define WEATHER_ZONE_PRESS              2
-#define WEATHER_ZONE_LIGHT              3
+#define WEATHER_DATA_POS_X(data_zone)               (data_zone.p2.x - (data_zone.p2.x - data_zone.p1.x)/2 - 30)
+#define WEATHER_DATA_POS_Y(data_zone)               (data_zone.p2.y - (data_zone.p2.y - data_zone.p1.y)/2)
+
+#define WEATHER_ZONE_TEMP                           0
+#define WEATHER_ZONE_HUM                            1
+#define WEATHER_ZONE_PRESS                          2
+#define WEATHER_ZONE_LIGHT                          3
+
+// --- Bottom zone
+#define WEATHER_BOTTOM_GRID_COL                     3
+#define WEATHER_BOTTOM_GRID_ROW                     1
+#define WEATHER_BOTTOM_GRID_BORDER_COLOR            LCD_WHITE
+#define WEATHER_BOTTOM_START                        ((point_t){0,210})
+#define WEATHER_BOTTOM_END                          ((point_t){320,240})
+
+
 
 typedef struct {
     int temp;
@@ -43,7 +62,8 @@ typedef struct {
     int data;
 } weather_grid_content_t;
 
-extern zone_matrix_t weather_grid;
+extern zone_matrix_t weather_main_grid;
+extern zone_matrix_t* weather_mode_if[];
 
 void weather_mode_init();
 void weather_mode_draw_grid();

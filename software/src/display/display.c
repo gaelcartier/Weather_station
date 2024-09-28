@@ -16,22 +16,6 @@ zone_t display_zone_init() {
     return z;
 }
 
-// zone_matrix_t display_zone_matrix_init() {
-//     zone_matrix_t zm;
-//     zm.start = display_point_init(0,0);
-//     zm.end = display_point_init(0,0);
-//     zm.row = 0;
-//     zm.col = 0;
-//     zm.z_width = 0;
-//     zm.z_height = 0;
-//     zm.z = NULL;
-//     zm.swipe_bottom_handler = NULL;
-//     zm.swipe_top_handler = NULL;
-//     zm.swipe_left_handler = NULL;
-//     zm.swipe_right_handler = NULL;
-//     return zm;
-// }
-
 void display_create_zone_matrix( zone_matrix_t* zm, zone_t* zone_array, uint row, uint col, point_t start, point_t end ) {
     zm->start = start;
     zm->end = end;

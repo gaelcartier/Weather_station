@@ -30,6 +30,13 @@
                                     .swipe_left_handler = NULL, \
                                     .swipe_right_handler = NULL, }
 
+#define DISPLAY_IF_INIT            {.matrix_number = 0, \
+                                    .matrix_if = NULL, \
+                                    .swipe_left_handler = NULL, \
+                                    .swipe_right_handler = NULL, \
+                                    .swipe_top_handler = NULL, \
+                                    .swipe_bottom_handler = NULL, }
+
 // #define ZONE_MATRIX_NUMBER_IN_IF    3
 
 typedef struct point_t {
@@ -56,6 +63,15 @@ typedef struct zone_matrix_t {
     void (*swipe_top_handler)();
     void (*swipe_bottom_handler)();
 } zone_matrix_t;
+
+typedef struct _display_if {
+    void (*swipe_right_handler)();
+    void (*swipe_left_handler)();
+    void (*swipe_top_handler)();
+    void (*swipe_bottom_handler)();
+    uint8_t matrix_number;
+    zone_matrix_t** matrix_if;
+} display_if_t;
 
 void display_create_zone_matrix( zone_matrix_t *zm, zone_t* zone_array, uint row, uint col, point_t start, point_t end );
 void display_draw_zone( zone_t z, uint16_t color );

@@ -132,8 +132,8 @@ void station_change_mode(station_mode_t next_mode){
     station_state.mode_initialized = false;
 }
 
-void station_update_state_after_mode_switch( zone_matrix_t* new_matrix ){
-    station_state.current_matrix = new_matrix;
+void station_update_state_after_mode_switch( zone_matrix_t** new_if ){
+    station_state.current_if = new_if;
     station_state.mode_initialized = true;
 }
 

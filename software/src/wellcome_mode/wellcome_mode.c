@@ -19,6 +19,7 @@ zone_matrix_t wellcome_bottom_grid = ZONE_MATRIX_INIT;
 
 // --- Wellcome mode interface 
 zone_matrix_t* wellcome_mode_if[STATION_MATRIX_NUMBER_IN_IF] = {&wellcome_top_grid, &wellcome_main_grid, &wellcome_bottom_grid};
+display_if_t wellcome_mode_if_tmp = DISPLAY_IF_INIT;
 
 void wellcome_mode_init(){
     display_create_zone_matrix(&wellcome_main_grid, wellcome_zone_main, WELLCOME_MAIN_GRID_ROW, WELLCOME_MAIN_GRID_COL, WELLCOME_MAIN_START, WELLCOME_MAIN_END);
@@ -56,11 +57,11 @@ void wellcome_mode_draw_grid(){
 void wellcome_mode_switch_to_weather_mode(){
     station_change_mode( WEATHER_ALL_GRID );
     weather_mode_init();
-    station_update_state_after_mode_switch(&weather_grid);
+    station_update_state_after_mode_switch(weather_mode_if);
 }
 
 void wellcome_mode_switch_to_drawing_mode() {
     station_change_mode( DRAWING );
     drawing_mode_init();
-    station_update_state_after_mode_switch(&drawing_main_grid);
+    station_update_state_after_mode_switch(drawing_mode_if);
 }

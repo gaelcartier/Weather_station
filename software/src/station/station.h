@@ -60,6 +60,6 @@ void station_run();
 void station_draw_title( char* title );
 void station_gesture_handler( touchscreen_action_t geture_event );
 void station_change_mode(station_mode_t next_mode);
-void station_update_state_after_mode_switch( zone_matrix_t* new_matrix );
+void station_update_state_after_mode_switch( zone_matrix_t** new_if );
 
 #endif
