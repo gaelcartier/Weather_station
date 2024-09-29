@@ -75,7 +75,7 @@ typedef struct _display_if {
 
 void display_create_zone_matrix( zone_matrix_t *zm, zone_t* zone_array, uint row, uint col, point_t start, point_t end );
 void display_draw_zone( zone_t z, uint16_t color );
-zone_matrix_t* display_find_zone_matrix_from_coordiantes(zone_matrix_t** mode_if, uint16_t matrix_number, uint16_t x, uint16_t y);
+zone_matrix_t* display_find_zone_matrix_from_coordinates(display_if_t* mode_if, uint16_t x, uint16_t y);
 zone_t* display_find_zone_from_coordinates( zone_matrix_t *zm, uint16_t x, uint16_t y );
 point_t display_point_init( int x , int y );
 zone_t display_zone_init();

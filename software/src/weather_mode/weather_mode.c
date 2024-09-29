@@ -18,26 +18,31 @@ zone_t weather_zone_bottom[WEATHER_BOTTOM_GRID_COL*WEATHER_BOTTOM_GRID_ROW];
 zone_matrix_t weather_bottom_grid = ZONE_MATRIX_INIT;
 
 // --- WEather mode interface
-zone_matrix_t* weather_mode_if[STATION_MATRIX_NUMBER_IN_IF] = {&weather_top_grid, &weather_main_grid, &weather_bottom_grid};
+zone_matrix_t* weather_mode_matrix[STATION_MATRIX_NUMBER_IN_IF] = {&weather_top_grid, &weather_main_grid, &weather_bottom_grid};
+display_if_t weather_mode_if = DISPLAY_IF_INIT;
 
-void weather_mode_init(){
-    // BME280_init();
-    // VEML7700_init();
-    display_create_zone_matrix( &weather_main_grid, weather_zone_main, WEATHER_MAIN_GRID_ROW, WEATHER_MAIN_GRID_COL, WEATHER_MAIN_START, WEATHER_MAIN_END );
-    weather_main_grid.z[WEATHER_ZONE_TEMP].content = &temperature;
-    weather_main_grid.z[WEATHER_ZONE_HUM].content = &humidity;
-    weather_main_grid.z[WEATHER_ZONE_PRESS].content = &pressure;
-    weather_main_grid.z[WEATHER_ZONE_LIGHT].content = &light;
-    weather_main_grid.swipe_left_handler = (void*)weather_mode_switch_to_wellcome_mode;
-    weather_main_grid.swipe_right_handler = (void*)weather_mode_switch_to_wellcome_mode;
-    display_create_zone_matrix( &weather_top_grid, weather_zone_top, WEATHER_TOP_GRID_ROW, WEATHER_TOP_GRID_COL, WEATHER_TOP_START, WEATHER_TOP_END );
-    display_create_zone_matrix( &weather_bottom_grid, weather_zone_bottom, WEATHER_BOTTOM_GRID_ROW, WEATHER_BOTTOM_GRID_COL, WEATHER_BOTTOM_START, WEATHER_BOTTOM_END );
+void weather_mode_init_if(){
+    weather_mode_init_matrix();
+    weather_mode_if.matrix_if = weather_mode_matrix;
+    weather_mode_if.matrix_number = STATION_MATRIX_NUMBER_IN_IF;
+    weather_mode_if.swipe_left_handler = (void*)weather_mode_switch_to_wellcome_mode;
+    weather_mode_if.swipe_right_handler = (void*)weather_mode_switch_to_wellcome_mode;
     station_init_i2c_sensor();
     BME280_config();
     VEML7700_config();
     lcd_clear(LCD_BLACK);
     lcd_backlight_on();
     weather_mode_draw_grid();
+}
+
+void weather_mode_init_matrix(){
+    display_create_zone_matrix( &weather_main_grid, weather_zone_main, WEATHER_MAIN_GRID_ROW, WEATHER_MAIN_GRID_COL, WEATHER_MAIN_START, WEATHER_MAIN_END );
+    weather_main_grid.z[WEATHER_ZONE_TEMP].content = &temperature;
+    weather_main_grid.z[WEATHER_ZONE_HUM].content = &humidity;
+    weather_main_grid.z[WEATHER_ZONE_PRESS].content = &pressure;
+    weather_main_grid.z[WEATHER_ZONE_LIGHT].content = &light;
+    display_create_zone_matrix( &weather_top_grid, weather_zone_top, WEATHER_TOP_GRID_ROW, WEATHER_TOP_GRID_COL, WEATHER_TOP_START, WEATHER_TOP_END );
+    display_create_zone_matrix( &weather_bottom_grid, weather_zone_bottom, WEATHER_BOTTOM_GRID_ROW, WEATHER_BOTTOM_GRID_COL, WEATHER_BOTTOM_START, WEATHER_BOTTOM_END );
 }
 
 void weather_mode_draw_grid(){
@@ -75,7 +80,7 @@ void weather_mode_update_data_on_screen(){
 
 void weather_mode_switch_to_wellcome_mode() {
     station_change_mode(WELLCOME);
-    wellcome_mode_init();
-    station_update_state_after_mode_switch(wellcome_mode_if);
+    wellcome_mode_init_if();
+    station_update_state_after_mode_switch(&wellcome_mode_if);
 }
 

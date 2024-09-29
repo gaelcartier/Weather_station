@@ -46,9 +46,11 @@ typedef struct {
 } wellcome_grid_content_t;
 
 extern zone_matrix_t wellcome_main_grid;
-extern zone_matrix_t* wellcome_mode_if[];
+extern zone_matrix_t* wellcome_mode_matrix[];
+extern display_if_t wellcome_mode_if;
 
-void wellcome_mode_init();
+void wellcome_mode_init_matrix();
+void wellcome_mode_init_if();
 void wellcome_mode_draw_grid();
 void wellcome_mode_switch_to_weather_mode();
 void wellcome_mode_switch_to_drawing_mode();

@@ -41,7 +41,7 @@ typedef enum {
 typedef struct {
     station_mode_t mode;
     zone_matrix_t* current_matrix;
-    zone_matrix_t** current_if;
+    display_if_t* current_if;
     bool mode_initialized;
     uint systick_counter;
 } station_state_t;
@@ -60,6 +60,6 @@ void station_run();
 void station_draw_title( char* title );
 void station_gesture_handler( touchscreen_action_t geture_event );
 void station_change_mode(station_mode_t next_mode);
-void station_update_state_after_mode_switch( zone_matrix_t** new_if );
+void station_update_state_after_mode_switch( display_if_t* new_if );
 
 #endif

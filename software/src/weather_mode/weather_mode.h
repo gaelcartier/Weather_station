@@ -63,9 +63,11 @@ typedef struct {
 } weather_grid_content_t;
 
 extern zone_matrix_t weather_main_grid;
-extern zone_matrix_t* weather_mode_if[];
+extern zone_matrix_t* weather_mode_matrix[];
+extern display_if_t weather_mode_if;
 
-void weather_mode_init();
+void weather_mode_init_if();
+void weather_mode_init_matrix();
 void weather_mode_draw_grid();
 void weather_mode_measure_data();
 void weather_mode_update_data_on_screen();

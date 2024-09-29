@@ -9,7 +9,7 @@ src/station/libstation.a(station.c.obj)
 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
                               src/station/libstation.a(station.c.obj) (weather_mode_measure_data)
 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                              src/station/libstation.a(station.c.obj) (wellcome_mode_init)
+                              src/station/libstation.a(station.c.obj) (wellcome_mode_init_if)
 src/lcd/liblcd.a(lcd.c.obj)   src/station/libstation.a(station.c.obj) (lcd_backlight_off)
 src/font/libfont.a(font.c.obj)
                               src/station/libstation.a(station.c.obj) (BigFont)
@@ -1100,8 +1100,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
  .data          0x0000000000000000        0x0 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
  .bss           0x0000000000000000        0x0 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
- .bss.wellcome_mode_if_tmp
-                0x0000000000000000       0x18 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
  .text          0x0000000000000000        0x0 src/lcd/liblcd.a(lcd.c.obj)
  .data          0x0000000000000000        0x0 src/lcd/liblcd.a(lcd.c.obj)
  .bss           0x0000000000000000        0x0 src/lcd/liblcd.a(lcd.c.obj)
@@ -1159,12 +1157,8 @@ Discarded input sections
                 0x0000000000000000        0xc src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text.touchscreen_in_simple_touch_mode
                 0x0000000000000000       0x10 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
- .text.touchscreen_switch_to_gesture_mode
-                0x0000000000000000        0xc src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text.touchscreen_status_init_watching
                 0x0000000000000000       0x14 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
- .text.touchscreen_status_reset_watching
-                0x0000000000000000        0xc src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .rodata.touchscreen_print_touch_event.str1.4
                 0x0000000000000000       0x25 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
  .text.touchscreen_print_touch_event
@@ -1265,9 +1259,11 @@ Discarded input sections
  .text          0x0000000000000000        0x0 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
  .data          0x0000000000000000        0x0 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
  .bss           0x0000000000000000        0x0 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
- .text          0x0000000000000000        0x0 /tmp/ccNONgEH.o
- .data          0x0000000000000000        0x0 /tmp/ccNONgEH.o
- .bss           0x0000000000000000        0x0 /tmp/ccNONgEH.o
+ .text.drawing_mode_is_in_drawing_zone
+                0x0000000000000000       0x34 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+ .text          0x0000000000000000        0x0 /tmp/cclBpiH9.o
+ .data          0x0000000000000000        0x0 /tmp/cclBpiH9.o
+ .bss           0x0000000000000000        0x0 /tmp/cclBpiH9.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atexit.o)
@@ -1531,11 +1527,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/ccNONgEH.o
+ .boot2         0x0000000010000000      0x100 /tmp/cclBpiH9.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0x7250
+.text           0x0000000010000100     0x7318
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1960,156 +1956,174 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x0000000010004b88       0x28 src/systick/libsystick.a(systick.c.obj)
                 0x0000000010004b88                systick_init
  .text.station_gesture_handler
-                0x0000000010004bb0       0xb8 src/station/libstation.a(station.c.obj)
+                0x0000000010004bb0       0xb4 src/station/libstation.a(station.c.obj)
                 0x0000000010004bb0                station_gesture_handler
  .text.isr_systick
-                0x0000000010004c68       0x1c src/station/libstation.a(station.c.obj)
-                0x0000000010004c68                isr_systick
+                0x0000000010004c64       0x1c src/station/libstation.a(station.c.obj)
+                0x0000000010004c64                isr_systick
  .text.station_init
-                0x0000000010004c84       0x64 src/station/libstation.a(station.c.obj)
-                0x0000000010004c84                station_init
+                0x0000000010004c80       0x64 src/station/libstation.a(station.c.obj)
+                0x0000000010004c80                station_init
  .text.station_init_i2c_sensor
-                0x0000000010004ce8       0x24 src/station/libstation.a(station.c.obj)
-                0x0000000010004ce8                station_init_i2c_sensor
+                0x0000000010004ce4       0x24 src/station/libstation.a(station.c.obj)
+                0x0000000010004ce4                station_init_i2c_sensor
  .text.station_run
-                0x0000000010004d0c       0x80 src/station/libstation.a(station.c.obj)
-                0x0000000010004d0c                station_run
+                0x0000000010004d08       0x80 src/station/libstation.a(station.c.obj)
+                0x0000000010004d08                station_run
  .text.station_draw_title
-                0x0000000010004d8c       0x20 src/station/libstation.a(station.c.obj)
-                0x0000000010004d8c                station_draw_title
+                0x0000000010004d88       0x20 src/station/libstation.a(station.c.obj)
+                0x0000000010004d88                station_draw_title
  .text.station_change_mode
-                0x0000000010004dac       0x10 src/station/libstation.a(station.c.obj)
-                0x0000000010004dac                station_change_mode
+                0x0000000010004da8       0x10 src/station/libstation.a(station.c.obj)
+                0x0000000010004da8                station_change_mode
  .text.station_update_state_after_mode_switch
-                0x0000000010004dbc       0x10 src/station/libstation.a(station.c.obj)
-                0x0000000010004dbc                station_update_state_after_mode_switch
+                0x0000000010004db8       0x10 src/station/libstation.a(station.c.obj)
+                0x0000000010004db8                station_update_state_after_mode_switch
  .text.weather_mode_switch_to_wellcome_mode
-                0x0000000010004dcc       0x18 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x0000000010004dcc                weather_mode_switch_to_wellcome_mode
+                0x0000000010004dc8       0x18 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000010004dc8                weather_mode_switch_to_wellcome_mode
+ .text.weather_mode_init_matrix
+                0x0000000010004de0       0xd0 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000010004de0                weather_mode_init_matrix
  .text.weather_mode_draw_grid
-                0x0000000010004de4       0xdc src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x0000000010004de4                weather_mode_draw_grid
- .text.weather_mode_init
-                0x0000000010004ec0       0xf4 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x0000000010004ec0                weather_mode_init
+                0x0000000010004eb0       0xdc src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000010004eb0                weather_mode_draw_grid
+ .text.weather_mode_init_if
+                0x0000000010004f8c       0x40 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000010004f8c                weather_mode_init_if
  .text.weather_mode_measure_data
-                0x0000000010004fb4       0x4c src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x0000000010004fb4                weather_mode_measure_data
+                0x0000000010004fcc       0x4c src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000010004fcc                weather_mode_measure_data
  .text.weather_mode_update_data_on_screen
-                0x0000000010005000       0xb0 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x0000000010005000                weather_mode_update_data_on_screen
+                0x0000000010005018       0xb0 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000010005018                weather_mode_update_data_on_screen
  .text.wellcome_mode_switch_to_weather_mode
-                0x00000000100050b0       0x18 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x00000000100050b0                wellcome_mode_switch_to_weather_mode
- .text.wellcome_mode_switch_to_drawing_mode
                 0x00000000100050c8       0x18 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x00000000100050c8                wellcome_mode_switch_to_drawing_mode
+                0x00000000100050c8                wellcome_mode_switch_to_weather_mode
+ .text.wellcome_mode_switch_to_drawing_mode
+                0x00000000100050e0       0x18 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x00000000100050e0                wellcome_mode_switch_to_drawing_mode
+ .text.wellcome_mode_init_matrix
+                0x00000000100050f8       0xe4 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x00000000100050f8                wellcome_mode_init_matrix
  .text.wellcome_mode_draw_grid
-                0x00000000100050e0       0xdc src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x00000000100050e0                wellcome_mode_draw_grid
- .text.wellcome_mode_init
-                0x00000000100051bc       0xf0 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x00000000100051bc                wellcome_mode_init
+                0x00000000100051dc       0xdc src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x00000000100051dc                wellcome_mode_draw_grid
+ .text.wellcome_mode_init_if
+                0x00000000100052b8       0x28 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x00000000100052b8                wellcome_mode_init_if
  .text.lcd_backlight_off
-                0x00000000100052ac        0xc src/lcd/liblcd.a(lcd.c.obj)
-                0x00000000100052ac                lcd_backlight_off
+                0x00000000100052e0        0xc src/lcd/liblcd.a(lcd.c.obj)
+                0x00000000100052e0                lcd_backlight_off
  .text.lcd_backlight_on
-                0x00000000100052b8        0xc src/lcd/liblcd.a(lcd.c.obj)
-                0x00000000100052b8                lcd_backlight_on
+                0x00000000100052ec        0xc src/lcd/liblcd.a(lcd.c.obj)
+                0x00000000100052ec                lcd_backlight_on
  .text.lcd_config
-                0x00000000100052c4      0x5a4 src/lcd/liblcd.a(lcd.c.obj)
-                0x00000000100052c4                lcd_config
+                0x00000000100052f8      0x5a4 src/lcd/liblcd.a(lcd.c.obj)
+                0x00000000100052f8                lcd_config
  .text.lcd_init
-                0x0000000010005868      0x144 src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010005868                lcd_init
+                0x000000001000589c      0x144 src/lcd/liblcd.a(lcd.c.obj)
+                0x000000001000589c                lcd_init
  .text.lcd_draw_char
-                0x00000000100059ac      0x43c src/lcd/liblcd.a(lcd.c.obj)
-                0x00000000100059ac                lcd_draw_char
+                0x00000000100059e0      0x43c src/lcd/liblcd.a(lcd.c.obj)
+                0x00000000100059e0                lcd_draw_char
  .text.lcd_draw_string
-                0x0000000010005de8       0x40 src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010005de8                lcd_draw_string
+                0x0000000010005e1c       0x40 src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010005e1c                lcd_draw_string
  .text.lcd_print_int
-                0x0000000010005e28       0x50 src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010005e28                lcd_print_int
+                0x0000000010005e5c       0x50 src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010005e5c                lcd_print_int
  .text.lcd_set_zone
-                0x0000000010005e78       0xf0 src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010005e78                lcd_set_zone
+                0x0000000010005eac       0xf0 src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010005eac                lcd_set_zone
  .text.lcd_clear
-                0x0000000010005f68      0x11c src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010005f68                lcd_clear
+                0x0000000010005f9c      0x11c src/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010005f9c                lcd_clear
  .text.lcd_set_pixel
-                0x0000000010006084      0x11c src/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010006084                lcd_set_pixel
+                0x00000000100060b8      0x11c src/lcd/liblcd.a(lcd.c.obj)
+                0x00000000100060b8                lcd_set_pixel
  .text.lcd_fill_rect
-                0x00000000100061a0      0x158 src/lcd/liblcd.a(lcd.c.obj)
-                0x00000000100061a0                lcd_fill_rect
+                0x00000000100061d4      0x158 src/lcd/liblcd.a(lcd.c.obj)
+                0x00000000100061d4                lcd_fill_rect
  .text.lcd_rect
-                0x00000000100062f8      0x25c src/lcd/liblcd.a(lcd.c.obj)
-                0x00000000100062f8                lcd_rect
+                0x000000001000632c      0x25c src/lcd/liblcd.a(lcd.c.obj)
+                0x000000001000632c                lcd_rect
  .text.touchscreen_irq_callback
-                0x0000000010006554       0x20 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x0000000010006554                touchscreen_irq_callback
+                0x0000000010006588       0x24 src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+                0x0000000010006588                touchscreen_irq_callback
  .text.touchscreen_init
-                0x0000000010006574       0x9c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x0000000010006574                touchscreen_init
+                0x00000000100065ac       0x9c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+                0x00000000100065ac                touchscreen_init
  .text.touchscreen_switch_to_simple_touch_mode
-                0x0000000010006610        0xc src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x0000000010006610                touchscreen_switch_to_simple_touch_mode
+                0x0000000010006648        0xc src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+                0x0000000010006648                touchscreen_switch_to_simple_touch_mode
+ .text.touchscreen_switch_to_gesture_mode
+                0x0000000010006654        0xc src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+                0x0000000010006654                touchscreen_switch_to_gesture_mode
+ .text.touchscreen_status_reset_watching
+                0x0000000010006660        0xc src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+                0x0000000010006660                touchscreen_status_reset_watching
  .text.touchscreen_handler_in_gesture_mode
-                0x000000001000661c      0x14c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x000000001000661c                touchscreen_handler_in_gesture_mode
+                0x000000001000666c      0x14c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+                0x000000001000666c                touchscreen_handler_in_gesture_mode
  .text.touchscreen_handler_in_simple_touch_mode
-                0x0000000010006768       0x6c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x0000000010006768                touchscreen_handler_in_simple_touch_mode
+                0x00000000100067b8       0x6c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+                0x00000000100067b8                touchscreen_handler_in_simple_touch_mode
  .text.BME280_init_calib
-                0x00000000100067d4      0x120 src/bme280/libbme280.a(bme280.c.obj)
-                0x00000000100067d4                BME280_init_calib
+                0x0000000010006824      0x120 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000010006824                BME280_init_calib
  .text.BME280_config
-                0x00000000100068f4       0x5c src/bme280/libbme280.a(bme280.c.obj)
-                0x00000000100068f4                BME280_config
+                0x0000000010006944       0x5c src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000010006944                BME280_config
  .text.BME280_compensate_P
-                0x0000000010006950      0x23c src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000010006950                BME280_compensate_P
+                0x00000000100069a0      0x23c src/bme280/libbme280.a(bme280.c.obj)
+                0x00000000100069a0                BME280_compensate_P
  .text.BME280_compensate_H
-                0x0000000010006b8c      0x190 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000010006b8c                BME280_compensate_H
+                0x0000000010006bdc      0x190 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000010006bdc                BME280_compensate_H
  .text.BME280_read
-                0x0000000010006d1c      0x1f0 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000010006d1c                BME280_read
+                0x0000000010006d6c      0x1f0 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000010006d6c                BME280_read
  .text.VEML7700_config
-                0x0000000010006f0c       0x28 src/veml7700/libveml7700.a(veml7700.c.obj)
-                0x0000000010006f0c                VEML7700_config
+                0x0000000010006f5c       0x28 src/veml7700/libveml7700.a(veml7700.c.obj)
+                0x0000000010006f5c                VEML7700_config
  .text.VEML7700_read
-                0x0000000010006f34       0x40 src/veml7700/libveml7700.a(veml7700.c.obj)
-                0x0000000010006f34                VEML7700_read
+                0x0000000010006f84       0x40 src/veml7700/libveml7700.a(veml7700.c.obj)
+                0x0000000010006f84                VEML7700_read
  .text.display_create_zone_matrix
-                0x0000000010006f74       0xd4 src/display/libdisplay.a(display.c.obj)
-                0x0000000010006f74                display_create_zone_matrix
+                0x0000000010006fc4       0xd4 src/display/libdisplay.a(display.c.obj)
+                0x0000000010006fc4                display_create_zone_matrix
  .text.display_draw_zone
-                0x0000000010007048       0x38 src/display/libdisplay.a(display.c.obj)
-                0x0000000010007048                display_draw_zone
- .text.display_find_zone_matrix_from_coordiantes
-                0x0000000010007080       0x30 src/display/libdisplay.a(display.c.obj)
-                0x0000000010007080                display_find_zone_matrix_from_coordiantes
+                0x0000000010007098       0x38 src/display/libdisplay.a(display.c.obj)
+                0x0000000010007098                display_draw_zone
+ .text.display_find_zone_matrix_from_coordinates
+                0x00000000100070d0       0x30 src/display/libdisplay.a(display.c.obj)
+                0x00000000100070d0                display_find_zone_matrix_from_coordinates
  .text.display_find_zone_from_coordinates
-                0x00000000100070b0       0x34 src/display/libdisplay.a(display.c.obj)
-                0x00000000100070b0                display_find_zone_from_coordinates
- .text.drawing_mode_draw
-                0x00000000100070e4       0x5c src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
-                0x00000000100070e4                drawing_mode_draw
+                0x0000000010007100       0x34 src/display/libdisplay.a(display.c.obj)
+                0x0000000010007100                display_find_zone_from_coordinates
  .text.drawing_mode_draw_grid
-                0x0000000010007140       0x98 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
-                0x0000000010007140                drawing_mode_draw_grid
- .text.drawing_mode_init
-                0x00000000100071d8       0xc4 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
-                0x00000000100071d8                drawing_mode_init
- .text          0x000000001000729c       0x5c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x000000001000729c                strlen
+                0x0000000010007134       0x9c src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x0000000010007134                drawing_mode_draw_grid
+ .text.drawing_mode_draw
+                0x00000000100071d0       0x84 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x00000000100071d0                drawing_mode_draw
+ .text.drawing_mode_switch_to_wellcome_mode
+                0x0000000010007254       0x20 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x0000000010007254                drawing_mode_switch_to_wellcome_mode
+ .text.drawing_mode_init_matrix
+                0x0000000010007274       0xcc src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x0000000010007274                drawing_mode_init_matrix
+ .text.drawing_mode_init_if
+                0x0000000010007340       0x24 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x0000000010007340                drawing_mode_init_if
+ .text          0x0000000010007364       0x5c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x0000000010007364                strlen
  *(.fini)
- .fini          0x00000000100072f8        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x00000000100072f8                _fini
- *fill*         0x00000000100072fc        0x4 
- .fini.__stub   0x0000000010007300       0x50 linker stubs
+ .fini          0x00000000100073c0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x00000000100073c0                _fini
+ *fill*         0x00000000100073c4        0x4 
+ .fini.__stub   0x00000000100073c8       0x50 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2121,107 +2135,107 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x0000000010007350        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000010007350                . = ALIGN (0x4)
+ .eh_frame      0x0000000010007418        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010007418                . = ALIGN (0x4)
 
-.glue_7         0x0000000010007350        0x0
- .glue_7        0x0000000010007350        0x0 linker stubs
+.glue_7         0x0000000010007418        0x0
+ .glue_7        0x0000000010007418        0x0 linker stubs
 
-.glue_7t        0x0000000010007350        0x0
- .glue_7t       0x0000000010007350        0x0 linker stubs
+.glue_7t        0x0000000010007418        0x0
+ .glue_7t       0x0000000010007418        0x0 linker stubs
 
-.vfp11_veneer   0x0000000010007350        0x0
- .vfp11_veneer  0x0000000010007350        0x0 linker stubs
+.vfp11_veneer   0x0000000010007418        0x0
+ .vfp11_veneer  0x0000000010007418        0x0 linker stubs
 
-.v4_bx          0x0000000010007350        0x0
- .v4_bx         0x0000000010007350        0x0 linker stubs
+.v4_bx          0x0000000010007418        0x0
+ .v4_bx         0x0000000010007418        0x0 linker stubs
 
-.iplt           0x0000000010007350        0x0
- .iplt          0x0000000010007350        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000010007418        0x0
+ .iplt          0x0000000010007418        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000010007350     0x1384
+.rodata         0x0000000010007418     0x1384
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.hardware_alarm_claim.str1.4
-                0x0000000010007350       0x22 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x0000000010007372        0x2 
+                0x0000000010007418       0x22 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x000000001000743a        0x2 
  .rodata.panic.str1.4
-                0x0000000010007374       0x12 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x0000000010007386        0x2 
+                0x000000001000743c       0x12 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x000000001000744e        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x0000000010007388        0xc CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010007450        0xc CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x0000000010007394       0x15 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x00000000100073a9        0x3 
+                0x000000001000745c       0x15 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x0000000010007471        0x3 
  .rodata._vsnprintf
-                0x00000000100073ac      0x1e0 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x000000001000758c        0x4 
+                0x0000000010007474      0x1e0 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x0000000010007654        0x4 
  .rodata.pow10.0
-                0x0000000010007590       0x50 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010007658       0x50 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.str1.4
-                0x00000000100075e0       0x44 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100076a8       0x44 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x0000000010007624        0xc CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100076ec        0xc CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x0000000010007630        0xc CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100076f8        0xc CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x000000001000763c        0xc CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010007704        0xc CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x0000000010007648        0x2 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x000000001000764a        0x2 
+                0x0000000010007710        0x2 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x0000000010007712        0x2 
  .rodata.weather_mode_draw_grid.str1.4
-                0x000000001000764c        0x8 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000010007714        0x8 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
  .rodata.weather_mode_update_data_on_screen.str1.4
-                0x0000000010007654        0xc src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x000000001000771c        0xc src/weather_mode/libweather_mode.a(weather_mode.c.obj)
  .rodata.wellcome_mode_draw_grid.str1.4
-                0x0000000010007660        0x9 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
- *fill*         0x0000000010007669        0x3 
+                0x0000000010007728        0x9 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+ *fill*         0x0000000010007731        0x3 
  .rodata.lcd_print_int.str1.4
-                0x000000001000766c        0x3 src/lcd/liblcd.a(lcd.c.obj)
- *fill*         0x000000001000766f        0x1 
+                0x0000000010007734        0x3 src/lcd/liblcd.a(lcd.c.obj)
+ *fill*         0x0000000010007737        0x1 
  .rodata.BigFont
-                0x0000000010007670      0xbe4 src/font/libfont.a(font.c.obj)
-                0x0000000010007670                BigFont
+                0x0000000010007738      0xbe4 src/font/libfont.a(font.c.obj)
+                0x0000000010007738                BigFont
  .rodata.SmallFont
-                0x0000000010008254      0x478 src/font/libfont.a(font.c.obj)
-                0x0000000010008254                SmallFont
+                0x000000001000831c      0x478 src/font/libfont.a(font.c.obj)
+                0x000000001000831c                SmallFont
  .rodata.drawing_mode_draw_grid.str1.4
-                0x00000000100086cc        0x8 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
-                0x00000000100086d4                . = ALIGN (0x4)
+                0x0000000010008794        0x8 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x000000001000879c                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x00000000100086d4                . = ALIGN (0x4)
+                0x000000001000879c                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000000100086d4                __exidx_start = .
+                0x000000001000879c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000000100086d4                __exidx_end = .
-                0x00000000100086d4                . = ALIGN (0x4)
-                0x00000000100086d4                __binary_info_start = .
+                0x000000001000879c                __exidx_end = .
+                0x000000001000879c                . = ALIGN (0x4)
+                0x000000001000879c                __binary_info_start = .
 
-.binary_info    0x00000000100086d4       0x1c
+.binary_info    0x000000001000879c       0x1c
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x00000000100086d4        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000879c        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x00000000100086d8        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100087a0        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x00000000100086dc        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100087a4        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x00000000100086e0        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100087a8        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x00000000100086e4        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100087ac        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x00000000100086e8        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100087b0        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x00000000100086ec        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100087b4        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
-                0x00000000100086f0                __binary_info_end = .
+                0x00000000100087b8                __binary_info_end = .
 
-.rel.dyn        0x00000000100086f0        0x0
- .rel.iplt      0x00000000100086f0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x00000000100086f0                . = ALIGN (0x4)
+.rel.dyn        0x00000000100087b8        0x0
+ .rel.iplt      0x00000000100087b8        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x00000000100087b8                . = ALIGN (0x4)
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -2230,7 +2244,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x0000000020000000       0xc0 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0      0x330 load address 0x00000000100086f0
+.data           0x00000000200000c0      0x330 load address 0x00000000100087b8
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2290,9 +2304,9 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  .data.temperature
                 0x00000000200002fc       0x24 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
                 0x00000000200002fc                temperature
- .data.weather_mode_if
+ .data.weather_mode_matrix
                 0x0000000020000320        0xc src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x0000000020000320                weather_mode_if
+                0x0000000020000320                weather_mode_matrix
  .data.drawing  0x000000002000032c       0x21 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
                 0x000000002000032c                drawing
  *fill*         0x000000002000034d        0x3 
@@ -2306,12 +2320,12 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  .data.weather  0x0000000020000398       0x21 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
                 0x0000000020000398                weather
  *fill*         0x00000000200003b9        0x3 
- .data.wellcome_mode_if
+ .data.wellcome_mode_matrix
                 0x00000000200003bc        0xc src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x00000000200003bc                wellcome_mode_if
- .data.drawing_mode_if
+                0x00000000200003bc                wellcome_mode_matrix
+ .data.drawing_mode_matrix
                 0x00000000200003c8        0xc src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
-                0x00000000200003c8                drawing_mode_if
+                0x00000000200003c8                drawing_mode_matrix
                 0x00000000200003d4                . = ALIGN (0x4)
  *(.after_data.*)
                 0x00000000200003d4                . = ALIGN (0x4)
@@ -2347,38 +2361,38 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.jcr)
                 0x00000000200003f0                . = ALIGN (0x4)
                 0x00000000200003f0                __data_end__ = .
-                0x00000000100086f0                __etext = LOADADDR (.data)
+                0x00000000100087b8                __etext = LOADADDR (.data)
 
 .tm_clone_table
-                0x00000000200003f0        0x0 load address 0x0000000010008a20
+                0x00000000200003f0        0x0 load address 0x0000000010008ae8
  .tm_clone_table
                 0x00000000200003f0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x00000000200003f0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x00000000200003f0        0x0 load address 0x0000000010008a20
+.igot.plt       0x00000000200003f0        0x0 load address 0x0000000010008ae8
  .igot.plt      0x00000000200003f0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x00000000200003f0        0x0 load address 0x0000000010008a20
+                0x00000000200003f0        0x0 load address 0x0000000010008ae8
                 0x00000000200003f0                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x0000000010008a20
+.scratch_x      0x0000000020040000        0x0 load address 0x0000000010008ae8
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x0000000010008a20                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x0000000010008ae8                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x0000000010008a20
+.scratch_y      0x0000000020041000        0x0 load address 0x0000000010008ae8
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x0000000010008a20                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x0000000010008ae8                __scratch_y_source__ = LOADADDR (.scratch_y)
 
-.bss            0x00000000200003f0      0x8a4
+.bss            0x00000000200003f0      0x8ec
                 0x00000000200003f0                . = ALIGN (0x4)
                 0x00000000200003f0                __bss_start__ = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
@@ -2405,127 +2419,136 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  .bss.drawing_main_grid
                 0x00000000200007c0       0x34 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
                 0x00000000200007c0                drawing_main_grid
+ .bss.drawing_mode_if
+                0x00000000200007f4       0x18 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x00000000200007f4                drawing_mode_if
  .bss.drawing_top_grid
-                0x00000000200007f4       0x34 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
-                0x00000000200007f4                drawing_top_grid
+                0x000000002000080c       0x34 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x000000002000080c                drawing_top_grid
  .bss.drawing_zone_bottom
-                0x0000000020000828       0x60 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
-                0x0000000020000828                drawing_zone_bottom
+                0x0000000020000840       0x60 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x0000000020000840                drawing_zone_bottom
  .bss.drawing_zone_main
-                0x0000000020000888       0x20 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
-                0x0000000020000888                drawing_zone_main
+                0x00000000200008a0       0x20 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x00000000200008a0                drawing_zone_main
  .bss.drawing_zone_top
-                0x00000000200008a8       0x20 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
-                0x00000000200008a8                drawing_zone_top
- .bss.drivers   0x00000000200008c8        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .bss.filter    0x00000000200008cc        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000200008c0       0x20 src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
+                0x00000000200008c0                drawing_zone_top
+ .bss.drivers   0x00000000200008e0        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.filter    0x00000000200008e4        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .bss.lazy_vsnprintf
-                0x00000000200008d0        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .bss.pools     0x00000000200008d4       0x10 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000200008e8        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .bss.pools     0x00000000200008ec       0x10 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/common/pico_time/time.c.obj
  .bss.raw_irq_mask
-                0x00000000200008e4        0x8 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x00000000200008fc        0x8 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .bss.sf_clz_func
-                0x00000000200008ec        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x00000000200008ec                sf_clz_func
+                0x0000000020000904        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000020000904                sf_clz_func
  .bss.sleep_notifier
-                0x00000000200008f0        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020000908        0x4 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/common/pico_time/time.c.obj
  .bss.station_state
-                0x00000000200008f4       0x14 src/station/libstation.a(station.c.obj)
-                0x00000000200008f4                station_state
- .bss.t_fine    0x0000000020000908        0x4 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000908                t_fine
+                0x000000002000090c       0x14 src/station/libstation.a(station.c.obj)
+                0x000000002000090c                station_state
+ .bss.t_fine    0x0000000020000920        0x4 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000920                t_fine
  .bss.target_hi
-                0x000000002000090c       0x10 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020000924       0x10 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.touchscreen_status
-                0x000000002000091c       0x1c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
-                0x000000002000091c                touchscreen_status
+                0x0000000020000934       0x1c src/touchscreen/libtouchscreen.a(touchscreen.c.obj)
+                0x0000000020000934                touchscreen_status
  .bss.weather_bottom_grid
-                0x0000000020000938       0x34 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x0000000020000938                weather_bottom_grid
+                0x0000000020000950       0x34 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020000950                weather_bottom_grid
  .bss.weather_main_grid
-                0x000000002000096c       0x34 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x000000002000096c                weather_main_grid
+                0x0000000020000984       0x34 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020000984                weather_main_grid
+ .bss.weather_mode_if
+                0x00000000200009b8       0x18 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x00000000200009b8                weather_mode_if
  .bss.weather_top_grid
-                0x00000000200009a0       0x34 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x00000000200009a0                weather_top_grid
+                0x00000000200009d0       0x34 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x00000000200009d0                weather_top_grid
  .bss.weather_zone_bottom
-                0x00000000200009d4       0x60 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x00000000200009d4                weather_zone_bottom
+                0x0000000020000a04       0x60 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020000a04                weather_zone_bottom
  .bss.weather_zone_main
-                0x0000000020000a34       0x80 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x0000000020000a34                weather_zone_main
+                0x0000000020000a64       0x80 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020000a64                weather_zone_main
  .bss.weather_zone_top
-                0x0000000020000ab4       0x20 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
-                0x0000000020000ab4                weather_zone_top
+                0x0000000020000ae4       0x20 src/weather_mode/libweather_mode.a(weather_mode.c.obj)
+                0x0000000020000ae4                weather_zone_top
  .bss.wellcome_bottom_grid
-                0x0000000020000ad4       0x34 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x0000000020000ad4                wellcome_bottom_grid
+                0x0000000020000b04       0x34 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x0000000020000b04                wellcome_bottom_grid
  .bss.wellcome_main_grid
-                0x0000000020000b08       0x34 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x0000000020000b08                wellcome_main_grid
+                0x0000000020000b38       0x34 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x0000000020000b38                wellcome_main_grid
+ .bss.wellcome_mode_if
+                0x0000000020000b6c       0x18 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x0000000020000b6c                wellcome_mode_if
  .bss.wellcome_top_grid
-                0x0000000020000b3c       0x34 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x0000000020000b3c                wellcome_top_grid
+                0x0000000020000b84       0x34 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x0000000020000b84                wellcome_top_grid
  .bss.wellcome_zone_bottom
-                0x0000000020000b70       0x60 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x0000000020000b70                wellcome_zone_bottom
+                0x0000000020000bb8       0x60 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x0000000020000bb8                wellcome_zone_bottom
  .bss.wellcome_zone_main
-                0x0000000020000bd0       0x80 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x0000000020000bd0                wellcome_zone_main
+                0x0000000020000c18       0x80 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x0000000020000c18                wellcome_zone_main
  .bss.wellcome_zone_top
-                0x0000000020000c50       0x20 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
-                0x0000000020000c50                wellcome_zone_top
- .bss.dig_H2    0x0000000020000c70        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c70                dig_H2
- .bss.dig_H4    0x0000000020000c72        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c72                dig_H4
- .bss.dig_H5    0x0000000020000c74        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c74                dig_H5
- .bss.dig_P1    0x0000000020000c76        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c76                dig_P1
- .bss.dig_P2    0x0000000020000c78        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c78                dig_P2
- .bss.dig_P3    0x0000000020000c7a        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c7a                dig_P3
- .bss.dig_P4    0x0000000020000c7c        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c7c                dig_P4
- .bss.dig_P5    0x0000000020000c7e        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c7e                dig_P5
- .bss.dig_P6    0x0000000020000c80        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c80                dig_P6
- .bss.dig_P7    0x0000000020000c82        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c82                dig_P7
- .bss.dig_P8    0x0000000020000c84        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c84                dig_P8
- .bss.dig_P9    0x0000000020000c86        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c86                dig_P9
- .bss.dig_T1    0x0000000020000c88        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c88                dig_T1
- .bss.dig_T2    0x0000000020000c8a        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c8a                dig_T2
- .bss.dig_T3    0x0000000020000c8c        0x2 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c8c                dig_T3
- .bss.claimed   0x0000000020000c8e        0x1 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .bss.dig_H1    0x0000000020000c8f        0x1 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c8f                dig_H1
- .bss.dig_H3    0x0000000020000c90        0x1 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c90                dig_H3
- .bss.dig_H6    0x0000000020000c91        0x1 src/bme280/libbme280.a(bme280.c.obj)
-                0x0000000020000c91                dig_H6
+                0x0000000020000c98       0x20 src/wellcome_mode/libwellcome_mode.a(wellcome_mode.c.obj)
+                0x0000000020000c98                wellcome_zone_top
+ .bss.dig_H2    0x0000000020000cb8        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cb8                dig_H2
+ .bss.dig_H4    0x0000000020000cba        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cba                dig_H4
+ .bss.dig_H5    0x0000000020000cbc        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cbc                dig_H5
+ .bss.dig_P1    0x0000000020000cbe        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cbe                dig_P1
+ .bss.dig_P2    0x0000000020000cc0        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cc0                dig_P2
+ .bss.dig_P3    0x0000000020000cc2        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cc2                dig_P3
+ .bss.dig_P4    0x0000000020000cc4        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cc4                dig_P4
+ .bss.dig_P5    0x0000000020000cc6        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cc6                dig_P5
+ .bss.dig_P6    0x0000000020000cc8        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cc8                dig_P6
+ .bss.dig_P7    0x0000000020000cca        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cca                dig_P7
+ .bss.dig_P8    0x0000000020000ccc        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000ccc                dig_P8
+ .bss.dig_P9    0x0000000020000cce        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cce                dig_P9
+ .bss.dig_T1    0x0000000020000cd0        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cd0                dig_T1
+ .bss.dig_T2    0x0000000020000cd2        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cd2                dig_T2
+ .bss.dig_T3    0x0000000020000cd4        0x2 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cd4                dig_T3
+ .bss.claimed   0x0000000020000cd6        0x1 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .bss.dig_H1    0x0000000020000cd7        0x1 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cd7                dig_H1
+ .bss.dig_H3    0x0000000020000cd8        0x1 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cd8                dig_H3
+ .bss.dig_H6    0x0000000020000cd9        0x1 src/bme280/libbme280.a(bme280.c.obj)
+                0x0000000020000cd9                dig_H6
  .bss.irq_hander_chain_free_slot_head
-                0x0000000020000c92        0x1 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000020000cda        0x1 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .bss.timer_callbacks_pending
-                0x0000000020000c93        0x1 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020000cdb        0x1 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  *(COMMON)
-                0x0000000020000c94                . = ALIGN (0x4)
-                0x0000000020000c94                __bss_end__ = .
+                0x0000000020000cdc                . = ALIGN (0x4)
+                0x0000000020000cdc                __bss_end__ = .
 
-.heap           0x0000000020000c94      0x800
-                0x0000000020000c94                __end__ = .
-                0x0000000020000c94                end = __end__
+.heap           0x0000000020000cdc      0x800
+                0x0000000020000cdc                __end__ = .
+                0x0000000020000cdc                end = __end__
  *(.heap*)
- .heap          0x0000000020000c94      0x800 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-                0x0000000020001494                __HeapLimit = .
+ .heap          0x0000000020000cdc      0x800 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x00000000200014dc                __HeapLimit = .
 
 .stack1_dummy   0x0000000020040000        0x0
  *(.stack1*)
@@ -2534,8 +2557,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/weather_station.dir/home/gael/git/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x0000000010008a20        0x0
-                0x0000000010008a20                PROVIDE (__flash_binary_end = .)
+.flash_end      0x0000000010008ae8        0x0
+                0x0000000010008ae8                PROVIDE (__flash_binary_end = .)
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2613,7 +2636,7 @@ LOAD src/callback/libcallback.a
 LOAD src/lcd/liblcd.a
 LOAD src/led_rgb/libled_rgb.a
 LOAD src/drawing_mode/libdrawing_mode.a
-LOAD /tmp/ccNONgEH.o
+LOAD /tmp/cclBpiH9.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2727,7 +2750,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000000000000782       0x2c src/drawing_mode/libdrawing_mode.a(drawing_mode.c.obj)
  .ARM.attributes
-                0x00000000000007ae       0x22 /tmp/ccNONgEH.o
+                0x00000000000007ae       0x22 /tmp/cclBpiH9.o
  .ARM.attributes
                 0x00000000000007d0       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes

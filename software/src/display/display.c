@@ -40,10 +40,10 @@ void display_draw_zone( zone_t z, uint16_t color ) {
     if(z.has_border) lcd_rect( z.p1.x, z.p2.x, z.p1.y, z.p2.y, color );
 }
 
-zone_matrix_t* display_find_zone_matrix_from_coordiantes(zone_matrix_t** mode_if, uint16_t matrix_number, uint16_t x, uint16_t y) {
-    for(int i=0; i < matrix_number; i++){
-        if( x>= mode_if[i]->start.x && x < mode_if[i]->end.x && y >= mode_if[i]->start.y && y < mode_if[i]->end.y)
-            return mode_if[i];
+zone_matrix_t* display_find_zone_matrix_from_coordinates(display_if_t* mode_if, uint16_t x, uint16_t y) {
+    for(int i=0; i < mode_if->matrix_number; i++){
+        if( x>= mode_if->matrix_if[i]->start.x && x < mode_if->matrix_if[i]->end.x && y >= mode_if->matrix_if[i]->start.y && y < mode_if->matrix_if[i]->end.y)
+            return mode_if->matrix_if[i];
     }
 }
 

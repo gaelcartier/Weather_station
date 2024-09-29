@@ -39,10 +39,14 @@
 
 
 extern zone_matrix_t drawing_main_grid;
-extern zone_matrix_t* drawing_mode_if[];
+extern zone_matrix_t* drawing_mode_matrix[];
+extern display_if_t drawing_mode_if;
 
-void drawing_mode_init();
+void drawing_mode_init_matrix();
+void drawing_mode_init_if();
 void drawing_mode_draw_grid();
 void drawing_mode_draw();
+void drawing_mode_switch_to_wellcome_mode();
+bool drawing_mode_is_in_drawing_zone( uint16_t x, uint16_t y );
 
 #endif

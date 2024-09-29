@@ -36,7 +36,7 @@ void touchscreen_config() {
 }
 
 void touchscreen_irq_callback( uint8_t gpio, uint32_t events ) {
-	if( touchscreen_new_event() ){
+	if( touchscreen_new_event() && touchscreen_in_gesture_mode() ){
 		touchscreen_status.is_watching = true;
 		touchscreen_status.duration = 0;
 		touchscreen_status.read_initialized = false;
